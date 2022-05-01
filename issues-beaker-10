@@ -1,0 +1,39 @@
+{
+  "title": "Issues (Beaker 1.0)",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "712b250ae134b92b",
+      "text": "A list of issues we discover while migrating from Beaker 0.8 to Beaker 1.0"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Issues (Beaker 1.0)",
+        "story": []
+      },
+      "date": 1589793010732
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "712b250ae134b92b"
+      },
+      "id": "712b250ae134b92b",
+      "type": "add",
+      "date": 1589793016630
+    },
+    {
+      "type": "edit",
+      "id": "712b250ae134b92b",
+      "item": {
+        "type": "paragraph",
+        "id": "712b250ae134b92b",
+        "text": "A list of issues we discover while migrating from Beaker 0.8 to Beaker 1.0"
+      },
+      "date": 1589793078684
+    }
+  ]
+}

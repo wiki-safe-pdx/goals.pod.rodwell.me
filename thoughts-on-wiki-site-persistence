@@ -1,0 +1,306 @@
+{
+  "title": "Thoughts on Wiki Site Persistence",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "d8c57f8d3d5a3910",
+      "text": "These thoughts flow out of a Sunday discussion between Ward and myself (Paul)."
+    },
+    {
+      "type": "markdown",
+      "id": "7cb2bd07408f299b",
+      "text": "> **Ward:** I've been thinking of cloning whole sites onto pages. A plugin adds the captured site to the neighborhood. The captured site could appear to have a domain name, but that wouldn't need to be existing domain anymore.\n\n> **Ward:** Mike Caulfield sent me dumps of sites he retired. I'd like to restore them but not restore the dns, just the content in a way that remembers the once dns address.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "5f8d11ea297c5e94",
+      "text": "An initial thought is that each site could be stored in a [https://datproject.org/ dat]. As the files would have to be accessible on the same routes as they would if a wiki server was being used, the page files would need the `.json` suffix adding and sitemaps would need to be stored in a `system` directory. For an example see an archive of journal.hapgood.net at dat://24e436c1d5861801a1f6c92904b060150cffe53408be4a4b3b95451282860b5c and [https://journal-hapgood-net-paul90.hashbase.io https://journal-hapgood-net-paul90.hashbase.io]  N.B. This archive only contains the page file, favicon and sitemap - and currently can be added to your neighbourhood if your fed wiki origin is using https.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "71e76e1b26d938d2",
+      "text": "Persisting a wiki site's data, is not in itself a particularly difficult problem. However, finding if, and where, an archive is available is more difficult.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "feb1f602ec5990f4",
+      "text": "The site adapter code could be made archive aware, and provides a point to separate the concerns about what name a wiki site is known by, and how it is accessed. The site adapter already does some checking on how to reach remote sites, and provides a mapping from the site name to how it is accessed.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "46988ad793526df4",
+      "text": "Persisting the discovered routes used by the site adapter could present the opertunity of injesting the required site to archive mappings.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "fec7612587d05db7",
+      "text": "It is not unreasonable to expect each archive site to publish a list of the archives it is maintaining. This could be wiki, with a page per archived wiki with the details on how to reach the archive embedded. Such an approach allows a number discovery routes.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "7fe5feb34465e064",
+      "text": "We might want to have something like:"
+    },
+    {
+      "type": "code",
+      "id": "51d82655a7d3f3f4",
+      "text": "[\n  {\n    site: \"journal.hapgood.net\",\n    archiveDate: \"2016-11-22T16:43:00.000Z\",\n    access: {\n      dat: \"24e436c1d5861801a1f6c92904b060150cffe53408be4a4b3b95451282860b5c\",\n      https: [\n        \"journal-hapgood-net-paul90.hashbase.io\"\n      ]\n    }\n  }\n]"
+    },
+    {
+      "type": "markdown",
+      "id": "624d22e13a231d11",
+      "text": "The archive date should reflect the date the archive was taken, but it might also be an idea to have some indication of if an archive has been updated to reflect any changes to plugins."
+    },
+    {
+      "type": "pagefold",
+      "id": "3352adb621b7f45e",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "2c83107747eae31b",
+      "text": "Those using a https origin, can try adding an archive of `journal.hapgood.net` from November 2016 to their neighbourhood using the roster below."
+    },
+    {
+      "type": "roster",
+      "id": "a24dddfaed409ab4",
+      "text": "Sample Archive\n\njournal-hapgood-net-paul90.hashbase.io"
+    },
+    {
+      "type": "activity",
+      "id": "e9e9f102158e1382",
+      "text": "ROSTER Sample Archive"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Thoughts on Wiki Site Persistence",
+        "story": []
+      },
+      "date": 1511968283665
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "d8c57f8d3d5a3910",
+        "text": "These thoughts flow out of a Sunday discussion between Ward and myself (Paul)."
+      },
+      "id": "d8c57f8d3d5a3910",
+      "date": 1511968299169
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "markdown",
+        "id": "7cb2bd07408f299b",
+        "text": "> **Ward:** I've been thinking of cloning whole sites onto pages. A plugin adds the captured site to the neighborhood. The captured site could appear to have a domain name, but that wouldn't need to be existing domain anymore.\n\n> **Ward:** Mike Caulfield sent me dumps of sites he retired. I'd like to restore them but not restore the dns, just the content in a way that remembers the once dns address.\n"
+      },
+      "after": "d8c57f8d3d5a3910",
+      "id": "7cb2bd07408f299b",
+      "date": 1511968301394
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "markdown",
+        "id": "5f8d11ea297c5e94",
+        "text": "An initial thought is that each site could be stored in a [https://datproject.org/ dat]. As the files would have to be accessible on the same routes as they would if a wiki server was being used, the page files would need the `.json` suffix adding and sitemaps would need to be stored in a `system` directory. For an example see an archive of journal.hapgood.net at dat://24e436c1d5861801a1f6c92904b060150cffe53408be4a4b3b95451282860b5c and [https://journal-hapgood-net-paul90.hashbase.io https://journal-hapgood-net-paul90.hashbase.io]  N.B. This archive only contains the page file, favicon and sitemap - and currently is only accessible if your fed wiki origin is using https.\n"
+      },
+      "after": "7cb2bd07408f299b",
+      "id": "5f8d11ea297c5e94",
+      "date": 1511968303889
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "markdown",
+        "id": "71e76e1b26d938d2",
+        "text": "Persisting a wiki site's data, is not in itself a particularly difficult problem. However, finding if, and where, an archive is available is more difficult.\n"
+      },
+      "after": "5f8d11ea297c5e94",
+      "id": "71e76e1b26d938d2",
+      "date": 1511968306918
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "markdown",
+        "id": "feb1f602ec5990f4",
+        "text": "The site adapter code could be made archive aware, and provides a point to separate the concerns about what name a wiki site is known by, and how it is accessed. The site adapter already does some checking on how to reach remote sites, and provides a mapping from the site name to how it is accessed.\n"
+      },
+      "after": "71e76e1b26d938d2",
+      "id": "feb1f602ec5990f4",
+      "date": 1511968310222
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "markdown",
+        "id": "46988ad793526df4",
+        "text": "Persisting the discovered routes used by the site adapter could present the opertunity of injesting the required site to archive mappings.\n"
+      },
+      "after": "feb1f602ec5990f4",
+      "id": "46988ad793526df4",
+      "date": 1511968313254
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "markdown",
+        "id": "fec7612587d05db7",
+        "text": "It is not unreasonable to expect each archive site to publish a list of the archives it is maintaining. This could be wiki, with a page per archived wiki with the details on how to reach the archive embedded. Such an approach allows a number discovery routes.\n"
+      },
+      "after": "46988ad793526df4",
+      "id": "fec7612587d05db7",
+      "date": 1511968317301
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "markdown",
+        "id": "7fe5feb34465e064",
+        "text": "We might want to have something like:"
+      },
+      "after": "fec7612587d05db7",
+      "id": "7fe5feb34465e064",
+      "date": 1511968320678
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "code",
+        "id": "51d82655a7d3f3f4",
+        "text": "[\n  {\n    site: \"journal.hapgood.net\",\n    archiveDate: \"2016-11-22T16:43:00.000Z\",\n    access: {\n      dat: \"24e436c1d5861801a1f6c92904b060150cffe53408be4a4b3b95451282860b5c\",\n      https: [\n        \"journal-hapgood-net-paul90.hashbase.io\"\n      ]\n    }\n  }\n]"
+      },
+      "after": "7fe5feb34465e064",
+      "id": "51d82655a7d3f3f4",
+      "date": 1511968325437
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "markdown",
+        "id": "624d22e13a231d11",
+        "text": "The archive date should reflect the date the archive was taken, but it might also be an idea to have some indication of if an archive has been updated to reflect any changes to plugins."
+      },
+      "after": "51d82655a7d3f3f4",
+      "id": "624d22e13a231d11",
+      "date": 1511968341399
+    },
+    {
+      "type": "edit",
+      "id": "5f8d11ea297c5e94",
+      "item": {
+        "type": "markdown",
+        "id": "5f8d11ea297c5e94",
+        "text": "An initial thought is that each site could be stored in a [https://datproject.org/ dat]. As the files would have to be accessible on the same routes as they would if a wiki server was being used, the page files would need the `.json` suffix adding and sitemaps would need to be stored in a `system` directory. For an example see an archive of journal.hapgood.net at dat://24e436c1d5861801a1f6c92904b060150cffe53408be4a4b3b95451282860b5c and [https://journal-hapgood-net-paul90.hashbase.io https://journal-hapgood-net-paul90.hashbase.io]  N.B. This archive only contains the page file, favicon and sitemap - and currently can be added to your neighbourhood if your fed wiki origin is using https.\n"
+      },
+      "date": 1511968625245
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3352adb621b7f45e"
+      },
+      "id": "3352adb621b7f45e",
+      "type": "add",
+      "after": "624d22e13a231d11",
+      "date": 1511968788030
+    },
+    {
+      "type": "edit",
+      "id": "3352adb621b7f45e",
+      "item": {
+        "type": "pagefold",
+        "id": "3352adb621b7f45e",
+        "text": "."
+      },
+      "date": 1511968794885
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2c83107747eae31b"
+      },
+      "id": "2c83107747eae31b",
+      "type": "add",
+      "after": "3352adb621b7f45e",
+      "date": 1511968796412
+    },
+    {
+      "type": "edit",
+      "id": "2c83107747eae31b",
+      "item": {
+        "type": "paragraph",
+        "id": "2c83107747eae31b",
+        "text": "Those using a https origin, can try adding an archive of `journal.hapgood.net` from November 2016 to their neighbourhood using the roster below."
+      },
+      "date": 1511968925446
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "roster",
+        "id": "a24dddfaed409ab4",
+        "text": "journal-hapgood-net-paul90.hashbase.io"
+      },
+      "after": "2c83107747eae31b",
+      "id": "a24dddfaed409ab4",
+      "date": 1511968928985
+    },
+    {
+      "type": "edit",
+      "id": "a24dddfaed409ab4",
+      "item": {
+        "type": "roster",
+        "id": "a24dddfaed409ab4",
+        "text": "Sample Archive\n\njournal-hapgood-net-paul90.hashbase.io"
+      },
+      "date": 1511968946464
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "activity",
+        "id": "e9e9f102158e1382"
+      },
+      "after": "2c83107747eae31b",
+      "id": "e9e9f102158e1382",
+      "date": 1511969249038
+    },
+    {
+      "type": "edit",
+      "id": "e9e9f102158e1382",
+      "item": {
+        "type": "activity",
+        "id": "e9e9f102158e1382",
+        "text": "ROSTER Sample Archive"
+      },
+      "date": 1511969263619
+    },
+    {
+      "type": "move",
+      "order": [
+        "d8c57f8d3d5a3910",
+        "7cb2bd07408f299b",
+        "5f8d11ea297c5e94",
+        "71e76e1b26d938d2",
+        "feb1f602ec5990f4",
+        "46988ad793526df4",
+        "fec7612587d05db7",
+        "7fe5feb34465e064",
+        "51d82655a7d3f3f4",
+        "624d22e13a231d11",
+        "3352adb621b7f45e",
+        "2c83107747eae31b",
+        "a24dddfaed409ab4",
+        "e9e9f102158e1382"
+      ],
+      "id": "e9e9f102158e1382",
+      "date": 1511969268090
+    }
+  ]
+}

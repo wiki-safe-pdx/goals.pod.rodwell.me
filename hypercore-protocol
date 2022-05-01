@@ -1,0 +1,39 @@
+{
+  "title": "Hypercore Protocol",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "9a9681a56422a854",
+      "text": "Dat Protocol has been renamed Hypercore Protocol, see [https://blog.datproject.org/2020/05/15/dat-protocol-renamed-hypercore-protocol/ blog]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Hypercore Protocol",
+        "story": []
+      },
+      "date": 1589567805289
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9a9681a56422a854"
+      },
+      "id": "9a9681a56422a854",
+      "type": "add",
+      "date": 1589567809162
+    },
+    {
+      "type": "edit",
+      "id": "9a9681a56422a854",
+      "item": {
+        "type": "paragraph",
+        "id": "9a9681a56422a854",
+        "text": "Dat Protocol has been renamed Hypercore Protocol, see [https://blog.datproject.org/2020/05/15/dat-protocol-renamed-hypercore-protocol/ blog]"
+      },
+      "date": 1589567848060
+    }
+  ]
+}

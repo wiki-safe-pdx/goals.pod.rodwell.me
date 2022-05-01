@@ -1,0 +1,125 @@
+{
+  "title": "Archived Wiki",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "fb941a7316b89808",
+      "text": "Some sites that have been archived using dat."
+    },
+    {
+      "type": "markdown",
+      "id": "0d0de272fc0cf816",
+      "text": "**N.B.** These archived wiki don't currently load a wiki client, so their contents is only available via other wiki."
+    },
+    {
+      "type": "reference",
+      "id": "8b9fe31c8cf27bee",
+      "site": "journal-hapgood-net-paul90.hashbase.io",
+      "slug": "mike-caulfield",
+      "title": "Mike Caulfield",
+      "text": "Mike Caulfield is director of blended and networked learning at Washington State University Vancouver. (this is an archive copy of Mike's journal)"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Archived Wiki",
+        "story": []
+      },
+      "date": 1523477900104
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "fb941a7316b89808",
+        "text": "Some sites that have been archived using dat."
+      },
+      "id": "fb941a7316b89808",
+      "date": 1523477909912
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "reference",
+        "id": "8b9fe31c8cf27bee",
+        "site": "journal-hapgood-net-paul90.hashbase.io",
+        "slug": "mike-caulfield",
+        "title": "Mike Caulfield",
+        "text": "Mike Caulfield is director of blended and networked learning at Washington State University Vancouver. (this is an archive copy of Mike's journal)"
+      },
+      "after": "fb941a7316b89808",
+      "id": "8b9fe31c8cf27bee",
+      "date": 1523477914592
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "reference",
+        "id": "6761398a5f1e9375",
+        "site": "nrn-io-paul90.hashbase.io",
+        "slug": "nick-niemeir",
+        "title": "Nick Niemeir",
+        "text": "Nick is a JavaScript nerd, and contributor to [[Smallest Federated Wiki]].\n\nCheckout my introduction to [[JavaScript]] or the list of [[JavaScript Common Pitfalls]].\n"
+      },
+      "after": "8b9fe31c8cf27bee",
+      "id": "6761398a5f1e9375",
+      "date": 1523477917554
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0d0de272fc0cf816"
+      },
+      "id": "0d0de272fc0cf816",
+      "type": "add",
+      "after": "6761398a5f1e9375",
+      "date": 1537956566532
+    },
+    {
+      "type": "move",
+      "order": [
+        "fb941a7316b89808",
+        "0d0de272fc0cf816",
+        "8b9fe31c8cf27bee",
+        "6761398a5f1e9375"
+      ],
+      "id": "0d0de272fc0cf816",
+      "date": 1537956568666
+    },
+    {
+      "type": "edit",
+      "id": "0d0de272fc0cf816",
+      "item": {
+        "type": "markdown",
+        "id": "0d0de272fc0cf816",
+        "text": "**N.B.** These archived wiki don't currently load a wiki client, so their contents is only available via other wiki."
+      },
+      "date": 1537956638157
+    },
+    {
+      "type": "edit",
+      "id": "6761398a5f1e9375",
+      "item": {
+        "type": "reference",
+        "id": "6761398a5f1e9375",
+        "site": "nrn-io-paul90.hashbase.io",
+        "slug": "nick-niemeir",
+        "title": "Nick Niemeir",
+        "text": "\n"
+      },
+      "date": 1537957486437
+    },
+    {
+      "type": "remove",
+      "id": "6761398a5f1e9375",
+      "date": 1537957493668
+    },
+    {
+      "type": "fork",
+      "site": "forage.rodwell.me",
+      "date": 1537957509276
+    }
+  ]
+}

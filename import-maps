@@ -1,0 +1,663 @@
+{
+  "title": "Import Maps",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "5c1f83bbeaa54b01",
+      "text": "Import maps allow the behaviour of JavaScript imports to be controlled. In seran wiki this finds an initial use providing a way of pinning the version of an imported library in a central location. In the browser, import maps are an experimental technology, and at this time are only available in Chrome with an experimental features flag, and so are only accessible with a shim."
+    },
+    {
+      "type": "markdown",
+      "id": "024f9a19f19c0df2",
+      "text": "# In The Browser\n"
+    },
+    {
+      "type": "markdown",
+      "id": "537347f932603e3c",
+      "text": "Here I record some earlier thoughts, reimagined using import maps, on developing a next generation client for dat.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "5036fae10e0daf32",
+      "text": "While it is possible to import from services like [https://unpkg.com/ unpkg] or [https://www.pika.dev Pika], our aim is not to rely on external services as far as practical. So, following the example of Go and storing a copy of 3rd party packages locally for use. With a dat client implementation, it is likely that a dat containing these 3rd party packages will be mounted within the application's dat (most likely also pinned to a specific dat version).\n"
+    },
+    {
+      "type": "markdown",
+      "id": "4bae58a681723e5a",
+      "text": "There are some notes on achieving this manually elsewhere, but any manual process especially when it is likely to only be performed infrequently, is prone to errors. Far better to have some automated process.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "f33b4345262aced3",
+      "text": "One such tool is Snowpack.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "61131acb8ff5a38b",
+      "text": "My original look at using Web Components, and modules, was for a client running in Beaker Browser, and used LitElement. In the original example the common modules were vendored in one hyperdrive and that then mounted into the vendor directory of the app. This approach leads to some quite long paths for the location of the module, e.g."
+    },
+    {
+      "type": "code",
+      "id": "9fc03c415b9e1b60",
+      "text": "import { LitElement, html } from '/vendor/beaker-app-stdlib/vendor/lit-element/lit-element.js'"
+    },
+    {
+      "type": "markdown",
+      "id": "765208bf55eb071c",
+      "text": "While that is a long string, it does at least mean that the modules are local and we are not using a CDN. We can pin to a particular version of the modules by mounting a specific version of the hyperdrive.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "6f8ea328147658bd",
+      "text": "Using Snowpack provides a way of automating, and simplifying, the standard library vendor directory. We would have a package.json something like:"
+    },
+    {
+      "type": "code",
+      "id": "ade2a83010a41fe7",
+      "text": "{\n  \"dependencies\": {\n    \"lit-element\": \"^2.2.1\",\n    \"lit-html\": \"^1.1.2\"\n  },\n  \"snowpack\": {\n    \"installOptions\": {\n      \"dest\": \"vendor\",\n      \"clean\": true,\n      \"optimize\": true\n    }\n  }\n}"
+    },
+    {
+      "type": "markdown",
+      "id": "a7e782f7eddbf18e",
+      "text": "While this wouldn't shorten the long path in the import above, it does automate the process.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "e739c26a238cc13d",
+      "text": "But, Snowpack also generates an import map. Although import maps are experimental, and not supported widely yet, we can make use of es-module-shims to add support. This allows the import to be simplied to:"
+    },
+    {
+      "type": "code",
+      "id": "d4fef815e1065357",
+      "text": "import { LitElement, html } from 'lit-element'"
+    },
+    {
+      "type": "markdown",
+      "id": "0039dc9eb4d86139",
+      "text": "by modifying our loading html, for example:"
+    },
+    {
+      "type": "code",
+      "id": "1647838bf6fe70bc",
+      "text": "<!DOCTYPE html>\n<html>\n  <head>\n    ...\n    <script defer src=\"/vendor/es-module-shims.js\"></script>\n    <script type=\"importmap-shim\" src=\"/vendor/import-map.json\"></script>\n    ...\n  </head>\n  <body>\n    ...\n    <script type=\"module-shim\" src=\"/js/main.js\"></script>\n  </body>\n</html>\n\n"
+    },
+    {
+      "type": "markdown",
+      "id": "bbc3b842f04e6679",
+      "text": "# Future Investigations\n"
+    },
+    {
+      "type": "markdown",
+      "id": "a0899645a8a1403b",
+      "text": "There is mention in the documentation of being able to dynamically generate import maps. This might provide an alternative to the mechanism used for handling plugins in the dat variant of the client. [https://github.com/WICG/import-maps#dynamic-import-map-example link] "
+    },
+    {
+      "type": "markdown",
+      "id": "552b3d04482eefab",
+      "text": "# Further Reading\n\n- [https://www.snowpack.dev Snowpack] - installs npm dependencies as ES Modules.\n- [https://github.com/guybedford/es-module-shims es-module-shims] - provides a shim to add Import Maps support.\n- [https://wicg.github.io/import-maps/ Import Maps - W3C Draft]\n"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Import Maps",
+        "story": []
+      },
+      "date": 1584703556428
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5c1f83bbeaa54b01"
+      },
+      "id": "5c1f83bbeaa54b01",
+      "type": "add",
+      "date": 1584703568504
+    },
+    {
+      "type": "edit",
+      "id": "5c1f83bbeaa54b01",
+      "item": {
+        "type": "paragraph",
+        "id": "5c1f83bbeaa54b01",
+        "text": "Import maps allow the behaviour of JavaScript imports to be controlled. In serene wiki this finds an initial use providing a way of pinning the version of an imported library in a central location. In the browser, import maps are an experimental technology, and at this time are only available in Chrome with an experimental features flag, and so are only accessible with a shim."
+      },
+      "date": 1584705146683
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "552b3d04482eefab"
+      },
+      "id": "552b3d04482eefab",
+      "type": "add",
+      "after": "5c1f83bbeaa54b01",
+      "date": 1584705152130
+    },
+    {
+      "type": "edit",
+      "id": "552b3d04482eefab",
+      "item": {
+        "type": "markdown",
+        "id": "552b3d04482eefab",
+        "text": "*Further Reading*\n\n- [https://www.snowpack.dev Snowpack] - installs npm dependencies as ES Modules.\n- [https://github.com/guybedford/es-module-shims es-module-shims] - provides a shim to add Import Maps support\n- [https://wicg.github.io/import-maps/ Import Maps - W3C Draft]\n"
+      },
+      "date": 1584705192357
+    },
+    {
+      "type": "edit",
+      "id": "552b3d04482eefab",
+      "item": {
+        "type": "markdown",
+        "id": "552b3d04482eefab",
+        "text": "**Further Reading**\n\n- [https://www.snowpack.dev Snowpack] - installs npm dependencies as ES Modules.\n- [https://github.com/guybedford/es-module-shims es-module-shims] - provides a shim to add Import Maps support\n- [https://wicg.github.io/import-maps/ Import Maps - W3C Draft]\n"
+      },
+      "date": 1584705204770
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "024f9a19f19c0df2"
+      },
+      "id": "024f9a19f19c0df2",
+      "type": "add",
+      "after": "552b3d04482eefab",
+      "date": 1584705325699
+    },
+    {
+      "type": "edit",
+      "id": "024f9a19f19c0df2",
+      "item": {
+        "type": "markdown",
+        "id": "024f9a19f19c0df2",
+        "text": "## In The Browser"
+      },
+      "date": 1584705355908
+    },
+    {
+      "id": "024f9a19f19c0df2",
+      "type": "move",
+      "order": [
+        "5c1f83bbeaa54b01",
+        "024f9a19f19c0df2",
+        "552b3d04482eefab"
+      ],
+      "date": 1584705358156
+    },
+    {
+      "type": "edit",
+      "id": "552b3d04482eefab",
+      "item": {
+        "type": "markdown",
+        "id": "552b3d04482eefab",
+        "text": "## Further Reading\n\n- [https://www.snowpack.dev Snowpack] - installs npm dependencies as ES Modules.\n- [https://github.com/guybedford/es-module-shims es-module-shims] - provides a shim to add Import Maps support\n- [https://wicg.github.io/import-maps/ Import Maps - W3C Draft]\n"
+      },
+      "date": 1584705366659
+    },
+    {
+      "type": "edit",
+      "id": "024f9a19f19c0df2",
+      "item": {
+        "type": "markdown",
+        "id": "024f9a19f19c0df2",
+        "text": "# In The Browser"
+      },
+      "date": 1584705397540
+    },
+    {
+      "type": "edit",
+      "id": "552b3d04482eefab",
+      "item": {
+        "type": "markdown",
+        "id": "552b3d04482eefab",
+        "text": "# Further Reading\n\n- [https://www.snowpack.dev Snowpack] - installs npm dependencies as ES Modules.\n- [https://github.com/guybedford/es-module-shims es-module-shims] - provides a shim to add Import Maps support\n- [https://wicg.github.io/import-maps/ Import Maps - W3C Draft]\n"
+      },
+      "date": 1584705412691
+    },
+    {
+      "type": "edit",
+      "id": "024f9a19f19c0df2",
+      "item": {
+        "type": "markdown",
+        "id": "024f9a19f19c0df2",
+        "text": "# In The Browser\n"
+      },
+      "date": 1584706099095
+    },
+    {
+      "type": "add",
+      "id": "bbc3b842f04e6679",
+      "item": {
+        "type": "markdown",
+        "id": "bbc3b842f04e6679",
+        "text": "# Future Investigations"
+      },
+      "after": "024f9a19f19c0df2",
+      "date": 1584706113088
+    },
+    {
+      "type": "edit",
+      "id": "552b3d04482eefab",
+      "item": {
+        "type": "markdown",
+        "id": "552b3d04482eefab",
+        "text": "# Further Reading\n\n- [https://www.snowpack.dev Snowpack] - installs npm dependencies as ES Modules.\n- [https://github.com/guybedford/es-module-shims es-module-shims] - provides a shim to add Import Maps support.\n- [https://wicg.github.io/import-maps/ Import Maps - W3C Draft]\n"
+      },
+      "date": 1584706244905
+    },
+    {
+      "type": "edit",
+      "id": "bbc3b842f04e6679",
+      "item": {
+        "type": "markdown",
+        "id": "bbc3b842f04e6679",
+        "text": "# Future Investigations\n"
+      },
+      "date": 1584706336651
+    },
+    {
+      "type": "add",
+      "id": "a0899645a8a1403b",
+      "item": {
+        "type": "markdown",
+        "id": "a0899645a8a1403b",
+        "text": "There is mention in the documentation of being able to dynamically generate import maps. "
+      },
+      "after": "bbc3b842f04e6679",
+      "date": 1584706439812
+    },
+    {
+      "type": "edit",
+      "id": "a0899645a8a1403b",
+      "item": {
+        "type": "markdown",
+        "id": "a0899645a8a1403b",
+        "text": "There is mention in the documentation of being able to dynamically generate import maps. This might provide an alternative to the mechanism used for handling plugins in the dat variant of the client. [https://github.com/WICG/import-maps#dynamic-import-map-example link] "
+      },
+      "date": 1584706569830
+    },
+    {
+      "type": "add",
+      "id": "537347f932603e3c",
+      "item": {
+        "type": "markdown",
+        "id": "537347f932603e3c",
+        "text": "Here I record some earlier thoughts, reimagined using import maps, on developing a next generation client for dat.\n"
+      },
+      "after": "024f9a19f19c0df2",
+      "date": 1584904688535
+    },
+    {
+      "type": "add",
+      "id": "5036fae10e0daf32",
+      "item": {
+        "type": "markdown",
+        "id": "5036fae10e0daf32",
+        "text": "While it is possible to import from services like [https://unpkg.com/ unpkg] or [https://www.pika.dev Pika], our aim is not to rely on external services as far as practical. So, following the example of Go and storing a copy of 3rd party packages locally for use. With a dat client implementation, it is likely that a dat containing these 3rd party packages will be mounted within the application's dat (most likely also pinned to a specific dat version).\n"
+      },
+      "after": "537347f932603e3c",
+      "date": 1584904697355
+    },
+    {
+      "type": "add",
+      "id": "4bae58a681723e5a",
+      "item": {
+        "type": "markdown",
+        "id": "4bae58a681723e5a",
+        "text": "There are some notes on achieving this manually elsewhere, but any manual process especially when it is likely to only be performed infrequently, is prone to errors. Far better to have some automated process.\n"
+      },
+      "after": "5036fae10e0daf32",
+      "date": 1584904707519
+    },
+    {
+      "type": "add",
+      "id": "f33b4345262aced3",
+      "item": {
+        "type": "markdown",
+        "id": "f33b4345262aced3",
+        "text": "One such tool is Snowpack.\n"
+      },
+      "after": "4bae58a681723e5a",
+      "date": 1584904716458
+    },
+    {
+      "type": "add",
+      "id": "61131acb8ff5a38b",
+      "item": {
+        "type": "markdown",
+        "id": "61131acb8ff5a38b",
+        "text": "My original look at using Web Components, and modules, was for a client running in Beaker Browser, and used LitElement. In the original example the common modules were vendored in one hyperdrive and that then mounted into the vendor directory of the app. This approach leads to some quite long paths for the location of the module, e.g."
+      },
+      "after": "f33b4345262aced3",
+      "date": 1584904725467
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9fc03c415b9e1b60"
+      },
+      "id": "9fc03c415b9e1b60",
+      "type": "add",
+      "after": "552b3d04482eefab",
+      "date": 1584904731009
+    },
+    {
+      "id": "9fc03c415b9e1b60",
+      "type": "move",
+      "order": [
+        "5c1f83bbeaa54b01",
+        "024f9a19f19c0df2",
+        "537347f932603e3c",
+        "5036fae10e0daf32",
+        "4bae58a681723e5a",
+        "f33b4345262aced3",
+        "61131acb8ff5a38b",
+        "9fc03c415b9e1b60",
+        "bbc3b842f04e6679",
+        "a0899645a8a1403b",
+        "552b3d04482eefab"
+      ],
+      "date": 1584904734155
+    },
+    {
+      "type": "edit",
+      "id": "9fc03c415b9e1b60",
+      "item": {
+        "type": "code",
+        "id": "9fc03c415b9e1b60",
+        "text": "import { LitElement, html } from '/vendor/beaker-app-stdlib/vendor/lit-element/lit-element.js'"
+      },
+      "date": 1584904742474
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "765208bf55eb071c"
+      },
+      "id": "765208bf55eb071c",
+      "type": "add",
+      "after": "552b3d04482eefab",
+      "date": 1584904748115
+    },
+    {
+      "id": "765208bf55eb071c",
+      "type": "move",
+      "order": [
+        "5c1f83bbeaa54b01",
+        "024f9a19f19c0df2",
+        "537347f932603e3c",
+        "5036fae10e0daf32",
+        "4bae58a681723e5a",
+        "f33b4345262aced3",
+        "61131acb8ff5a38b",
+        "9fc03c415b9e1b60",
+        "765208bf55eb071c",
+        "bbc3b842f04e6679",
+        "a0899645a8a1403b",
+        "552b3d04482eefab"
+      ],
+      "date": 1584904751154
+    },
+    {
+      "type": "edit",
+      "id": "765208bf55eb071c",
+      "item": {
+        "type": "markdown",
+        "id": "765208bf55eb071c",
+        "text": "While that is a long string, it does at least mean that the modules are local and we are not using a CDN. We can pin to a particular version of the modules by mounting a specific version of the hyperdrive.\n"
+      },
+      "date": 1584904763516
+    },
+    {
+      "type": "add",
+      "id": "6f8ea328147658bd",
+      "item": {
+        "type": "markdown",
+        "id": "6f8ea328147658bd",
+        "text": "Using Snowpack provides a way of automating, and simplifying, the standard library vendor directory. We would have a package.json something like:"
+      },
+      "after": "765208bf55eb071c",
+      "date": 1584904770512
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ade2a83010a41fe7"
+      },
+      "id": "ade2a83010a41fe7",
+      "type": "add",
+      "after": "552b3d04482eefab",
+      "date": 1584904772274
+    },
+    {
+      "id": "ade2a83010a41fe7",
+      "type": "move",
+      "order": [
+        "5c1f83bbeaa54b01",
+        "024f9a19f19c0df2",
+        "537347f932603e3c",
+        "5036fae10e0daf32",
+        "4bae58a681723e5a",
+        "f33b4345262aced3",
+        "61131acb8ff5a38b",
+        "9fc03c415b9e1b60",
+        "765208bf55eb071c",
+        "6f8ea328147658bd",
+        "ade2a83010a41fe7",
+        "bbc3b842f04e6679",
+        "a0899645a8a1403b",
+        "552b3d04482eefab"
+      ],
+      "date": 1584904774321
+    },
+    {
+      "type": "edit",
+      "id": "ade2a83010a41fe7",
+      "item": {
+        "type": "code",
+        "id": "ade2a83010a41fe7",
+        "text": "{\n  \"dependencies\": {\n    \"lit-element\": \"^2.2.1\",\n    \"lit-html\": \"^1.1.2\"\n  },\n  \"snowpack\": {\n    \"installOptions\": {\n      \"dest\": \"vendor\",\n      \"clean\": true,\n      \"optimize\": true\n    }\n  }\n}"
+      },
+      "date": 1584904789712
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a7e782f7eddbf18e"
+      },
+      "id": "a7e782f7eddbf18e",
+      "type": "add",
+      "after": "552b3d04482eefab",
+      "date": 1584904795374
+    },
+    {
+      "id": "a7e782f7eddbf18e",
+      "type": "move",
+      "order": [
+        "5c1f83bbeaa54b01",
+        "024f9a19f19c0df2",
+        "537347f932603e3c",
+        "5036fae10e0daf32",
+        "4bae58a681723e5a",
+        "f33b4345262aced3",
+        "61131acb8ff5a38b",
+        "9fc03c415b9e1b60",
+        "765208bf55eb071c",
+        "6f8ea328147658bd",
+        "ade2a83010a41fe7",
+        "a7e782f7eddbf18e",
+        "bbc3b842f04e6679",
+        "a0899645a8a1403b",
+        "552b3d04482eefab"
+      ],
+      "date": 1584904797456
+    },
+    {
+      "type": "edit",
+      "id": "a7e782f7eddbf18e",
+      "item": {
+        "type": "markdown",
+        "id": "a7e782f7eddbf18e",
+        "text": "While this wouldn't shorten the long path in the import above, it does automate the process.\n"
+      },
+      "date": 1584904828248
+    },
+    {
+      "type": "add",
+      "id": "e739c26a238cc13d",
+      "item": {
+        "type": "markdown",
+        "id": "e739c26a238cc13d",
+        "text": "But, Snowpack also generates an import map. Although import maps are experimental, and not supported widely yet, we can make use of es-module-shims to add support. This allows the import to be simplied to:"
+      },
+      "after": "a7e782f7eddbf18e",
+      "date": 1584904833446
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d4fef815e1065357"
+      },
+      "id": "d4fef815e1065357",
+      "type": "add",
+      "after": "552b3d04482eefab",
+      "date": 1584904837540
+    },
+    {
+      "id": "d4fef815e1065357",
+      "type": "move",
+      "order": [
+        "5c1f83bbeaa54b01",
+        "024f9a19f19c0df2",
+        "537347f932603e3c",
+        "5036fae10e0daf32",
+        "4bae58a681723e5a",
+        "f33b4345262aced3",
+        "61131acb8ff5a38b",
+        "9fc03c415b9e1b60",
+        "765208bf55eb071c",
+        "6f8ea328147658bd",
+        "ade2a83010a41fe7",
+        "a7e782f7eddbf18e",
+        "e739c26a238cc13d",
+        "d4fef815e1065357",
+        "bbc3b842f04e6679",
+        "a0899645a8a1403b",
+        "552b3d04482eefab"
+      ],
+      "date": 1584904842220
+    },
+    {
+      "type": "edit",
+      "id": "d4fef815e1065357",
+      "item": {
+        "type": "code",
+        "id": "d4fef815e1065357",
+        "text": "import { LitElement, html } from 'lit-element'"
+      },
+      "date": 1584904853917
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0039dc9eb4d86139"
+      },
+      "id": "0039dc9eb4d86139",
+      "type": "add",
+      "after": "552b3d04482eefab",
+      "date": 1584904865267
+    },
+    {
+      "id": "0039dc9eb4d86139",
+      "type": "move",
+      "order": [
+        "5c1f83bbeaa54b01",
+        "024f9a19f19c0df2",
+        "537347f932603e3c",
+        "5036fae10e0daf32",
+        "4bae58a681723e5a",
+        "f33b4345262aced3",
+        "61131acb8ff5a38b",
+        "9fc03c415b9e1b60",
+        "765208bf55eb071c",
+        "6f8ea328147658bd",
+        "ade2a83010a41fe7",
+        "a7e782f7eddbf18e",
+        "e739c26a238cc13d",
+        "d4fef815e1065357",
+        "0039dc9eb4d86139",
+        "bbc3b842f04e6679",
+        "a0899645a8a1403b",
+        "552b3d04482eefab"
+      ],
+      "date": 1584904867677
+    },
+    {
+      "type": "edit",
+      "id": "0039dc9eb4d86139",
+      "item": {
+        "type": "markdown",
+        "id": "0039dc9eb4d86139",
+        "text": "by modifying our loading html, for example:"
+      },
+      "date": 1584904873084
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1647838bf6fe70bc"
+      },
+      "id": "1647838bf6fe70bc",
+      "type": "add",
+      "after": "552b3d04482eefab",
+      "date": 1584904875779
+    },
+    {
+      "id": "1647838bf6fe70bc",
+      "type": "move",
+      "order": [
+        "5c1f83bbeaa54b01",
+        "024f9a19f19c0df2",
+        "537347f932603e3c",
+        "5036fae10e0daf32",
+        "4bae58a681723e5a",
+        "f33b4345262aced3",
+        "61131acb8ff5a38b",
+        "9fc03c415b9e1b60",
+        "765208bf55eb071c",
+        "6f8ea328147658bd",
+        "ade2a83010a41fe7",
+        "a7e782f7eddbf18e",
+        "e739c26a238cc13d",
+        "d4fef815e1065357",
+        "0039dc9eb4d86139",
+        "1647838bf6fe70bc",
+        "bbc3b842f04e6679",
+        "a0899645a8a1403b",
+        "552b3d04482eefab"
+      ],
+      "date": 1584904878067
+    },
+    {
+      "type": "edit",
+      "id": "1647838bf6fe70bc",
+      "item": {
+        "type": "code",
+        "id": "1647838bf6fe70bc",
+        "text": "<!DOCTYPE html>\n<html>\n  <head>\n    ...\n    <script defer src=\"/vendor/es-module-shims.js\"></script>\n    <script type=\"importmap-shim\" src=\"/vendor/import-map.json\"></script>\n    ...\n  </head>\n  <body>\n    ...\n    <script type=\"module-shim\" src=\"/js/main.js\"></script>\n  </body>\n</html>\n\n"
+      },
+      "date": 1584904906363
+    },
+    {
+      "type": "edit",
+      "id": "5c1f83bbeaa54b01",
+      "item": {
+        "type": "paragraph",
+        "id": "5c1f83bbeaa54b01",
+        "text": "Import maps allow the behaviour of JavaScript imports to be controlled. In seran wiki this finds an initial use providing a way of pinning the version of an imported library in a central location. In the browser, import maps are an experimental technology, and at this time are only available in Chrome with an experimental features flag, and so are only accessible with a shim."
+      },
+      "date": 1585994493965
+    }
+  ]
+}

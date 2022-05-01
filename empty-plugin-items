@@ -1,0 +1,440 @@
+{
+  "title": "Empty Plugin Items",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "260dcec18abe818d",
+      "text": "Empty plugin items on a page present a usability trap to the unwary. Double clicking on an item opens the editor, and if the item is empty exiting the edit will remove the item from the page."
+    },
+    {
+      "type": "paragraph",
+      "id": "85798d4818e7256b",
+      "text": "A little command line that will count the number of items on plugin pages that don't have a text key."
+    },
+    {
+      "type": "code",
+      "id": "114121ff3cf31f99",
+      "text": "find wiki*/pages/* -exec echo {} \\; -exec jq '{story} | .[] | map(select(.text == null)) | length' {} \\;"
+    },
+    {
+      "type": "paragraph",
+      "id": "a296bdcabaabc8a2",
+      "text": "Removing the pages which don't have any items with a text key, gives us the following list:"
+    },
+    {
+      "type": "markdown",
+      "id": "593476ff727a9af4",
+      "text": "* [x] [[about-activity-plugin]]\n~~[[about-bars-plugin]]~~\n~~[[d3-bars]]~~\n~~[[local-changes]]~~\n~~[[local-editing]]~~\n~~[[submit-changes]]~~\n~~[[about-chart-plugin]]~~\n~~[[air-temperature]]~~\n~~[[garden-report]]~~\n~~[[about-factory-plugin]]~~\n~~[[about-flagmatic-plugin]]~~\n~~[[about-force-plugin]]~~\n~~[[about-line-plugin]]~~\n~~[[d3-line]]~~\n~~[[about-pushpin-plugin]]~~\n~~[[about-recycler-plugin]]~~\n~~[[recycled-pages]]~~\n~~[[about-scatter-plugin]]~~\n* [x] [[more-about-search-plugin]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "dc92f55c093adfe7",
+      "text": "Some of the pages this finds will need no action, they are struck out in the list, as the plug-in either doesn't react to a double click or does something other than opening an editor, e.g. [[About Line Plugin]] which contains a data and line plugin."
+    },
+    {
+      "type": "paragraph",
+      "id": "e70f70b7f9ceeed9",
+      "text": "The fix on [[About Activity Plugin]] is just a repeat of the fix we applied to [[Recent Changes]]."
+    },
+    {
+      "type": "pagefold",
+      "id": "ee7c0374988e86a3",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "5b033a865d8ab52e",
+      "text": "New version of both the activity and search plugin to help fix this usability problem have been published."
+    },
+    {
+      "type": "markdown",
+      "id": "1aa5f20021a6a1f2",
+      "text": "* activity - 0.4.7\n* search - 0.1.9"
+    },
+    {
+      "type": "plugmatic",
+      "id": "f7116c3cae8bb5b3",
+      "text": "wiki-plugin-activity\nwiki-plugin-search"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Empty Plugin Items",
+        "story": []
+      },
+      "date": 1626084830278
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "260dcec18abe818d"
+      },
+      "id": "260dcec18abe818d",
+      "type": "add",
+      "date": 1626084831136
+    },
+    {
+      "type": "edit",
+      "id": "260dcec18abe818d",
+      "item": {
+        "type": "paragraph",
+        "id": "260dcec18abe818d",
+        "text": "Empty plugin items on a page present a usability trap to the unwary. Double clicking on an item opens the editor, and if the item is empty exiting the edit will remove the item from the page."
+      },
+      "date": 1626084944871
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "114121ff3cf31f99"
+      },
+      "id": "114121ff3cf31f99",
+      "type": "add",
+      "after": "260dcec18abe818d",
+      "date": 1626202047327
+    },
+    {
+      "type": "edit",
+      "id": "114121ff3cf31f99",
+      "item": {
+        "type": "code",
+        "id": "114121ff3cf31f99",
+        "text": "find wiki*/pages/* -exec echo {} \\; -exec jq '{story} | .[] | map(select(.text == null)) | length' {} \\;"
+      },
+      "date": 1626202083098
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "85798d4818e7256b"
+      },
+      "id": "85798d4818e7256b",
+      "type": "add",
+      "after": "114121ff3cf31f99",
+      "date": 1626202091259
+    },
+    {
+      "id": "85798d4818e7256b",
+      "type": "move",
+      "order": [
+        "260dcec18abe818d",
+        "85798d4818e7256b",
+        "114121ff3cf31f99"
+      ],
+      "date": 1626202093726
+    },
+    {
+      "type": "edit",
+      "id": "85798d4818e7256b",
+      "item": {
+        "type": "paragraph",
+        "id": "85798d4818e7256b",
+        "text": "A little command line that will count the number of items on plugin pages that don't have a text key."
+      },
+      "date": 1626202178050
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dc92f55c093adfe7"
+      },
+      "id": "dc92f55c093adfe7",
+      "type": "add",
+      "after": "114121ff3cf31f99",
+      "date": 1626202368691
+    },
+    {
+      "type": "edit",
+      "id": "dc92f55c093adfe7",
+      "item": {
+        "type": "paragraph",
+        "id": "dc92f55c093adfe7",
+        "text": "Some of the pages this finds will need no action, as the plug-ins that have no text item can't be edited. "
+      },
+      "date": 1626202462909
+    },
+    {
+      "type": "edit",
+      "id": "dc92f55c093adfe7",
+      "item": {
+        "type": "paragraph",
+        "id": "dc92f55c093adfe7",
+        "text": "Some of the pages this finds will need no action, as the plug-ins that have no text item can't be edited, e.g. [[About Line Plugin]] which contains a data and line plugin."
+      },
+      "date": 1626202521626
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3bafce87fd563d8c"
+      },
+      "id": "3bafce87fd563d8c",
+      "type": "add",
+      "after": "dc92f55c093adfe7",
+      "date": 1626251212410
+    },
+    {
+      "type": "remove",
+      "id": "3bafce87fd563d8c",
+      "date": 1626251230464
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "593476ff727a9af4"
+      },
+      "id": "593476ff727a9af4",
+      "type": "add",
+      "after": "dc92f55c093adfe7",
+      "date": 1626251233080
+    },
+    {
+      "type": "edit",
+      "id": "593476ff727a9af4",
+      "item": {
+        "type": "code",
+        "id": "593476ff727a9af4",
+        "text": "wiki-plugin-activity/pages/about-activity-plugin\nwiki-plugin-bars/pages/about-bars-plugin\nwiki-plugin-bars/pages/d3-bars\nwiki-plugin-changes/pages/local-changes\nwiki-plugin-changes/pages/local-editing\nwiki-plugin-changes/pages/submit-changes\nwiki-plugin-chart/pages/about-chart-plugin\nwiki-plugin-chart/pages/air-temperature\nwiki-plugin-chart/pages/garden-report\nwiki-plugin-factory/pages/about-factory-plugin\nwiki-plugin-flagmatic/pages/about-flagmatic-plugin\nwiki-plugin-force/pages/about-force-plugin\nwiki-plugin-line/pages/about-line-plugin\nwiki-plugin-line/pages/d3-line\nwiki-plugin-pushpin/pages/about-pushpin-plugin\nwiki-plugin-radar/pages/growth-beyond-requirements\nwiki-plugin-radar/pages/top-carbon-emitters\nwiki-plugin-recycler/pages/about-recycler-plugin\nwiki-plugin-recycler/pages/recycled-pages\nwiki-plugin-scatter/pages/about-scatter-plugin\nwiki-plugin-search/pages/more-about-search-plugin"
+      },
+      "date": 1626251240376
+    },
+    {
+      "id": "593476ff727a9af4",
+      "type": "move",
+      "order": [
+        "260dcec18abe818d",
+        "85798d4818e7256b",
+        "114121ff3cf31f99",
+        "593476ff727a9af4",
+        "dc92f55c093adfe7"
+      ],
+      "date": 1626251247490
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a296bdcabaabc8a2"
+      },
+      "id": "a296bdcabaabc8a2",
+      "type": "add",
+      "after": "dc92f55c093adfe7",
+      "date": 1626251264447
+    },
+    {
+      "id": "a296bdcabaabc8a2",
+      "type": "move",
+      "order": [
+        "260dcec18abe818d",
+        "85798d4818e7256b",
+        "114121ff3cf31f99",
+        "a296bdcabaabc8a2",
+        "593476ff727a9af4",
+        "dc92f55c093adfe7"
+      ],
+      "date": 1626251266671
+    },
+    {
+      "type": "edit",
+      "id": "a296bdcabaabc8a2",
+      "item": {
+        "type": "paragraph",
+        "id": "a296bdcabaabc8a2",
+        "text": "Removing the pages which don't have "
+      },
+      "date": 1626252502040
+    },
+    {
+      "type": "edit",
+      "id": "593476ff727a9af4",
+      "item": {
+        "type": "factory",
+        "id": "593476ff727a9af4",
+        "text": "about-activity-plugin\nabout-bars-plugin\nd3-bars\nlocal-changes\nlocal-editing\nsubmit-changes\nabout-chart-plugin\nair-temperature\ngarden-report\nabout-factory-plugin\nabout-flagmatic-plugin\nabout-force-plugin\nabout-line-plugin\nd3-line\nabout-pushpin-plugin\ngrowth-beyond-requirements\ntop-carbon-emitters\nabout-recycler-plugin\nrecycled-pages\nabout-scatter-plugin\nmore-about-search-plugin"
+      },
+      "date": 1626253286261
+    },
+    {
+      "type": "edit",
+      "id": "593476ff727a9af4",
+      "item": {
+        "type": "markdown",
+        "id": "593476ff727a9af4",
+        "text": "[[about-activity-plugin]]\n[[about-bars-plugin]]\n[[d3-bars]]\n[[local-changes]]\n[[local-editing]]\n[[submit-changes]]\n[[about-chart-plugin]]\n[[air-temperature]]\n[[garden-report]]\n[[about-factory-plugin]]\n[[about-flagmatic-plugin]]\n[[about-force-plugin]]\n[[about-line-plugin]]\n[[d3-line]]\n[[about-pushpin-plugin]]\n[[growth-beyond-requirements]]\n[[top-carbon-emitters]]\n[[about-recycler-plugin]]\n[[recycled-pages]]\n[[about-scatter-plugin]]\n[[more-about-search-plugin]]"
+      },
+      "date": 1626253363550
+    },
+    {
+      "type": "edit",
+      "id": "a296bdcabaabc8a2",
+      "item": {
+        "type": "paragraph",
+        "id": "a296bdcabaabc8a2",
+        "text": "Removing the pages which don't have any items with a text key, gives us the following list:"
+      },
+      "date": 1626253433530
+    },
+    {
+      "type": "edit",
+      "id": "593476ff727a9af4",
+      "item": {
+        "type": "markdown",
+        "id": "593476ff727a9af4",
+        "text": "[[about-activity-plugin]]\n~~[[about-bars-plugin]]~~\n~~[[d3-bars]]~~\n~~[[local-changes]]~~\n~~[[local-editing]]~~\n~~[[submit-changes]]~~\n~~[[about-chart-plugin]]~~\n~~[[air-temperature]]~~\n~~[[garden-report]]~~\n~~[[about-factory-plugin]]~~\n~~[[about-flagmatic-plugin]]~~\n~~[[about-force-plugin]]~~\n~~[[about-line-plugin]]~~\n~~[[d3-line]]~~\n~~[[about-pushpin-plugin]]~~\n~~[[about-recycler-plugin]]~~\n~~[[recycled-pages]]~~\n~~[[about-scatter-plugin]]~~\n[[more-about-search-plugin]]"
+      },
+      "date": 1626342123510
+    },
+    {
+      "type": "edit",
+      "id": "dc92f55c093adfe7",
+      "item": {
+        "type": "paragraph",
+        "id": "dc92f55c093adfe7",
+        "text": "Some of the pages this finds will need no action, they are struck out in the list, as the plug-in either doesn't react to a double click or does something other than opening an editor, e.g. [[About Line Plugin]] which contains a data and line plugin."
+      },
+      "date": 1626342194627
+    },
+    {
+      "type": "add",
+      "id": "e70f70b7f9ceeed9",
+      "item": {
+        "type": "paragraph",
+        "id": "e70f70b7f9ceeed9",
+        "text": "The fix on [[About Activity Plugin]] is just a repeat of the fix we applied to [[Recent Changes]]."
+      },
+      "after": "dc92f55c093adfe7",
+      "date": 1626342470247
+    },
+    {
+      "type": "edit",
+      "id": "593476ff727a9af4",
+      "item": {
+        "type": "markdown",
+        "id": "593476ff727a9af4",
+        "text": "* [ ] [[about-activity-plugin]]\n~~[[about-bars-plugin]]~~\n~~[[d3-bars]]~~\n~~[[local-changes]]~~\n~~[[local-editing]]~~\n~~[[submit-changes]]~~\n~~[[about-chart-plugin]]~~\n~~[[air-temperature]]~~\n~~[[garden-report]]~~\n~~[[about-factory-plugin]]~~\n~~[[about-flagmatic-plugin]]~~\n~~[[about-force-plugin]]~~\n~~[[about-line-plugin]]~~\n~~[[d3-line]]~~\n~~[[about-pushpin-plugin]]~~\n~~[[about-recycler-plugin]]~~\n~~[[recycled-pages]]~~\n~~[[about-scatter-plugin]]~~\n* [ ] [[more-about-search-plugin]]"
+      },
+      "date": 1627897992050
+    },
+    {
+      "type": "edit",
+      "id": "593476ff727a9af4",
+      "item": {
+        "type": "markdown",
+        "id": "593476ff727a9af4",
+        "text": "* [x] [[about-activity-plugin]]\n~~[[about-bars-plugin]]~~\n~~[[d3-bars]]~~\n~~[[local-changes]]~~\n~~[[local-editing]]~~\n~~[[submit-changes]]~~\n~~[[about-chart-plugin]]~~\n~~[[air-temperature]]~~\n~~[[garden-report]]~~\n~~[[about-factory-plugin]]~~\n~~[[about-flagmatic-plugin]]~~\n~~[[about-force-plugin]]~~\n~~[[about-line-plugin]]~~\n~~[[d3-line]]~~\n~~[[about-pushpin-plugin]]~~\n~~[[about-recycler-plugin]]~~\n~~[[recycled-pages]]~~\n~~[[about-scatter-plugin]]~~\n* [ ] [[more-about-search-plugin]]"
+      },
+      "date": 1627898532116
+    },
+    {
+      "type": "edit",
+      "id": "593476ff727a9af4",
+      "item": {
+        "type": "markdown",
+        "id": "593476ff727a9af4",
+        "text": "* [x] [[about-activity-plugin]]\n~~[[about-bars-plugin]]~~\n~~[[d3-bars]]~~\n~~[[local-changes]]~~\n~~[[local-editing]]~~\n~~[[submit-changes]]~~\n~~[[about-chart-plugin]]~~\n~~[[air-temperature]]~~\n~~[[garden-report]]~~\n~~[[about-factory-plugin]]~~\n~~[[about-flagmatic-plugin]]~~\n~~[[about-force-plugin]]~~\n~~[[about-line-plugin]]~~\n~~[[d3-line]]~~\n~~[[about-pushpin-plugin]]~~\n~~[[about-recycler-plugin]]~~\n~~[[recycled-pages]]~~\n~~[[about-scatter-plugin]]~~\n* [x] [[more-about-search-plugin]]"
+      },
+      "date": 1627899007616
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ee7c0374988e86a3"
+      },
+      "id": "ee7c0374988e86a3",
+      "type": "add",
+      "after": "e70f70b7f9ceeed9",
+      "date": 1627899017485
+    },
+    {
+      "type": "edit",
+      "id": "ee7c0374988e86a3",
+      "item": {
+        "type": "pagefold",
+        "id": "ee7c0374988e86a3",
+        "text": "."
+      },
+      "date": 1627899024589
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5b033a865d8ab52e"
+      },
+      "id": "5b033a865d8ab52e",
+      "type": "add",
+      "after": "ee7c0374988e86a3",
+      "date": 1627899032874
+    },
+    {
+      "type": "edit",
+      "id": "5b033a865d8ab52e",
+      "item": {
+        "type": "paragraph",
+        "id": "5b033a865d8ab52e",
+        "text": "New version of both the activity and search plugin to help fix this usability problem have been published."
+      },
+      "date": 1627899076563
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1aa5f20021a6a1f2"
+      },
+      "id": "1aa5f20021a6a1f2",
+      "type": "add",
+      "after": "5b033a865d8ab52e",
+      "date": 1627899078719
+    },
+    {
+      "type": "edit",
+      "id": "1aa5f20021a6a1f2",
+      "item": {
+        "type": "markdown",
+        "id": "1aa5f20021a6a1f2",
+        "text": "* activity - "
+      },
+      "date": 1627899108034
+    },
+    {
+      "type": "edit",
+      "id": "1aa5f20021a6a1f2",
+      "item": {
+        "type": "markdown",
+        "id": "1aa5f20021a6a1f2",
+        "text": "* activity - 0.4.7"
+      },
+      "date": 1627899126827
+    },
+    {
+      "type": "edit",
+      "id": "1aa5f20021a6a1f2",
+      "item": {
+        "type": "markdown",
+        "id": "1aa5f20021a6a1f2",
+        "text": "* activity - 0.4.7\n* search - 0.1.9"
+      },
+      "date": 1627899174639
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f7116c3cae8bb5b3"
+      },
+      "id": "f7116c3cae8bb5b3",
+      "type": "add",
+      "after": "1aa5f20021a6a1f2",
+      "date": 1627900704606
+    },
+    {
+      "type": "edit",
+      "id": "f7116c3cae8bb5b3",
+      "item": {
+        "type": "plugmatic",
+        "id": "f7116c3cae8bb5b3",
+        "text": "wiki-plugin-activity\nwiki-plugin-search"
+      },
+      "date": 1627900725242
+    }
+  ]
+}

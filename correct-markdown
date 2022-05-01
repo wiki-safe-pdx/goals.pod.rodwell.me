@@ -1,0 +1,580 @@
+{
+  "title": "Correct Markdown",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "91bdbd615fb2ce5c",
+      "text": "Markdown collects a handful of internet news group conventions as a counterpoint to the at one time simple but still unattractive html markup. Wiki markdown borrows some of these in order to render styles appropriate to its narrow anti-paper pages. This much it should do well."
+    },
+    {
+      "type": "paragraph",
+      "id": "86cb2ce1b34984ba",
+      "text": "Github's free pages has made their flavor of markdown popular among documentation authors. Github actually offers two flavors of markdown depending on whether the rendering is tightly connected to their database backend or not. We use their checklists to show off our persistence."
+    },
+    {
+      "type": "paragraph",
+      "id": "57e5cd3d70a73a25",
+      "text": "See [[Mixed Content]] where we motivate our use of plugins."
+    },
+    {
+      "type": "markdown",
+      "id": "20ea6a5e8bb6a177",
+      "text": "# Deviations"
+    },
+    {
+      "type": "paragraph",
+      "id": "ae2e2190dc23387e",
+      "text": "We intentionally limit our flavor of markdown in order to discourage elaborate page layout. Complex presentation interferes with sharing and subsequent refactoring."
+    },
+    {
+      "type": "paragraph",
+      "id": "022a1cfdff4647ba",
+      "text": "We limit heading size to one size."
+    },
+    {
+      "type": "paragraph",
+      "id": "685561ec39f59397",
+      "text": "We limit bullet depth to one deep."
+    },
+    {
+      "type": "paragraph",
+      "id": "7a6e1f356b13e5bd",
+      "text": "We limit paragraphs to one paragraph."
+    },
+    {
+      "type": "paragraph",
+      "id": "66e5420946c009a2",
+      "text": "We encode links with wiki notation and semantics."
+    },
+    {
+      "type": "paragraph",
+      "id": "ffdf4fb6829285d5",
+      "text": "We defer images to the image plugin."
+    },
+    {
+      "type": "paragraph",
+      "id": "79b14b05d48ab984",
+      "text": "We defer tables to the html plugin."
+    },
+    {
+      "type": "markdown",
+      "id": "07b45e48e6539c6c",
+      "text": "# Deficiencies"
+    },
+    {
+      "type": "paragraph",
+      "id": "0705f6de00322933",
+      "text": "Our implementation translates markdown to html one line at a time. This hinders translation to html markup that encloses other markup."
+    },
+    {
+      "type": "paragraph",
+      "id": "5c2ea180448f748e",
+      "text": "We don't wrap bullet lists with necessary markup to have them rendered properly in all browsers."
+    },
+    {
+      "type": "paragraph",
+      "id": "6569c10fbba72a04",
+      "text": "We don't attempt to recognize block quotes."
+    },
+    {
+      "type": "paragraph",
+      "id": "a8cbd9efe270dca7",
+      "text": "We squash blank lines which would normally separate markdown paragraphs but don't support the split/join interpretation of enter/delete keystrokes that would provide a substitute."
+    },
+    {
+      "type": "markdown",
+      "id": "3577d60059308029",
+      "text": "# Implementation"
+    },
+    {
+      "type": "paragraph",
+      "id": "43abdb591225ea98",
+      "text": "Numerous markdown to html translators exist in the open source. Some of these are modular or pluggable recognizing the desire of implementers to flavor the translation."
+    },
+    {
+      "type": "paragraph",
+      "id": "a317b61bee8d727d",
+      "text": "Paul has configured one translator to handle wiki conventions for links and maybe other notations. This increment on a featureful implementation is more likely to satisfy a markdown-only author than the from a blank slate implementation we currently have."
+    },
+    {
+      "type": "paragraph",
+      "id": "e04228450d5304c7",
+      "text": "Paul has also suggested round-trip translation from and to the notation of the editor's preference. An html subset or equivalent would be the interchange format. This could be tested in isolation but this alone would defeat the universal intention of the suggestion."
+    },
+    {
+      "type": "pagefold",
+      "id": "c39443e22c3f80e8",
+      "text": "thoughts (Paul)"
+    },
+    {
+      "type": "paragraph",
+      "id": "e8e75d2f6d5ff535",
+      "text": "The current wiki editor will not break markdown text into multiple markdown items. It would be good to create a new markdown item when `enter` is pressed twice. This would mimic the behaviour seen with paragraph items, and not require either using the factory for the creation of each new item or writing as paragraph items and shift+clicking to convert to markdown."
+    },
+    {
+      "type": "paragraph",
+      "id": "ad3e7b71284db050",
+      "text": "The react base wiki reader used showdown to provide the rendering for the markdown plugin. It used an extention to handle wiki links, but this should not be needed in the current client as we already have code to handle links."
+    },
+    {
+      "type": "paragraph",
+      "id": "eb9d2b9c1faf6644",
+      "text": "Currently not sure which is the best markdown renderer to use."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Correct Markdown",
+        "story": []
+      },
+      "date": 1508762941088
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "91bdbd615fb2ce5c"
+      },
+      "id": "91bdbd615fb2ce5c",
+      "type": "add",
+      "date": 1508762947007
+    },
+    {
+      "type": "edit",
+      "id": "91bdbd615fb2ce5c",
+      "item": {
+        "type": "paragraph",
+        "id": "91bdbd615fb2ce5c",
+        "text": "Markdown collects a handful of internet news group conventions as a counterpoint to the at one time simple but still unattractive html markup. Wiki markdown borrows some of these in order to render styles appropriate to its narrow anti-paper pages. This much at least it should do well."
+      },
+      "date": 1508763245710
+    },
+    {
+      "type": "edit",
+      "id": "91bdbd615fb2ce5c",
+      "item": {
+        "type": "paragraph",
+        "id": "91bdbd615fb2ce5c",
+        "text": "Markdown collects a handful of internet news group conventions as a counterpoint to the at one time simple but still unattractive html markup. Wiki markdown borrows some of these in order to render styles appropriate to its narrow anti-paper pages. This much it should do well."
+      },
+      "date": 1508763258646
+    },
+    {
+      "type": "add",
+      "id": "86cb2ce1b34984ba",
+      "item": {
+        "type": "paragraph",
+        "id": "86cb2ce1b34984ba",
+        "text": "Github's free pages has made their flavor of markdown popular among documentation authors. Github actually offers two flavors of markdown depending on whether the rendering is tightly connected to their database backend or not. We borrow checklists from github to show off our persistence."
+      },
+      "after": "91bdbd615fb2ce5c",
+      "date": 1508763546887
+    },
+    {
+      "type": "edit",
+      "id": "86cb2ce1b34984ba",
+      "item": {
+        "type": "paragraph",
+        "id": "86cb2ce1b34984ba",
+        "text": "Github's free pages has made their flavor of markdown popular among documentation authors. Github actually offers two flavors of markdown depending on whether the rendering is tightly connected to their database backend or not. We borrow their checklists to show off our persistence."
+      },
+      "date": 1508763570843
+    },
+    {
+      "type": "edit",
+      "id": "86cb2ce1b34984ba",
+      "item": {
+        "type": "paragraph",
+        "id": "86cb2ce1b34984ba",
+        "text": "Github's free pages has made their flavor of markdown popular among documentation authors. Github actually offers two flavors of markdown depending on whether the rendering is tightly connected to their database backend or not. We use their checklists to show off our persistence."
+      },
+      "date": 1508763591402
+    },
+    {
+      "type": "add",
+      "id": "20ea6a5e8bb6a177",
+      "item": {
+        "type": "paragraph",
+        "id": "20ea6a5e8bb6a177",
+        "text": "# Deviations"
+      },
+      "after": "86cb2ce1b34984ba",
+      "date": 1508763686057
+    },
+    {
+      "type": "add",
+      "id": "ae2e2190dc23387e",
+      "item": {
+        "type": "paragraph",
+        "id": "ae2e2190dc23387e",
+        "text": "We intentionally limit our flavor of markdown in order to discourage elaborate page layout. Complex presentation interferes with sharing and subsequent refactoring."
+      },
+      "after": "20ea6a5e8bb6a177",
+      "date": 1508764009160
+    },
+    {
+      "type": "add",
+      "id": "022a1cfdff4647ba",
+      "item": {
+        "type": "paragraph",
+        "id": "022a1cfdff4647ba",
+        "text": "We limit heading size to one size."
+      },
+      "after": "ae2e2190dc23387e",
+      "date": 1508764040802
+    },
+    {
+      "type": "add",
+      "id": "685561ec39f59397",
+      "item": {
+        "type": "paragraph",
+        "id": "685561ec39f59397",
+        "text": "We limit bullet depth to one deep."
+      },
+      "after": "022a1cfdff4647ba",
+      "date": 1508764103808
+    },
+    {
+      "type": "add",
+      "id": "0676a4292eacd451",
+      "item": {
+        "type": "paragraph",
+        "id": "0676a4292eacd451",
+        "text": "We limit heading notation to one notation."
+      },
+      "after": "685561ec39f59397",
+      "date": 1508764120152
+    },
+    {
+      "type": "add",
+      "id": "7a6e1f356b13e5bd",
+      "item": {
+        "type": "paragraph",
+        "id": "7a6e1f356b13e5bd",
+        "text": "We limit paragraphs to one paragraph."
+      },
+      "after": "0676a4292eacd451",
+      "date": 1508764189008
+    },
+    {
+      "type": "remove",
+      "id": "0676a4292eacd451",
+      "date": 1508764193932
+    },
+    {
+      "type": "add",
+      "id": "66e5420946c009a2",
+      "item": {
+        "type": "paragraph",
+        "id": "66e5420946c009a2",
+        "text": "We encode links with wiki notation and semantics."
+      },
+      "after": "7a6e1f356b13e5bd",
+      "date": 1508764227682
+    },
+    {
+      "type": "add",
+      "id": "ffdf4fb6829285d5",
+      "item": {
+        "type": "paragraph",
+        "id": "ffdf4fb6829285d5",
+        "text": "We defer images to the image plugin."
+      },
+      "after": "66e5420946c009a2",
+      "date": 1508764309321
+    },
+    {
+      "type": "add",
+      "id": "79b14b05d48ab984",
+      "item": {
+        "type": "paragraph",
+        "id": "79b14b05d48ab984",
+        "text": "We defer tables to the html plugin."
+      },
+      "after": "ffdf4fb6829285d5",
+      "date": 1508764367175
+    },
+    {
+      "type": "edit",
+      "id": "20ea6a5e8bb6a177",
+      "item": {
+        "type": "markdown",
+        "id": "20ea6a5e8bb6a177",
+        "text": "# Deviations"
+      },
+      "date": 1508764376385
+    },
+    {
+      "type": "add",
+      "id": "07b45e48e6539c6c",
+      "item": {
+        "type": "paragraph",
+        "id": "07b45e48e6539c6c",
+        "text": "# Deficiencies"
+      },
+      "after": "79b14b05d48ab984",
+      "date": 1508764455331
+    },
+    {
+      "type": "add",
+      "id": "5c2ea180448f748e",
+      "item": {
+        "type": "paragraph",
+        "id": "5c2ea180448f748e",
+        "text": "We don't wrap bullet lists with necessary markup to have them rendered properly in all browsers."
+      },
+      "after": "07b45e48e6539c6c",
+      "date": 1508764557089
+    },
+    {
+      "type": "add",
+      "id": "6569c10fbba72a04",
+      "item": {
+        "type": "paragraph",
+        "id": "6569c10fbba72a04",
+        "text": "We don't attempt to recognize block quotes."
+      },
+      "after": "5c2ea180448f748e",
+      "date": 1508764626974
+    },
+    {
+      "type": "edit",
+      "id": "07b45e48e6539c6c",
+      "item": {
+        "type": "markdown",
+        "id": "07b45e48e6539c6c",
+        "text": "# Deficiencies"
+      },
+      "date": 1508764631154
+    },
+    {
+      "type": "add",
+      "id": "0705f6de00322933",
+      "item": {
+        "type": "paragraph",
+        "id": "0705f6de00322933",
+        "text": "Our implementation translates markdown to html one line at a time. This hinders translation to html markup that encloses other markup."
+      },
+      "after": "6569c10fbba72a04",
+      "date": 1508764753954
+    },
+    {
+      "type": "move",
+      "order": [
+        "91bdbd615fb2ce5c",
+        "86cb2ce1b34984ba",
+        "20ea6a5e8bb6a177",
+        "ae2e2190dc23387e",
+        "022a1cfdff4647ba",
+        "685561ec39f59397",
+        "7a6e1f356b13e5bd",
+        "66e5420946c009a2",
+        "ffdf4fb6829285d5",
+        "79b14b05d48ab984",
+        "07b45e48e6539c6c",
+        "0705f6de00322933",
+        "5c2ea180448f748e",
+        "6569c10fbba72a04"
+      ],
+      "id": "0705f6de00322933",
+      "date": 1508764757447
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "57e5cd3d70a73a25",
+        "text": "See [[Mixed Content]] where we motivate our use of plugins."
+      },
+      "after": "86cb2ce1b34984ba",
+      "id": "57e5cd3d70a73a25",
+      "date": 1508764868227
+    },
+    {
+      "type": "add",
+      "id": "3577d60059308029",
+      "item": {
+        "type": "paragraph",
+        "id": "3577d60059308029",
+        "text": "# Interpretation"
+      },
+      "after": "6569c10fbba72a04",
+      "date": 1508765084461
+    },
+    {
+      "type": "edit",
+      "id": "3577d60059308029",
+      "item": {
+        "type": "paragraph",
+        "id": "3577d60059308029",
+        "text": "# Implementation"
+      },
+      "date": 1508765108069
+    },
+    {
+      "type": "add",
+      "id": "43abdb591225ea98",
+      "item": {
+        "type": "paragraph",
+        "id": "43abdb591225ea98",
+        "text": "Numerous markdown to html translators exist in the open source. Some of these are modular or pluggable recognizing the desire of implementers to flavor the translation."
+      },
+      "after": "3577d60059308029",
+      "date": 1508765278208
+    },
+    {
+      "type": "add",
+      "id": "a317b61bee8d727d",
+      "item": {
+        "type": "paragraph",
+        "id": "a317b61bee8d727d",
+        "text": "Paul has configured one translator to handle wiki conventions for links and maybe other notations. This increment on a featureful implementation is more likely to satisfy a markdown-only author than the from a blank slate implementation we currently have."
+      },
+      "after": "43abdb591225ea98",
+      "date": 1508765592150
+    },
+    {
+      "type": "add",
+      "id": "e04228450d5304c7",
+      "item": {
+        "type": "paragraph",
+        "id": "e04228450d5304c7",
+        "text": "Paul has also suggested round-trip translation from and to the notation of the editor's preference. An html subset or equivalent would be the interchange format. This could be tested in isolation but this alone would defeat the universal intention of the suggestion."
+      },
+      "after": "a317b61bee8d727d",
+      "date": 1508765802284
+    },
+    {
+      "type": "edit",
+      "id": "3577d60059308029",
+      "item": {
+        "type": "markdown",
+        "id": "3577d60059308029",
+        "text": "# Implementation"
+      },
+      "date": 1508765806519
+    },
+    {
+      "type": "add",
+      "id": "a8cbd9efe270dca7",
+      "item": {
+        "type": "paragraph",
+        "id": "a8cbd9efe270dca7",
+        "text": "We squash blank lines which would normally separate paragraphs but don't support the split/join interpretation of enter/delete keystrokes."
+      },
+      "after": "6569c10fbba72a04",
+      "date": 1508766265305
+    },
+    {
+      "type": "edit",
+      "id": "a8cbd9efe270dca7",
+      "item": {
+        "type": "paragraph",
+        "id": "a8cbd9efe270dca7",
+        "text": "We squash blank lines which would normally separate markdown paragraphs but don't support the split/join interpretation of enter/delete keystrokes that could substitute."
+      },
+      "date": 1508766356308
+    },
+    {
+      "type": "edit",
+      "id": "a8cbd9efe270dca7",
+      "item": {
+        "type": "paragraph",
+        "id": "a8cbd9efe270dca7",
+        "text": "We squash blank lines which would normally separate markdown paragraphs but don't support the split/join interpretation of enter/delete keystrokes that would provide a substitute."
+      },
+      "date": 1508766380328
+    },
+    {
+      "type": "fork",
+      "site": "ward.asia.wiki.org"
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c39443e22c3f80e8"
+      },
+      "id": "c39443e22c3f80e8",
+      "type": "add",
+      "after": "e04228450d5304c7",
+      "date": 1508772934262
+    },
+    {
+      "type": "edit",
+      "id": "c39443e22c3f80e8",
+      "item": {
+        "type": "pagefold",
+        "id": "c39443e22c3f80e8",
+        "text": "thoughts (Paul)"
+      },
+      "date": 1508772953455
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e8e75d2f6d5ff535"
+      },
+      "id": "e8e75d2f6d5ff535",
+      "type": "add",
+      "after": "c39443e22c3f80e8",
+      "date": 1508772955914
+    },
+    {
+      "type": "edit",
+      "id": "e8e75d2f6d5ff535",
+      "item": {
+        "type": "paragraph",
+        "id": "e8e75d2f6d5ff535",
+        "text": "The current wiki editor will not break markdown text into multiple markdown items. It would be good to create a new markdown item when `enter` is pressed twice. This would mimic the behaviour seen with paragraph items, and not require either using the factory for the creation of each new item or writing as paragraph items and shift+clicking to convert to markdown."
+      },
+      "date": 1508773331813
+    },
+    {
+      "type": "add",
+      "id": "ad3e7b71284db050",
+      "item": {
+        "type": "paragraph",
+        "id": "ad3e7b71284db050",
+        "text": "The react base wiki reader used showdown to provide the rendering for the markdown plugin. It used an extention to handle wiki links, but this should not be needed in the current client as we already have code to handle links."
+      },
+      "after": "e8e75d2f6d5ff535",
+      "date": 1508773529419
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f879b3cbda3321ad"
+      },
+      "id": "f879b3cbda3321ad",
+      "type": "add",
+      "after": "ad3e7b71284db050",
+      "date": 1508773819947
+    },
+    {
+      "type": "remove",
+      "id": "f879b3cbda3321ad",
+      "date": 1508773861253
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "eb9d2b9c1faf6644"
+      },
+      "id": "eb9d2b9c1faf6644",
+      "type": "add",
+      "after": "ad3e7b71284db050",
+      "date": 1508774834819
+    },
+    {
+      "type": "edit",
+      "id": "eb9d2b9c1faf6644",
+      "item": {
+        "type": "paragraph",
+        "id": "eb9d2b9c1faf6644",
+        "text": "Currently not sure which is the best markdown renderer to use."
+      },
+      "date": 1508775009682
+    }
+  ]
+}

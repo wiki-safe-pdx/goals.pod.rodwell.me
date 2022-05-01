@@ -1,0 +1,470 @@
+{
+  "title": "Smallest Wiki Revisited",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "19455a65d7631117",
+      "text": "Here I will record my notes, and progress, with a minimally different version of the `Smallest Wiki Revisited` client that will work on Hypercore Protocol (specifically Hyperdrive) in Beaker Browser."
+    },
+    {
+      "type": "paragraph",
+      "id": "49aef84529e18716",
+      "text": "Just to make life interesting, currently there are multiple parallel developments ongoing. As well as the notes below, also see [[Small Wiki]] - other experiments are likely to follow."
+    },
+    {
+      "type": "paragraph",
+      "id": "8317f782945008d0",
+      "text": "This is all based on Smallest Wiki, and the implementation in shared in [[Public Assets]] there."
+    },
+    {
+      "type": "reference",
+      "id": "b119db7477e3026e",
+      "site": "small.fed.wiki",
+      "slug": "smallest-wiki-explained",
+      "title": "Smallest Wiki Explained",
+      "text": "We imagine two files to make a read only wiki: host and view. We supplement this with two more files for authoring: edit and update. [https://github.com/WardCunningham/assets/tree/master/pages/smallest-wiki-revisited github]"
+    },
+    {
+      "type": "markdown",
+      "id": "40854f5f59ed9a07",
+      "text": "# Getting Started"
+    },
+    {
+      "type": "markdown",
+      "id": "716bbae211a3fcac",
+      "text": "Tools required:\n* [https://beakerbrowser.com/ Beaker Browser]\n* [https://hypercore-protocol.org/guides/hyp/ Hypercore CLI]\n* a code editor - although we could just use the editor in Beaker Browser."
+    },
+    {
+      "type": "markdown",
+      "id": "3dae33211fcd575e",
+      "text": "**Initial setup:**"
+    },
+    {
+      "type": "markdown",
+      "id": "5097252ca7d2728c",
+      "text": "You can follow along, by looking at the commit history on [https://github.com/paul90/smallest-wiki-revisited github]."
+    },
+    {
+      "type": "markdown",
+      "id": "bbb44710248ea9f1",
+      "text": "We only need `view.js` from [[Public Assets]], as we will not be running a server. From this the stylesheet is extracted out to `./style.css`, we will need an extra style to turn off the horizontal scrollbar on the lineup. And add an `index.html` to load both the view code and stylesheet.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "640a066a8ddb76b7",
+      "text": "To this we add a flag, some wiki pages and associated sitemap. As with the hyperdrive version of wiki we will place the wiki in `/wiki` so we don't need to guard against clobbering the hyperdrive manifest in `index.json`.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "a2e272e5aae88357",
+      "text": "In `view.js`, there is code to fetch pages in two places, and construct the URL for the favicon. These all assume that all resources will be using the same protocol as the origin. To escape that restriction, we split out the `resolveURL()`, and construct a URL with the appropriate protocol when that differs from the origin URL. We also add insertion of `/wiki` in the path when getting wiki pages from a Hyperdrive.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "844956951c24cc26",
+      "text": "In the git repo this is that what we have at commit [https://github.com/paul90/smallest-wiki-revisited/tree/cdda18592993d299724e0d5ce84797ef693387d0 cdda185929]."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Smallest Wiki Revisited",
+        "story": []
+      },
+      "date": 1608737663211
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "19455a65d7631117",
+        "text": "Here I will record my notes, and progress, with a minimally different version of the `Smallest Wiki Revisited` client that will work on Hypercore Protocol (specifically Hyperdrive) in Beaker Browser."
+      },
+      "id": "19455a65d7631117",
+      "type": "add",
+      "date": 1608978646056
+    },
+    {
+      "type": "edit",
+      "id": "19455a65d7631117",
+      "item": {
+        "type": "paragraph",
+        "id": "19455a65d7631117",
+        "text": "Here I will record my notes, and progress, with a minimally different version of the `Smallest Wiki Revisited` client that will work on Hypercore Protocol (specifically Hyperdrive) in Beaker Browser."
+      },
+      "date": 1608978866190
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "8317f782945008d0",
+        "text": "This is all based on Smallest Wiki, and the implementation in shared in [[Public Assets]] there."
+      },
+      "id": "8317f782945008d0",
+      "type": "add",
+      "after": "19455a65d7631117",
+      "date": 1608979721479
+    },
+    {
+      "type": "edit",
+      "id": "8317f782945008d0",
+      "item": {
+        "type": "paragraph",
+        "id": "8317f782945008d0",
+        "text": "This is all based on Smallest Wiki, and the implementation in shared in [[Public Assets]] there."
+      },
+      "date": 1608979832017
+    },
+    {
+      "item": {
+        "type": "reference",
+        "id": "b119db7477e3026e",
+        "site": "small.fed.wiki",
+        "slug": "smallest-wiki-explained",
+        "title": "Smallest Wiki Explained",
+        "text": "We imagine two files to make a read only wiki: host and view. We supplement this with two more files for authoring: edit and update. [https://github.com/WardCunningham/assets/tree/master/pages/smallest-wiki-revisited github]"
+      },
+      "id": "b119db7477e3026e",
+      "type": "add",
+      "after": "8317f782945008d0",
+      "date": 1608979871328
+    },
+    {
+      "type": "edit",
+      "id": "b119db7477e3026e",
+      "item": {
+        "type": "reference",
+        "id": "b119db7477e3026e",
+        "site": "small.fed.wiki",
+        "slug": "smallest-wiki-explained",
+        "title": "Smallest Wiki Explained",
+        "text": "We imagine two files to make a read only wiki: host and view. We supplement this with two more files for authoring: edit and update. [https://github.com/WardCunningham/assets/tree/master/pages/smallest-wiki-revisited github]"
+      },
+      "date": 1608979881767
+    },
+    {
+      "type": "edit",
+      "id": "8317f782945008d0",
+      "item": {
+        "type": "paragraph",
+        "id": "8317f782945008d0",
+        "text": "This is all based on Smallest Wiki, and the implementation in shared in [[Public Assets]] there."
+      },
+      "date": 1608979946703
+    },
+    {
+      "type": "edit",
+      "id": "8317f782945008d0",
+      "item": {
+        "type": "paragraph",
+        "id": "8317f782945008d0",
+        "text": "This is all based on Smallest Wiki, and the implementation in shared in [[Public Assets]] there."
+      },
+      "date": 1608979975126
+    },
+    {
+      "item": {
+        "type": "markdown",
+        "id": "40854f5f59ed9a07",
+        "text": "# Getting Started"
+      },
+      "id": "40854f5f59ed9a07",
+      "type": "add",
+      "after": "b119db7477e3026e",
+      "date": 1608980021723
+    },
+    {
+      "type": "edit",
+      "id": "40854f5f59ed9a07",
+      "item": {
+        "type": "markdown",
+        "id": "40854f5f59ed9a07",
+        "text": "# Getting Started"
+      },
+      "date": 1608980307012
+    },
+    {
+      "item": {
+        "type": "markdown",
+        "id": "716bbae211a3fcac",
+        "text": "Tools required:\n* [https://beakerbrowser.com/ Beaker Browser]\n* [https://hypercore-protocol.org/guides/hyp/ Hypercore CLI]\n* code editor - although we could just use the editor in Beaker Browser."
+      },
+      "id": "716bbae211a3fcac",
+      "type": "add",
+      "after": "40854f5f59ed9a07",
+      "date": 1608980312638
+    },
+    {
+      "type": "edit",
+      "id": "716bbae211a3fcac",
+      "item": {
+        "type": "markdown",
+        "id": "716bbae211a3fcac",
+        "text": "Tools required:\n* [https://beakerbrowser.com/ Beaker Browser]\n* [https://hypercore-protocol.org/guides/hyp/ Hypercore CLI]\n* code editor - although we could just use the editor in Beaker Browser."
+      },
+      "date": 1608980407725
+    },
+    {
+      "type": "edit",
+      "id": "716bbae211a3fcac",
+      "item": {
+        "type": "markdown",
+        "id": "716bbae211a3fcac",
+        "text": "Tools required:\n* [https://beakerbrowser.com/ Beaker Browser]\n* [https://hypercore-protocol.org/guides/hyp/ Hypercore CLI]\n* code editor - although we could just use the editor in Beaker Browser."
+      },
+      "date": 1608980473597
+    },
+    {
+      "type": "edit",
+      "id": "716bbae211a3fcac",
+      "item": {
+        "type": "markdown",
+        "id": "716bbae211a3fcac",
+        "text": "Tools required:\n* [https://beakerbrowser.com/ Beaker Browser]\n* [https://hypercore-protocol.org/guides/hyp/ Hypercore CLI]\n* code editor - although we could just use the editor in Beaker Browser."
+      },
+      "date": 1608980598295
+    },
+    {
+      "type": "edit",
+      "id": "716bbae211a3fcac",
+      "item": {
+        "type": "markdown",
+        "id": "716bbae211a3fcac",
+        "text": "Tools required:\n* [https://beakerbrowser.com/ Beaker Browser]\n* [https://hypercore-protocol.org/guides/hyp/ Hypercore CLI]\n* code editor - although we could just use the editor in Beaker Browser."
+      },
+      "date": 1608980655931
+    },
+    {
+      "item": {
+        "type": "markdown",
+        "id": "3dae33211fcd575e",
+        "text": "**Initial setup:**"
+      },
+      "id": "3dae33211fcd575e",
+      "type": "add",
+      "after": "716bbae211a3fcac",
+      "date": 1608981260428
+    },
+    {
+      "type": "edit",
+      "id": "3dae33211fcd575e",
+      "item": {
+        "type": "markdown",
+        "id": "3dae33211fcd575e",
+        "text": "**Initial setup:**"
+      },
+      "date": 1608981271979
+    },
+    {
+      "type": "add",
+      "id": "bbb44710248ea9f1",
+      "item": {
+        "type": "markdown",
+        "id": "bbb44710248ea9f1",
+        "text": "We only need `view.js` from [[Public Assets]], as we will not be running a server. So, we will need an `index.html`, a flag, some wiki pages and associated sitemap, as a start. As with the hyperdrive version of wiki we will place the wiki in `/wiki` so we don't need to guard against clobbering the hyperdrive manifest in `index.json`."
+      },
+      "after": "3dae33211fcd575e",
+      "date": 1608981555376
+    },
+    {
+      "type": "edit",
+      "id": "bbb44710248ea9f1",
+      "item": {
+        "type": "markdown",
+        "id": "bbb44710248ea9f1",
+        "text": "We only need `view.js` from [[Public Assets]], as we will not be running a server. So, we will need an `index.html`, a flag, some wiki pages and associated sitemap, as a start. As with the hyperdrive version of wiki we will place the wiki in `/wiki` so we don't need to guard against clobbering the hyperdrive manifest in `index.json`.\n"
+      },
+      "date": 1608981565725
+    },
+    {
+      "type": "edit",
+      "id": "3dae33211fcd575e",
+      "item": {
+        "type": "markdown",
+        "id": "3dae33211fcd575e",
+        "text": "**Initial setup:**"
+      },
+      "date": 1608981583077
+    },
+    {
+      "type": "edit",
+      "id": "bbb44710248ea9f1",
+      "item": {
+        "type": "markdown",
+        "id": "bbb44710248ea9f1",
+        "text": "We only need `view.js` from [[Public Assets]], as we will not be running a server. So, we will need an `index.html`, a flag, some wiki pages and associated sitemap, as a start. As with the hyperdrive version of wiki we will place the wiki in `/wiki` so we don't need to guard against clobbering the hyperdrive manifest in `index.json`.\n"
+      },
+      "date": 1608983876308
+    },
+    {
+      "type": "add",
+      "id": "5097252ca7d2728c",
+      "item": {
+        "type": "markdown",
+        "id": "5097252ca7d2728c",
+        "text": "You can follow along, by looking at the commit history on [https://github.com/paul90/smallest-wiki-revisited github]."
+      },
+      "after": "bbb44710248ea9f1",
+      "date": 1608983927623
+    },
+    {
+      "type": "edit",
+      "id": "5097252ca7d2728c",
+      "item": {
+        "type": "markdown",
+        "id": "5097252ca7d2728c",
+        "text": "You can follow along, by looking at the commit history on [https://github.com/paul90/smallest-wiki-revisited github]."
+      },
+      "date": 1608983940669
+    },
+    {
+      "type": "edit",
+      "id": "5097252ca7d2728c",
+      "item": {
+        "type": "markdown",
+        "id": "5097252ca7d2728c",
+        "text": "You can follow along, by looking at the commit history on [https://github.com/paul90/smallest-wiki-revisited github]."
+      },
+      "date": 1608983974023
+    },
+    {
+      "id": "5097252ca7d2728c",
+      "type": "move",
+      "order": [
+        "19455a65d7631117",
+        "8317f782945008d0",
+        "b119db7477e3026e",
+        "40854f5f59ed9a07",
+        "716bbae211a3fcac",
+        "3dae33211fcd575e",
+        "5097252ca7d2728c",
+        "bbb44710248ea9f1"
+      ],
+      "date": 1608983977415
+    },
+    {
+      "type": "edit",
+      "id": "bbb44710248ea9f1",
+      "item": {
+        "type": "markdown",
+        "id": "bbb44710248ea9f1",
+        "text": "We only need `view.js` from [[Public Assets]], as we will not be running a server. We will need an `index.html` to kick things off, a flag, some wiki pages and associated sitemap, as a start. As with the hyperdrive version of wiki we will place the wiki in `/wiki` so we don't need to guard against clobbering the hyperdrive manifest in `index.json`.\n"
+      },
+      "date": 1608992690885
+    },
+    {
+      "type": "edit",
+      "id": "bbb44710248ea9f1",
+      "item": {
+        "type": "markdown",
+        "id": "bbb44710248ea9f1",
+        "text": "We only need `view.js` from [[Public Assets]], as we will not be running a server. From this the stylesheet is extracted out to `./style.css`, we will need an extra style to turn off the horizontal scrollbar on the lineup. And add an `index.html` to load both the view code and stylesheet.\n"
+      },
+      "date": 1608992880995
+    },
+    {
+      "type": "add",
+      "id": "c9438d509e80b9ce",
+      "item": {
+        "type": "markdown",
+        "id": "c9438d509e80b9ce",
+        "text": ""
+      },
+      "after": "bbb44710248ea9f1",
+      "date": 1608992883869
+    },
+    {
+      "type": "edit",
+      "id": "bbb44710248ea9f1",
+      "item": {
+        "type": "markdown",
+        "id": "bbb44710248ea9f1",
+        "text": "We only need `view.js` from [[Public Assets]], as we will not be running a server. From this the stylesheet is extracted out to `./style.css`, we will need an extra style to turn off the horizontal scrollbar on the lineup. And add an `index.html` to load both the view code and stylesheet.\n"
+      },
+      "date": 1608992934634
+    },
+    {
+      "type": "remove",
+      "id": "c9438d509e80b9ce",
+      "date": 1608992938503
+    },
+    {
+      "type": "edit",
+      "id": "bbb44710248ea9f1",
+      "item": {
+        "type": "markdown",
+        "id": "bbb44710248ea9f1",
+        "text": "We only need `view.js` from [[Public Assets]], as we will not be running a server. From this the stylesheet is extracted out to `./style.css`, we will need an extra style to turn off the horizontal scrollbar on the lineup. And add an `index.html` to load both the view code and stylesheet.\n"
+      },
+      "date": 1608993008155
+    },
+    {
+      "type": "add",
+      "id": "640a066a8ddb76b7",
+      "item": {
+        "type": "markdown",
+        "id": "640a066a8ddb76b7",
+        "text": "To this we add a flag, some wiki pages and associated sitemap. As with the hyperdrive version of wiki we will place the wiki in `/wiki` so we don't need to guard against clobbering the hyperdrive manifest in `index.json`.\n"
+      },
+      "after": "bbb44710248ea9f1",
+      "date": 1608993053695
+    },
+    {
+      "type": "add",
+      "id": "a2e272e5aae88357",
+      "item": {
+        "type": "markdown",
+        "id": "a2e272e5aae88357",
+        "text": "In `view.js`, there is code to fetch pages in two places, and construct the URL for the favicon. These all assume that all resources will be using the same protocol as the origin. To escape that restriction, we split out the `resolveURL()`, and construct a URL with the appropriate protocol when that differs from the origin URL. We also add insertion of `/wiki` in the path when getting wiki pages from a Hyperdrive.\n"
+      },
+      "after": "640a066a8ddb76b7",
+      "date": 1608993525076
+    },
+    {
+      "type": "edit",
+      "id": "a2e272e5aae88357",
+      "item": {
+        "type": "markdown",
+        "id": "a2e272e5aae88357",
+        "text": "In `view.js`, there is code to fetch pages in two places, and construct the URL for the favicon. These all assume that all resources will be using the same protocol as the origin. To escape that restriction, we split out the `resolveURL()`, and construct a URL with the appropriate protocol when that differs from the origin URL. We also add insertion of `/wiki` in the path when getting wiki pages from a Hyperdrive.\n"
+      },
+      "date": 1608993572955
+    },
+    {
+      "type": "add",
+      "id": "844956951c24cc26",
+      "item": {
+        "type": "markdown",
+        "id": "844956951c24cc26",
+        "text": "In the git repo this is that what we have at commit [https://github.com/paul90/smallest-wiki-revisited/tree/cdda18592993d299724e0d5ce84797ef693387d0 cdda185929]."
+      },
+      "after": "a2e272e5aae88357",
+      "date": 1608993666893
+    },
+    {
+      "type": "edit",
+      "id": "716bbae211a3fcac",
+      "item": {
+        "type": "markdown",
+        "id": "716bbae211a3fcac",
+        "text": "Tools required:\n* [https://beakerbrowser.com/ Beaker Browser]\n* [https://hypercore-protocol.org/guides/hyp/ Hypercore CLI]\n* a code editor - although we could just use the editor in Beaker Browser."
+      },
+      "date": 1608994250622
+    },
+    {
+      "type": "fork",
+      "site": "goals.dat.rodwell.me"
+    },
+    {
+      "type": "add",
+      "id": "49aef84529e18716",
+      "item": {
+        "type": "paragraph",
+        "id": "49aef84529e18716",
+        "text": "Just to make life interesting, currently there are multiple parallel developments ongoing. As well as the notes below, also see [[Small Wiki]] - other experiments are likely to follow."
+      },
+      "after": "19455a65d7631117",
+      "date": 1609172847599
+    }
+  ]
+}

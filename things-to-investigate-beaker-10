@@ -1,0 +1,140 @@
+{
+  "title": "Things to Investigate (Beaker 1.0)",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "565f02fab51e576a",
+      "text": "A list of things that will need some investigation."
+    },
+    {
+      "type": "markdown",
+      "id": "f4d0f7db38210a92",
+      "text": "**DONE** - Making the Federated Wiki client a frontend, see [https://docs.beakerbrowser.com/developers/frontends-.ui-folder Beaker Docs]. *Some slight changes were needed to the bootstrap and in the client to accommodate the slightly different relative location of some things, but it works very nicely.*"
+    },
+    {
+      "type": "paragraph",
+      "id": "2df5cced6bc9637d",
+      "text": "Persistent Peers, and mirroring a wiki out to https."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Things to Investigate (Beaker 1.0)",
+        "story": []
+      },
+      "date": 1589792839233
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "565f02fab51e576a"
+      },
+      "id": "565f02fab51e576a",
+      "type": "add",
+      "date": 1589792843692
+    },
+    {
+      "type": "edit",
+      "id": "565f02fab51e576a",
+      "item": {
+        "type": "paragraph",
+        "id": "565f02fab51e576a",
+        "text": "A list of things that will need some investigation."
+      },
+      "date": 1589792877609
+    },
+    {
+      "type": "add",
+      "id": "f4d0f7db38210a92",
+      "item": {
+        "type": "paragraph",
+        "id": "f4d0f7db38210a92",
+        "text": "Making the Federated Wiki client a frontend, see [https://docs.beakerbrowser.com/developers/frontends-.ui-folder]"
+      },
+      "after": "565f02fab51e576a",
+      "date": 1589792922083
+    },
+    {
+      "type": "edit",
+      "id": "f4d0f7db38210a92",
+      "item": {
+        "type": "paragraph",
+        "id": "f4d0f7db38210a92",
+        "text": "Making the Federated Wiki client a frontend, see [https://docs.beakerbrowser.com/developers/frontends-.ui-folder Beaker Docs]"
+      },
+      "date": 1589792949473
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2df5cced6bc9637d"
+      },
+      "id": "2df5cced6bc9637d",
+      "type": "add",
+      "after": "f4d0f7db38210a92",
+      "date": 1589792952944
+    },
+    {
+      "type": "edit",
+      "id": "2df5cced6bc9637d",
+      "item": {
+        "type": "paragraph",
+        "id": "2df5cced6bc9637d",
+        "text": "Persistent Peers, and mirroring a wiki out to https."
+      },
+      "date": 1589792996952
+    },
+    {
+      "type": "edit",
+      "id": "f4d0f7db38210a92",
+      "item": {
+        "type": "markdown",
+        "id": "f4d0f7db38210a92",
+        "text": "Making the Federated Wiki client a frontend, see [https://docs.beakerbrowser.com/developers/frontends-.ui-folder Beaker Docs]"
+      },
+      "date": 1590141206298
+    },
+    {
+      "type": "edit",
+      "id": "f4d0f7db38210a92",
+      "item": {
+        "type": "markdown",
+        "id": "f4d0f7db38210a92",
+        "text": "Making the Federated Wiki client a frontend, see [https://docs.beakerbrowser.com/developers/frontends-.ui-folder Beaker Docs]\n- this looks to work quite nicely, but just as I had got the client bootstrap working with client as a mounted frontend I managed to break my hyperdrive/beaker installation."
+      },
+      "date": 1590141294053
+    },
+    {
+      "type": "edit",
+      "id": "f4d0f7db38210a92",
+      "item": {
+        "type": "markdown",
+        "id": "f4d0f7db38210a92",
+        "text": "**DONE** Making the Federated Wiki client a frontend, see [https://docs.beakerbrowser.com/developers/frontends-.ui-folder Beaker Docs]\n- Some slight changes were needed to the bootstrap and in the client to accommodate the slightly different relative location of some things, but it works very nicely."
+      },
+      "date": 1592980855422
+    },
+    {
+      "type": "edit",
+      "id": "f4d0f7db38210a92",
+      "item": {
+        "type": "markdown",
+        "id": "f4d0f7db38210a92",
+        "text": "**DONE** - Making the Federated Wiki client a frontend, see [https://docs.beakerbrowser.com/developers/frontends-.ui-folder Beaker Docs]\n- Some slight changes were needed to the bootstrap and in the client to accommodate the slightly different relative location of some things, but it works very nicely."
+      },
+      "date": 1592980863244
+    },
+    {
+      "type": "edit",
+      "id": "f4d0f7db38210a92",
+      "item": {
+        "type": "markdown",
+        "id": "f4d0f7db38210a92",
+        "text": "**DONE** - Making the Federated Wiki client a frontend, see [https://docs.beakerbrowser.com/developers/frontends-.ui-folder Beaker Docs]. *Some slight changes were needed to the bootstrap and in the client to accommodate the slightly different relative location of some things, but it works very nicely.*"
+      },
+      "date": 1592980882475
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "title": "Wiki HOA Notes 28 Feb 2018",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "5acb0c1319b39528",
+      "text": "Wiki to support Events in world time with the goal of being more composable and diagnoseable than calendars."
+    },
+    {
+      "type": "markdown",
+      "id": "c97d6f6a65a2ee3b",
+      "text": "Raw:\n"
+    },
+    {
+      "type": "markdown",
+      "id": "2eb0b4d9d48afcbc",
+      "text": "You https://earth.nullschool.net/\n18:03\nYou https://twitter.com/britishmuseum/status/968878139526057984\n18:07\nDavid Bovill http://hack.platform.earth/view/welcome-visitors/view/search-for-micro/view/federated-microservice/view/micro-frontends/view/microorgs\n18:24\nEric Dobbs Here's the algorithm that was used by one of the winners of ethdenver hackathon. https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing\n18:39\nduke crawford http://github.com/readfm/hypertextarea\n18:39\nYou https://github.com/brave/muon\n18:45\nDavid Ing https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906\n18:46\nWard Cunningham http://house.asia.wiki.org/patterns-together.html\n18:51\nDavid Bovill @eric - the link above is about the MicroFront End stuff....\n18:55\nDavid Bovill Alos @eric have you published the iFrame plugin in NPM - would like to install it on my server using Plugmatic?\n18:56\nDavid Ing Robert, I agree that I like SVG, which is why I initially went towards draw.io. That integration may not be technically desireable, though.\n18:59\nDavid Bovill http://c0de.academy/windowpostmessage.html\n19:01\nDavid Bovill https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage\n19:02\nWard Cunningham https://www.npmjs.com/search?q=wiki-plugin-frame\n19:03\nEric Dobbs As that last search shows, I have not published the frame plugin on npm. I have published it on github and installed from there in my own wiki. Wanted to see that work before I went further.\n19:04\nDavid Bovill @robert - yes - I like the idea of using SVG and an embedded snapshot of a dynamic graph in wiki\n19:06\nDavid Bovill Also the svg can then be used in a round-robin editing process with packages like Inkscape\n19:06\nduke crawford endlessOS puts wiki on client (most people view tiny fraction of wikipedia)\n19:10\nYou https://en.m.wikipedia.org/wiki/Colorado\n19:10\nYou https://stackoverflow.com/questions/40991114/issue-communication-with-postmessage-from-parent-to-child-iframe\n19:14\nduke crawford http://appear.in/ndn\n19:17\nDavid Bovill https://appear.in/outlanders\n19:18\nDavid Bovill https://en.wiktionary.org/api/rest_v1/page/mobile-sections/wiki\n"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Wiki HOA Notes 28 Feb 2018",
+        "story": []
+      },
+      "date": 1519892060570
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5acb0c1319b39528"
+      },
+      "id": "5acb0c1319b39528",
+      "type": "add",
+      "date": 1519892063978
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c97d6f6a65a2ee3b"
+      },
+      "id": "c97d6f6a65a2ee3b",
+      "type": "add",
+      "after": "5acb0c1319b39528",
+      "date": 1519892065490
+    },
+    {
+      "type": "edit",
+      "id": "c97d6f6a65a2ee3b",
+      "item": {
+        "type": "markdown",
+        "id": "c97d6f6a65a2ee3b",
+        "text": "\nYouhttps://earth.nullschool.net/\n18:03\nYouhttps://twitter.com/britishmuseum/status/968878139526057984\n18:07\nDavid Bovillhttp://hack.platform.earth/view/welcome-visitors/view/search-for-micro/view/federated-microservice/view/micro-frontends/view/microorgs\n18:24\nEric DobbsHere's the algorithm that was used by one of the winners of ethdenver hackathon. https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing\n18:39\nduke crawfordhttp://github.com/readfm/hypertextarea\n18:39\nYouhttps://github.com/brave/muon\n18:45\nDavid Inghttps://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906\n18:46\nWard Cunninghamhttp://house.asia.wiki.org/patterns-together.html\n18:51\nDavid Bovill@eric - the link above is about the MicroFront End stuff....\n18:55\nDavid BovillAlos @eric have you published the iFrame plugin in NPM - would like to install it on my server using Plugmatic?\n18:56\nDavid IngRobert, I agree that I like SVG, which is why I initially went towards draw.io. That integration may not be technically desireable, though.\n18:59\nDavid Bovillhttp://c0de.academy/windowpostmessage.html\n19:01\nDavid Bovillhttps://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage\n19:02\nWard Cunninghamhttps://www.npmjs.com/search?q=wiki-plugin-frame\n19:03\nEric DobbsAs that last search shows, I have not published the frame plugin on npm. I have published it on github and installed from there in my own wiki. Wanted to see that work before I went further.\n19:04\nDavid Bovill@robert - yes - I like the idea of using SVG and an embedded snapshot of a dynamic graph in wiki\n19:06\nDavid BovillAlso the svg can then be used in a round-robin editing process with packages like Inkscape\n19:06\nduke crawfordendlessOS puts wiki on client (most people view tiny fraction of wikipedia)\n19:10\nYouhttps://en.m.wikipedia.org/wiki/Colorado\n19:10\nYouhttps://stackoverflow.com/questions/40991114/issue-communication-with-postmessage-from-parent-to-child-iframe\n19:14\nduke crawfordhttp://appear.in/ndn\n19:17\nDavid Bovillhttps://appear.in/outlanders\n19:18\nDavid Bovillhttps://en.wiktionary.org/api/rest_v1/page/mobile-sections/wiki\n"
+      },
+      "date": 1519892087073
+    },
+    {
+      "type": "edit",
+      "id": "c97d6f6a65a2ee3b",
+      "item": {
+        "type": "markdown",
+        "id": "c97d6f6a65a2ee3b",
+        "text": "You https://earth.nullschool.net/\n18:03\nYou https://twitter.com/britishmuseum/status/968878139526057984\n18:07\nDavid Bovill http://hack.platform.earth/view/welcome-visitors/view/search-for-micro/view/federated-microservice/view/micro-frontends/view/microorgs\n18:24\nEric Dobbs Here's the algorithm that was used by one of the winners of ethdenver hackathon. https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing\n18:39\nduke crawford http://github.com/readfm/hypertextarea\n18:39\nYou https://github.com/brave/muon\n18:45\nDavid Ing https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906\n18:46\nWard Cunningham http://house.asia.wiki.org/patterns-together.html\n18:51\nDavid Bovill @eric - the link above is about the MicroFront End stuff....\n18:55\nDavid Bovill Alos @eric have you published the iFrame plugin in NPM - would like to install it on my server using Plugmatic?\n18:56\nDavid Ing Robert, I agree that I like SVG, which is why I initially went towards draw.io. That integration may not be technically desireable, though.\n18:59\nDavid Bovill http://c0de.academy/windowpostmessage.html\n19:01\nDavid Bovill https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage\n19:02\nWard Cunningham https://www.npmjs.com/search?q=wiki-plugin-frame\n19:03\nEric Dobbs As that last search shows, I have not published the frame plugin on npm. I have published it on github and installed from there in my own wiki. Wanted to see that work before I went further.\n19:04\nDavid Bovill @robert - yes - I like the idea of using SVG and an embedded snapshot of a dynamic graph in wiki\n19:06\nDavid Bovill Also the svg can then be used in a round-robin editing process with packages like Inkscape\n19:06\nduke crawford endlessOS puts wiki on client (most people view tiny fraction of wikipedia)\n19:10\nYou https://en.m.wikipedia.org/wiki/Colorado\n19:10\nYou https://stackoverflow.com/questions/40991114/issue-communication-with-postmessage-from-parent-to-child-iframe\n19:14\nduke crawford http://appear.in/ndn\n19:17\nDavid Bovill https://appear.in/outlanders\n19:18\nDavid Bovill https://en.wiktionary.org/api/rest_v1/page/mobile-sections/wiki\n"
+      },
+      "date": 1519892164709
+    },
+    {
+      "type": "edit",
+      "id": "c97d6f6a65a2ee3b",
+      "item": {
+        "type": "markdown",
+        "id": "c97d6f6a65a2ee3b",
+        "text": "Raw:\n"
+      },
+      "date": 1519892186105
+    },
+    {
+      "type": "add",
+      "id": "2eb0b4d9d48afcbc",
+      "item": {
+        "type": "markdown",
+        "id": "2eb0b4d9d48afcbc",
+        "text": "You https://earth.nullschool.net/\n18:03\nYou https://twitter.com/britishmuseum/status/968878139526057984\n18:07\nDavid Bovill http://hack.platform.earth/view/welcome-visitors/view/search-for-micro/view/federated-microservice/view/micro-frontends/view/microorgs\n18:24\nEric Dobbs Here's the algorithm that was used by one of the winners of ethdenver hackathon. https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing\n18:39\nduke crawford http://github.com/readfm/hypertextarea\n18:39\nYou https://github.com/brave/muon\n18:45\nDavid Ing https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906\n18:46\nWard Cunningham http://house.asia.wiki.org/patterns-together.html\n18:51\nDavid Bovill @eric - the link above is about the MicroFront End stuff....\n18:55\nDavid Bovill Alos @eric have you published the iFrame plugin in NPM - would like to install it on my server using Plugmatic?\n18:56\nDavid Ing Robert, I agree that I like SVG, which is why I initially went towards draw.io. That integration may not be technically desireable, though.\n18:59\nDavid Bovill http://c0de.academy/windowpostmessage.html\n19:01\nDavid Bovill https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage\n19:02\nWard Cunningham https://www.npmjs.com/search?q=wiki-plugin-frame\n19:03\nEric Dobbs As that last search shows, I have not published the frame plugin on npm. I have published it on github and installed from there in my own wiki. Wanted to see that work before I went further.\n19:04\nDavid Bovill @robert - yes - I like the idea of using SVG and an embedded snapshot of a dynamic graph in wiki\n19:06\nDavid Bovill Also the svg can then be used in a round-robin editing process with packages like Inkscape\n19:06\nduke crawford endlessOS puts wiki on client (most people view tiny fraction of wikipedia)\n19:10\nYou https://en.m.wikipedia.org/wiki/Colorado\n19:10\nYou https://stackoverflow.com/questions/40991114/issue-communication-with-postmessage-from-parent-to-child-iframe\n19:14\nduke crawford http://appear.in/ndn\n19:17\nDavid Bovill https://appear.in/outlanders\n19:18\nDavid Bovill https://en.wiktionary.org/api/rest_v1/page/mobile-sections/wiki\n"
+      },
+      "after": "c97d6f6a65a2ee3b",
+      "date": 1519892188271
+    },
+    {
+      "type": "edit",
+      "id": "5acb0c1319b39528",
+      "item": {
+        "type": "paragraph",
+        "id": "5acb0c1319b39528",
+        "text": "Wiki to support Events in world time with the goal of being more composable and diagnoseable than calendars."
+      },
+      "date": 1519892215103
+    }
+  ]
+}

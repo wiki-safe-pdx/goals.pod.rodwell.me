@@ -1,0 +1,119 @@
+{
+  "title": "Updated Plugins",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "eb7ca657d14b2a2a",
+      "text": "We revisit some old plugins that need attention."
+    },
+    {
+      "type": "markdown",
+      "id": "045526299505351f",
+      "text": "**Activity Plugin** – An issue with the browser becoming janking was noticed as the neighbourhood grows. Resolved by changing the way sitemaps are merged, and using a virtual dom to construct the display. [https://github.com/fedwiki/wiki-plugin-activity/issues/19 github]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Updated Plugins",
+        "story": []
+      },
+      "date": 1439967022659
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "eb7ca657d14b2a2a"
+      },
+      "id": "eb7ca657d14b2a2a",
+      "type": "add",
+      "date": 1439967044314
+    },
+    {
+      "type": "edit",
+      "id": "eb7ca657d14b2a2a",
+      "item": {
+        "type": "paragraph",
+        "id": "eb7ca657d14b2a2a",
+        "text": "We revisit old plugins that need some "
+      },
+      "date": 1439967132277
+    },
+    {
+      "type": "edit",
+      "id": "eb7ca657d14b2a2a",
+      "item": {
+        "type": "paragraph",
+        "id": "eb7ca657d14b2a2a",
+        "text": "We revisit old plugins that need some attention."
+      },
+      "date": 1439967218450
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "045526299505351f"
+      },
+      "id": "045526299505351f",
+      "type": "add",
+      "after": "eb7ca657d14b2a2a",
+      "date": 1439967496531
+    },
+    {
+      "type": "edit",
+      "id": "045526299505351f",
+      "item": {
+        "type": "paragraph",
+        "id": "045526299505351f",
+        "text": "Activity Plugin – An issue with the browser becoming janking was noticed as the neighbourhood grows. Resolved by changing the way sitemaps are merged, and using a virtual dom to construct the display. [https://github.com/fedwiki/wiki-plugin-activity/issues/19 github]"
+      },
+      "date": 1439967788573
+    },
+    {
+      "type": "edit",
+      "id": "045526299505351f",
+      "item": {
+        "type": "markdown",
+        "id": "045526299505351f",
+        "text": "Activity Plugin – An issue with the browser becoming janking was noticed as the neighbourhood grows. Resolved by changing the way sitemaps are merged, and using a virtual dom to construct the display. [https://github.com/fedwiki/wiki-plugin-activity/issues/19 github]"
+      },
+      "date": 1439967858054
+    },
+    {
+      "type": "edit",
+      "id": "045526299505351f",
+      "item": {
+        "type": "markdown",
+        "id": "045526299505351f",
+        "text": "**Activity Plugin** – An issue with the browser becoming janking was noticed as the neighbourhood grows. Resolved by changing the way sitemaps are merged, and using a virtual dom to construct the display. [https://github.com/fedwiki/wiki-plugin-activity/issues/19 github]"
+      },
+      "date": 1439967868279
+    },
+    {
+      "type": "edit",
+      "id": "eb7ca657d14b2a2a",
+      "item": {
+        "type": "paragraph",
+        "id": "eb7ca657d14b2a2a",
+        "text": "We revisit some old plugins that need attention."
+      },
+      "date": 1439967896199
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c6e69f523b8cbd3e"
+      },
+      "id": "c6e69f523b8cbd3e",
+      "type": "add",
+      "after": "045526299505351f",
+      "date": 1439967901658
+    },
+    {
+      "type": "remove",
+      "id": "c6e69f523b8cbd3e",
+      "date": 1439967932862
+    }
+  ]
+}

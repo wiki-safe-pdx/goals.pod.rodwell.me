@@ -1,0 +1,124 @@
+{
+  "title": "Wiki@Next",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "41c0747bdcc3ebc6",
+      "text": "Wiki@Next is the next significant version of Federated Wiki. It is used to make significant changes available during their development for testing."
+    },
+    {
+      "type": "paragraph",
+      "id": "a46791b4b365c826",
+      "text": "NOTE: This version is not intended for production use."
+    },
+    {
+      "type": "paragraph",
+      "id": "7c40bcb30d7cabf0",
+      "text": "Current Wiki@Next version is - [[Wiki - 0.11.0]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "813bb2b267b42f73",
+      "text": "Installed by running:"
+    },
+    {
+      "type": "code",
+      "id": "83e3db4286463c86",
+      "text": "npm install wiki@next"
+    },
+    {
+      "type": "paragraph",
+      "id": "665748af082fb602",
+      "text": "It is best on to install this in it's own directory - so as not to disturb your current working installation."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Wiki@Next",
+        "story": []
+      },
+      "date": 1460229490725
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "41c0747bdcc3ebc6",
+        "text": "Wiki@Next is the next significant version of Federated Wiki. It is used to make significant changes available during their development for testing."
+      },
+      "id": "41c0747bdcc3ebc6",
+      "date": 1460229503825
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "a46791b4b365c826",
+        "text": "NOTE: This version is not intended for production use."
+      },
+      "after": "41c0747bdcc3ebc6",
+      "id": "a46791b4b365c826",
+      "date": 1460229507189
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "7c40bcb30d7cabf0",
+        "text": "Current Wiki@Next version is - [[Wiki - 0.10.0]]"
+      },
+      "after": "a46791b4b365c826",
+      "id": "7c40bcb30d7cabf0",
+      "date": 1460229510126
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "813bb2b267b42f73",
+        "text": "Installed by running:"
+      },
+      "after": "7c40bcb30d7cabf0",
+      "id": "813bb2b267b42f73",
+      "date": 1460229513068
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "code",
+        "id": "83e3db4286463c86",
+        "text": "npm install wiki@next"
+      },
+      "after": "813bb2b267b42f73",
+      "id": "83e3db4286463c86",
+      "date": 1460229519283
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "665748af082fb602",
+        "text": "It is best on to install this in it's own directory - so as not to disturb your current working installation."
+      },
+      "after": "83e3db4286463c86",
+      "id": "665748af082fb602",
+      "date": 1460229523490
+    },
+    {
+      "type": "fork",
+      "date": 1460279577997
+    },
+    {
+      "type": "edit",
+      "id": "7c40bcb30d7cabf0",
+      "item": {
+        "type": "paragraph",
+        "id": "7c40bcb30d7cabf0",
+        "text": "Current Wiki@Next version is - [[Wiki - 0.11.0]]"
+      },
+      "date": 1489425906341
+    }
+  ]
+}

@@ -1,0 +1,414 @@
+{
+  "title": "Landing Page Registration",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "64f1013ca689f451",
+      "text": "We return to registering members of a community and provisioning wiki sites for their collaboration. This time we may make it simple enough to work. "
+    },
+    {
+      "type": "paragraph",
+      "id": "e5c42ab3574b9e00",
+      "text": "We propose a solution in two parts: a private endpoint that creates a new site, and, an html landing page that collects and validates new user information."
+    },
+    {
+      "type": "markdown",
+      "id": "0d71a3b063800004",
+      "text": "# History"
+    },
+    {
+      "type": "paragraph",
+      "id": "e34df00c593e2a39",
+      "text": "We've explored various versions of this and have some incomplete or unsatisfying implementations."
+    },
+    {
+      "type": "paragraph",
+      "id": "901da6a97e125ac8",
+      "text": "[[Registration Workflows]] for making subdomains."
+    },
+    {
+      "type": "paragraph",
+      "id": "f2ce076de9eb6d1c",
+      "text": "[[Private Pods]] with collective acknowledgement."
+    },
+    {
+      "type": "paragraph",
+      "id": "59470487e76dbdc9",
+      "text": "[[Open Membership in a Club]] version of a Roster."
+    },
+    {
+      "type": "paragraph",
+      "id": "5a6053202df52b1e",
+      "text": "[[Pop-Up Community]] with downloadable app."
+    },
+    {
+      "type": "paragraph",
+      "id": "4335537a5e79bc98",
+      "text": "[[Community of the Moment]] present and paying attention."
+    },
+    {
+      "type": "paragraph",
+      "id": "d5f63d8a87889b3c",
+      "text": "[[Organizing Large Communities]] hosted on wiki."
+    },
+    {
+      "type": "markdown",
+      "id": "d8d7e442ea98ec82",
+      "text": "# Solution"
+    },
+    {
+      "type": "paragraph",
+      "id": "157fbdaa6182ab85",
+      "text": "Now our solution as a series of small steps to be coded, tested and and then reviewed to be sure we are making useful modifications and not closing off more useful options later on."
+    },
+    {
+      "type": "paragraph",
+      "id": "3f5ac1ccb7929e94",
+      "text": "Write in html a custom home pages that can be uploaded as a home/index.html asset at any level of a domain name hierarchy served by a farm."
+    },
+    {
+      "type": "paragraph",
+      "id": "8c17204723674caf",
+      "text": "Code the collection, validation and submission of registration information such as user name, preferred subdomain and event registration code. Check for duplicates. Submit and report success."
+    },
+    {
+      "type": "paragraph",
+      "id": "f77d6e24e313f3c3",
+      "text": "Code in wiki-server the endpoint that will provision a minimal site, possibly just the expected subdomain directory."
+    },
+    {
+      "type": "paragraph",
+      "id": "608dff37d40fb53e",
+      "text": "Create the configuration option that will disable automatic registration of farm sites on first reference. When selected, one must use some other mechanism, like the custom landing page to create new sites."
+    },
+    {
+      "type": "markdown",
+      "id": "06443d1126e0e247",
+      "text": "# Enhancements"
+    },
+    {
+      "type": "paragraph",
+      "id": "004e479b149c24dc",
+      "text": "Consider how proper oauth login could be required, checked and forward to the provisioning endpoint from the custom landing page."
+    },
+    {
+      "type": "paragraph",
+      "id": "bca6bdd7f0bcffb4",
+      "text": "Consider how event specific welcome-visitors-template could be instantiated for new sites."
+    },
+    {
+      "type": "paragraph",
+      "id": "6e2bc5fe8e6612d2",
+      "text": "Consider how a proper user page could be created for the new user. "
+    },
+    {
+      "type": "paragraph",
+      "id": "8cef465459c33829",
+      "text": "Consider how the new site could be automatically appended to the event roster. (When will the flag be created?)"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Landing Page Registration",
+        "story": []
+      },
+      "date": 1573068652701
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "64f1013ca689f451"
+      },
+      "id": "64f1013ca689f451",
+      "type": "add",
+      "date": 1573068654858
+    },
+    {
+      "type": "edit",
+      "id": "64f1013ca689f451",
+      "item": {
+        "type": "paragraph",
+        "id": "64f1013ca689f451",
+        "text": "We return to registering members of a community and provisioning wiki sites for their collaboration. This time we may make it simple enough to work. "
+      },
+      "date": 1573068756782
+    },
+    {
+      "type": "add",
+      "id": "e5c42ab3574b9e00",
+      "item": {
+        "type": "paragraph",
+        "id": "e5c42ab3574b9e00",
+        "text": "We propose a solution in two parts: a private endpoint that creates a new site, and, an html landing page that collects and validates new user information."
+      },
+      "after": "64f1013ca689f451",
+      "date": 1573068905736
+    },
+    {
+      "type": "add",
+      "id": "0d71a3b063800004",
+      "item": {
+        "type": "paragraph",
+        "id": "0d71a3b063800004",
+        "text": "# History"
+      },
+      "after": "e5c42ab3574b9e00",
+      "date": 1573068955666
+    },
+    {
+      "type": "add",
+      "id": "e34df00c593e2a39",
+      "item": {
+        "type": "paragraph",
+        "id": "e34df00c593e2a39",
+        "text": "We've explored various versions of this and have some incomplete or unsatisfying implementations."
+      },
+      "after": "0d71a3b063800004",
+      "date": 1573069043072
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "901da6a97e125ac8",
+        "text": "[[Registration Workflows]] for making subdomains."
+      },
+      "after": "e34df00c593e2a39",
+      "id": "901da6a97e125ac8",
+      "date": 1573069066298
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "f2ce076de9eb6d1c",
+        "text": "[[Private Pods]] with collective acknowledgement."
+      },
+      "after": "901da6a97e125ac8",
+      "id": "f2ce076de9eb6d1c",
+      "date": 1573069091094
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "59470487e76dbdc9",
+        "text": "[[Open Membership in a Club]] version of a Roster."
+      },
+      "after": "f2ce076de9eb6d1c",
+      "id": "59470487e76dbdc9",
+      "date": 1573069099454
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "5a6053202df52b1e",
+        "text": "[[Pop-Up Community]] with downloadable app."
+      },
+      "after": "59470487e76dbdc9",
+      "id": "5a6053202df52b1e",
+      "date": 1573069186600
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "4335537a5e79bc98",
+        "text": "[[Community of the Moment]] present and paying attention."
+      },
+      "after": "5a6053202df52b1e",
+      "id": "4335537a5e79bc98",
+      "date": 1573069217911
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "d5f63d8a87889b3c",
+        "text": "[[Organizing Large Communities]] hosted on wiki."
+      },
+      "after": "4335537a5e79bc98",
+      "id": "d5f63d8a87889b3c",
+      "date": 1573069243977
+    },
+    {
+      "type": "edit",
+      "id": "0d71a3b063800004",
+      "item": {
+        "type": "markdown",
+        "id": "0d71a3b063800004",
+        "text": "# History"
+      },
+      "date": 1573069312923
+    },
+    {
+      "type": "add",
+      "id": "d8d7e442ea98ec82",
+      "item": {
+        "type": "paragraph",
+        "id": "d8d7e442ea98ec82",
+        "text": "# Solution"
+      },
+      "after": "d5f63d8a87889b3c",
+      "date": 1573069397961
+    },
+    {
+      "type": "add",
+      "id": "157fbdaa6182ab85",
+      "item": {
+        "type": "paragraph",
+        "id": "157fbdaa6182ab85",
+        "text": "Now our solution as a series of small steps to be coded, tested and and then reviewed to be sure we are making useful modifications and not closing off more useful options later on."
+      },
+      "after": "d8d7e442ea98ec82",
+      "date": 1573069688810
+    },
+    {
+      "type": "add",
+      "id": "3f5ac1ccb7929e94",
+      "item": {
+        "type": "paragraph",
+        "id": "3f5ac1ccb7929e94",
+        "text": "Write in html and javascript a custom home pages that can be uploaded as a home/index.html asset at any level of a domain name hierarchy served by a farm."
+      },
+      "after": "157fbdaa6182ab85",
+      "date": 1573069838363
+    },
+    {
+      "type": "add",
+      "id": "8c17204723674caf",
+      "item": {
+        "type": "paragraph",
+        "id": "8c17204723674caf",
+        "text": "Code "
+      },
+      "after": "3f5ac1ccb7929e94",
+      "date": 1573069858466
+    },
+    {
+      "type": "edit",
+      "id": "3f5ac1ccb7929e94",
+      "item": {
+        "type": "paragraph",
+        "id": "3f5ac1ccb7929e94",
+        "text": "Write in html a custom home pages that can be uploaded as a home/index.html asset at any level of a domain name hierarchy served by a farm."
+      },
+      "date": 1573069868566
+    },
+    {
+      "type": "edit",
+      "id": "8c17204723674caf",
+      "item": {
+        "type": "paragraph",
+        "id": "8c17204723674caf",
+        "text": "Code the collection, validation and submission of registration information such as user name, preferred subdomain and event registration code. Check for duplicates. Submit and report success."
+      },
+      "date": 1573070083318
+    },
+    {
+      "type": "add",
+      "id": "f77d6e24e313f3c3",
+      "item": {
+        "type": "paragraph",
+        "id": "f77d6e24e313f3c3",
+        "text": "Code in wiki-server the endpoint that will provision a minimal site, possibly just the expected subdomain directory."
+      },
+      "after": "8c17204723674caf",
+      "date": 1573070180286
+    },
+    {
+      "type": "add",
+      "id": "608dff37d40fb53e",
+      "item": {
+        "type": "paragraph",
+        "id": "608dff37d40fb53e",
+        "text": "Create the configuration option that will disable automatic registration of farm sites on first reference. When selected, one must use some other mechanism, like the custom landing page to create new sites."
+      },
+      "after": "f77d6e24e313f3c3",
+      "date": 1573070365471
+    },
+    {
+      "type": "add",
+      "id": "004e479b149c24dc",
+      "item": {
+        "type": "paragraph",
+        "id": "004e479b149c24dc",
+        "text": "Consider how proper oauth login could be required, checked and forward to the provisioning endpoint from the custom landing page."
+      },
+      "after": "608dff37d40fb53e",
+      "date": 1573070455483
+    },
+    {
+      "type": "add",
+      "id": "bca6bdd7f0bcffb4",
+      "item": {
+        "type": "paragraph",
+        "id": "bca6bdd7f0bcffb4",
+        "text": "Consider how event specific welcome-visitors-template could be instantiated for new sites."
+      },
+      "after": "004e479b149c24dc",
+      "date": 1573070514965
+    },
+    {
+      "type": "add",
+      "id": "6e2bc5fe8e6612d2",
+      "item": {
+        "type": "paragraph",
+        "id": "6e2bc5fe8e6612d2",
+        "text": "Consider how a proper user page could be created for the new user. "
+      },
+      "after": "bca6bdd7f0bcffb4",
+      "date": 1573070557918
+    },
+    {
+      "type": "add",
+      "id": "8cef465459c33829",
+      "item": {
+        "type": "paragraph",
+        "id": "8cef465459c33829",
+        "text": "Consider how the new site could be automatically appended to the event roster. (When will the flag be created?)"
+      },
+      "after": "6e2bc5fe8e6612d2",
+      "date": 1573070620422
+    },
+    {
+      "type": "edit",
+      "id": "d8d7e442ea98ec82",
+      "item": {
+        "type": "markdown",
+        "id": "d8d7e442ea98ec82",
+        "text": "# Solution"
+      },
+      "date": 1573070625885
+    },
+    {
+      "type": "add",
+      "id": "06443d1126e0e247",
+      "item": {
+        "type": "paragraph",
+        "id": "06443d1126e0e247",
+        "text": "# Enhancements"
+      },
+      "after": "608dff37d40fb53e",
+      "date": 1573070640675
+    },
+    {
+      "type": "edit",
+      "id": "06443d1126e0e247",
+      "item": {
+        "type": "markdown",
+        "id": "06443d1126e0e247",
+        "text": "# Enhancements"
+      },
+      "date": 1573070643087
+    },
+    {
+      "type": "fork",
+      "site": "ward.asia.wiki.org",
+      "date": 1573119018409
+    }
+  ]
+}

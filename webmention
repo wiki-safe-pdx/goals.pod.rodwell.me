@@ -1,0 +1,88 @@
+{
+  "title": "Webmention",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "e519f92b0710de6c",
+      "text": "Webmention is a simple way to notify any URL when you mention it on your site. From the receiver's perspective, it's a way to request notifications when other sites mention it. [https://indiewebcamp.com/webmention Webmention] [https://www.w3.org/TR/webmention/ W3C]"
+    },
+    {
+      "type": "pagefold",
+      "id": "8a305ae41f82e218",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "4b64cdbb415aeb9a",
+      "text": "From IndieWeb Summit 2018, posted by Jim Pick [dat://fritter.hashbase.io/thread/dat://c6740b08b319265079ebb9da98ee11a01da5d5379ca5d0ef12fa539403532372/posts/0jizb0zr7.json fritter]"
+    },
+    {
+      "type": "markdown",
+      "id": "5694762d2bf52626",
+      "text": "I snipped out @gozala 's show-and-tell from IndieWeb Summit and uploaded it to Hashbase...\n\ndat://indieweb-summit-2018.hashbase.io/indieweb-summit-2018-gozala.html\n\nHis demo shows sending a Webmention from inside Beaker Browser!\n\nThis is what a Webmention is...\n\nhttps://indieweb.org/Webmention\n\nTo run the demo yourself, load up a test page where you can make a webmention, eg.\n\nhttps://webmention.rocks/test/1\n\nThen go here, and write a comment which will be used as a webmention:\n\ndat://d58a4ed2df295e9c994c3f4a6934b3e946ab5e497f65cd2c7ab6adbb26d9ae9f/\n\nYou will be prompted to select a Dat from your library or to create a new one to hold the webmention data. Just create a new one with a creative name you will remember ... eg. \"webmentions\".\n\nIf all goes well, behind the scenes, the webmention will be saved to dat, and relayed to the test page ... behind-the-scenes, there's a gateway that does that for you, and which also proxies your dat content. If you go back to the page you commented on, you should see your comment!\n\nhttps://webmention.rocks/test/1\n\nThe demo uses a Node.js gateway server which lives here... (you shouldn't have to touch it)\n\nhttps://glitch.com/edit/#!/datmention"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Webmention",
+        "story": []
+      },
+      "date": 1530342185742
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "e519f92b0710de6c",
+        "text": "Webmention is a simple way to notify any URL when you mention it on your site. From the receiver's perspective, it's a way to request notifications when other sites mention it. [https://indiewebcamp.com/webmention Webmention] [https://www.w3.org/TR/webmention/ W3C]"
+      },
+      "id": "e519f92b0710de6c",
+      "date": 1530342221188
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "pagefold",
+        "id": "8a305ae41f82e218",
+        "text": "."
+      },
+      "after": "e519f92b0710de6c",
+      "id": "8a305ae41f82e218",
+      "date": 1530342223410
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "4b64cdbb415aeb9a",
+        "text": "From IndieWeb Summit 2018, posted by Jim Pick [dat://fritter.hashbase.io/thread/dat://c6740b08b319265079ebb9da98ee11a01da5d5379ca5d0ef12fa539403532372/posts/0jizb0zr7.json fritter]"
+      },
+      "after": "8a305ae41f82e218",
+      "id": "4b64cdbb415aeb9a",
+      "date": 1530342228673
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "markdown",
+        "id": "5694762d2bf52626",
+        "text": "I snipped out @gozala 's show-and-tell from IndieWeb Summit and uploaded it to Hashbase...\n\ndat://indieweb-summit-2018.hashbase.io/ind...\n\nHis demo shows sending a Webmention from inside Beaker Browser!\n\nThis is what a Webmention is...\n\nhttps://indieweb.org/Webmention\n\nTo run the demo yourself, load up a test page where you can make a webmention, eg.\n\nhttps://webmention.rocks/test/1\n\nThen go here, and write a comment which will be used as a webmention:\n\ndat://d58a4ed2df295e9c994c3f4a6934b3e946ab5e497f65cd2c7ab6adbb26d9ae9f/\n\nYou will be prompted to select a Dat from your library or to create a new one to hold the webmention data. Just create a new one with a creative name you will remember ... eg. \"webmentions\".\n\nIf all goes well, behind the scenes, the webmention will be saved to dat, and relayed to the test page ... behind-the-scenes, there's a gateway that does that for you, and which also proxies your dat content. If you go back to the page you commented on, you should see your comment!\n\nhttps://webmention.rocks/test/1\n\nThe demo uses a Node.js gateway server which lives here... (you shouldn't have to touch it)\n\nhttps://glitch.com/edit/#!/datmention"
+      },
+      "after": "4b64cdbb415aeb9a",
+      "id": "5694762d2bf52626",
+      "date": 1530342233633
+    },
+    {
+      "type": "edit",
+      "id": "5694762d2bf52626",
+      "item": {
+        "type": "markdown",
+        "id": "5694762d2bf52626",
+        "text": "I snipped out @gozala 's show-and-tell from IndieWeb Summit and uploaded it to Hashbase...\n\ndat://indieweb-summit-2018.hashbase.io/indieweb-summit-2018-gozala.html\n\nHis demo shows sending a Webmention from inside Beaker Browser!\n\nThis is what a Webmention is...\n\nhttps://indieweb.org/Webmention\n\nTo run the demo yourself, load up a test page where you can make a webmention, eg.\n\nhttps://webmention.rocks/test/1\n\nThen go here, and write a comment which will be used as a webmention:\n\ndat://d58a4ed2df295e9c994c3f4a6934b3e946ab5e497f65cd2c7ab6adbb26d9ae9f/\n\nYou will be prompted to select a Dat from your library or to create a new one to hold the webmention data. Just create a new one with a creative name you will remember ... eg. \"webmentions\".\n\nIf all goes well, behind the scenes, the webmention will be saved to dat, and relayed to the test page ... behind-the-scenes, there's a gateway that does that for you, and which also proxies your dat content. If you go back to the page you commented on, you should see your comment!\n\nhttps://webmention.rocks/test/1\n\nThe demo uses a Node.js gateway server which lives here... (you shouldn't have to touch it)\n\nhttps://glitch.com/edit/#!/datmention"
+      },
+      "date": 1544125167560
+    }
+  ]
+}

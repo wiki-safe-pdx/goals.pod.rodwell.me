@@ -1,0 +1,266 @@
+{
+  "title": "Exploring Underlying Principles",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "5f316a2142e0de2e",
+      "text": "Taking a look at those Vision and Tactics that are heavily solution based. We try and expose the ideas that are surfaced in the [[Principles for Version Two]]."
+    },
+    {
+      "type": "markdown",
+      "id": "0da742043dfa30c8",
+      "text": "# Vision"
+    },
+    {
+      "type": "markdown",
+      "id": "ac4ceb41b6a78590",
+      "text": "Creating new Wiki, and sharing it with others, needs to be simple. _A tactic that supports simple creation, for a client/server architecture, is 'Farm is the Only Option.'_\n"
+    },
+    {
+      "type": "markdown",
+      "id": "74c7d128ca1bb6d1",
+      "text": "Extending the types of content supported with a wiki should be simple. _A tactic to support this is to use plugins for each content type. A technology specific solution is the use of ES6 Module._\n"
+    },
+    {
+      "type": "markdown",
+      "id": "b4df7163cabd544c",
+      "text": "A wiki neighbourhood is not a static thing. While a lineup presents a static view into a neighbourhood there should be visual feedback offered to inform the reader if content has been updated. Any visual update should be at the request of the reader, and not automatic. *The client should infrequently ask if a newer sitemap is available. An updated sitemap will trigger offering feedback to the reader.*"
+    },
+    {
+      "type": "markdown",
+      "id": "f13c8351f3127cb4",
+      "text": "Internal links should be more than just forward links to a wiki page. We should be able to link to a specific item on a wiki page. *Each page item has a identifier, it should be possible to use these within an internal link to point to a specific item within a wiki page. As a side note: exposing pointing to a wiki page at a specific point in time. A form of this is currently seen in the links from the journal.*"
+    },
+    {
+      "type": "markdown",
+      "id": "b4ea58a0d9d5b98e",
+      "text": "Wiki Pages should be aware of what pages link to them. *The site metadata should be extended to include details of the origin of internal links.*"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Exploring Underlying Principles",
+        "story": []
+      },
+      "date": 1601117091007
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5f316a2142e0de2e"
+      },
+      "id": "5f316a2142e0de2e",
+      "type": "add",
+      "date": 1601117316793
+    },
+    {
+      "type": "edit",
+      "id": "5f316a2142e0de2e",
+      "item": {
+        "type": "paragraph",
+        "id": "5f316a2142e0de2e",
+        "text": "Taking a look at those Vision and Tactics that are heavily solution based. We try and expose the ideas that  "
+      },
+      "date": 1601117814787
+    },
+    {
+      "type": "edit",
+      "id": "5f316a2142e0de2e",
+      "item": {
+        "type": "paragraph",
+        "id": "5f316a2142e0de2e",
+        "text": "Taking a look at those Vision and Tactics that are heavily solution based. We try and expose the ideas that are surfaced in the [[Principles for Version Two]]."
+      },
+      "date": 1601117866465
+    },
+    {
+      "type": "add",
+      "id": "0da742043dfa30c8",
+      "item": {
+        "type": "paragraph",
+        "id": "0da742043dfa30c8",
+        "text": "# Vision"
+      },
+      "after": "5f316a2142e0de2e",
+      "date": 1601118892501
+    },
+    {
+      "type": "add",
+      "id": "ac4ceb41b6a78590",
+      "item": {
+        "type": "paragraph",
+        "id": "ac4ceb41b6a78590",
+        "text": "Creating new Wiki, and sharing it with others, needs to be simple. A tactic that supports simple creation, for a client/server architecture, is 'Farm is the Only Option.'"
+      },
+      "after": "0da742043dfa30c8",
+      "date": 1601119125961
+    },
+    {
+      "type": "edit",
+      "id": "0da742043dfa30c8",
+      "item": {
+        "type": "markdown",
+        "id": "0da742043dfa30c8",
+        "text": "# Vision"
+      },
+      "date": 1601119129957
+    },
+    {
+      "type": "edit",
+      "id": "ac4ceb41b6a78590",
+      "item": {
+        "type": "paragraph",
+        "id": "ac4ceb41b6a78590",
+        "text": "Creating new Wiki, and sharing it with others, needs to be simple. _A tactic that supports simple creation, for a client/server architecture, is 'Farm is the Only Option.'_"
+      },
+      "date": 1601119198955
+    },
+    {
+      "type": "edit",
+      "id": "ac4ceb41b6a78590",
+      "item": {
+        "type": "markdown",
+        "id": "ac4ceb41b6a78590",
+        "text": "Creating new Wiki, and sharing it with others, needs to be simple. _A tactic that supports simple creation, for a client/server architecture, is 'Farm is the Only Option.'_"
+      },
+      "date": 1601119200337
+    },
+    {
+      "type": "edit",
+      "id": "ac4ceb41b6a78590",
+      "item": {
+        "type": "markdown",
+        "id": "ac4ceb41b6a78590",
+        "text": "Creating new Wiki, and sharing it with others, needs to be simple. _A tactic that supports simple creation, for a client/server architecture, is 'Farm is the Only Option.'_\n"
+      },
+      "date": 1601119205624
+    },
+    {
+      "type": "add",
+      "id": "74c7d128ca1bb6d1",
+      "item": {
+        "type": "markdown",
+        "id": "74c7d128ca1bb6d1",
+        "text": "Extending the types of content supported with a wiki should be simple. _A tactic to support this is to use plugins for each content type. A technology specific solution is the use of ES6 Module._\n"
+      },
+      "after": "ac4ceb41b6a78590",
+      "date": 1601119664707
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "f13c8351f3127cb4",
+        "text": "Internal links should be more than just forward links to a wiki page. We should be able to link to a specific item on a wiki page."
+      },
+      "id": "f13c8351f3127cb4",
+      "type": "add",
+      "after": "74c7d128ca1bb6d1",
+      "date": 1606212383426
+    },
+    {
+      "type": "edit",
+      "id": "f13c8351f3127cb4",
+      "item": {
+        "type": "paragraph",
+        "id": "f13c8351f3127cb4",
+        "text": "Internal links should be more than just forward links to a wiki page. We should be able to link to a specific item on a wiki page."
+      },
+      "date": 1606213046056,
+      "error": {
+        "type": "error",
+        "msg": "Not Found",
+        "response": "Page not found"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1606213080116
+    },
+    {
+      "type": "edit",
+      "id": "f13c8351f3127cb4",
+      "item": {
+        "type": "markdown",
+        "id": "f13c8351f3127cb4",
+        "text": "Internal links should be more than just forward links to a wiki page. We should be able to link to a specific item on a wiki page. *Each page item has a identifier, it should be possible to use these within an internal link to point to a specific item within a wiki page. As a side note: exposing pointing to a wiki page at a specific point in time. A form of this is currently seen in the links from the journal.*"
+      },
+      "date": 1606213553348
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b4ea58a0d9d5b98e"
+      },
+      "id": "b4ea58a0d9d5b98e",
+      "type": "add",
+      "after": "f13c8351f3127cb4",
+      "date": 1606213830097
+    },
+    {
+      "type": "edit",
+      "id": "b4ea58a0d9d5b98e",
+      "item": {
+        "type": "paragraph",
+        "id": "b4ea58a0d9d5b98e",
+        "text": "Wiki Pages should be aware of what pages link to them."
+      },
+      "date": 1606213882345
+    },
+    {
+      "type": "edit",
+      "id": "b4ea58a0d9d5b98e",
+      "item": {
+        "type": "markdown",
+        "id": "b4ea58a0d9d5b98e",
+        "text": "Wiki Pages should be aware of what pages link to them. *The site metadata should be extended to include details of the origin of internal links.*"
+      },
+      "date": 1606214328927
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b4df7163cabd544c"
+      },
+      "id": "b4df7163cabd544c",
+      "type": "add",
+      "after": "b4ea58a0d9d5b98e",
+      "date": 1606214396130
+    },
+    {
+      "type": "edit",
+      "id": "b4df7163cabd544c",
+      "item": {
+        "type": "factory",
+        "id": "b4df7163cabd544c",
+        "text": "A wiki neighbourhood is not a static thing. While a lineup presents a static view into a neighbourhood there should be visual feedback offered to inform the reader if content has been updated."
+      },
+      "date": 1606215680821
+    },
+    {
+      "type": "edit",
+      "id": "b4df7163cabd544c",
+      "item": {
+        "type": "markdown",
+        "id": "b4df7163cabd544c",
+        "text": "A wiki neighbourhood is not a static thing. While a lineup presents a static view into a neighbourhood there should be visual feedback offered to inform the reader if content has been updated. Any visual update should be at the request of the reader, and not automatic. *The client should infrequently ask if a newer sitemap is available. An updated sitemap will trigger offering feedback to the reader.*"
+      },
+      "date": 1606215971294
+    },
+    {
+      "id": "b4df7163cabd544c",
+      "type": "move",
+      "order": [
+        "5f316a2142e0de2e",
+        "0da742043dfa30c8",
+        "ac4ceb41b6a78590",
+        "74c7d128ca1bb6d1",
+        "b4df7163cabd544c",
+        "f13c8351f3127cb4",
+        "b4ea58a0d9d5b98e"
+      ],
+      "date": 1606215991330
+    }
+  ]
+}

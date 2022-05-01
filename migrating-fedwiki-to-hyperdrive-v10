@@ -1,0 +1,109 @@
+{
+  "title": "Migrating FedWiki to Hyperdrive v10",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "b0c7f7eedaa05c15",
+      "text": "Some fairly random jottings, and observation along the way, while updating the existing dat variant of FedWiki to work with Hyperdrive v10, and Beaker 1.0."
+    },
+    {
+      "type": "markdown",
+      "id": "e1b751212d0c0c43",
+      "text": "[[Things to Investigate (Beaker 1.0)]]\n[[Issues (Beaker 1.0)]]\n[[Development Environment (Beaker 1.0)]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Migrating FedWiki to Hyperdrive v10",
+        "story": []
+      },
+      "date": 1589726044822
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b0c7f7eedaa05c15"
+      },
+      "id": "b0c7f7eedaa05c15",
+      "type": "add",
+      "date": 1589733486040
+    },
+    {
+      "type": "edit",
+      "id": "b0c7f7eedaa05c15",
+      "item": {
+        "type": "paragraph",
+        "id": "b0c7f7eedaa05c15",
+        "text": "Some fairly random jottings, and observation along the way, while updating the existing dat variant of FedWiki to work with Hyperdrive v10, and Beaker 1.0."
+      },
+      "date": 1589733580535
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e1b751212d0c0c43"
+      },
+      "id": "e1b751212d0c0c43",
+      "type": "add",
+      "after": "b0c7f7eedaa05c15",
+      "date": 1589792684868
+    },
+    {
+      "type": "edit",
+      "id": "e1b751212d0c0c43",
+      "item": {
+        "type": "paragraph",
+        "id": "e1b751212d0c0c43",
+        "text": "[[Beaker 1.0 - Things to Investigate]]"
+      },
+      "date": 1589792728590
+    },
+    {
+      "type": "edit",
+      "id": "e1b751212d0c0c43",
+      "item": {
+        "type": "markdown",
+        "id": "e1b751212d0c0c43",
+        "text": "[[Beaker 1.0 - Things to Investigate]]"
+      },
+      "date": 1589792734058
+    },
+    {
+      "type": "edit",
+      "id": "e1b751212d0c0c43",
+      "item": {
+        "type": "markdown",
+        "id": "e1b751212d0c0c43",
+        "text": "[[Things to Investigate (Beaker 1.0)]]\n[[Issues (Beaker 1.0)]]"
+      },
+      "date": 1589792802640
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6501b8b7b3a29ef8"
+      },
+      "id": "6501b8b7b3a29ef8",
+      "type": "add",
+      "after": "e1b751212d0c0c43",
+      "date": 1589793126794
+    },
+    {
+      "type": "edit",
+      "id": "e1b751212d0c0c43",
+      "item": {
+        "type": "markdown",
+        "id": "e1b751212d0c0c43",
+        "text": "[[Things to Investigate (Beaker 1.0)]]\n[[Issues (Beaker 1.0)]]\n[[Development Environment (Beaker 1.0)]]"
+      },
+      "date": 1589794474133
+    },
+    {
+      "type": "remove",
+      "id": "6501b8b7b3a29ef8",
+      "date": 1589815448864
+    }
+  ]
+}

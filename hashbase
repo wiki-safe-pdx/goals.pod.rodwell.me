@@ -1,0 +1,148 @@
+{
+  "title": "Hashbase",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "a722cd0b87b5fb80",
+      "text": "From the creators of [[Beaker]], a fungible hosting service for the peer-to-peer Web, that keeps Dat content online. Also rehosts Dat content over HTTPS. [https://medium.com/blue-link-labs/introducing-hashbase-bf4dd2328f7e blog], [https://hashbase.io/ try hashbase], [https://github.com/beakerbrowser/hashbase git]"
+    },
+    {
+      "type": "video",
+      "id": "7d9dc8ef3f5886b2",
+      "text": "YOUTUBE wwLaEyKGc90\nA quick demo of creating a site in Beaker, and sharing it using Hashbase.\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "9234f4eb517e56c3",
+      "text": "Also see [[Homebase]]."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Hashbase",
+        "story": []
+      },
+      "date": 1499356308710
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a722cd0b87b5fb80"
+      },
+      "id": "a722cd0b87b5fb80",
+      "type": "add",
+      "date": 1499356335269
+    },
+    {
+      "type": "edit",
+      "id": "a722cd0b87b5fb80",
+      "item": {
+        "type": "paragraph",
+        "id": "a722cd0b87b5fb80",
+        "text": "From the creators of [[Beaker]], a fungible hosting service for the peer-to-peer Web. [["
+      },
+      "date": 1499356626392
+    },
+    {
+      "type": "edit",
+      "id": "a722cd0b87b5fb80",
+      "item": {
+        "type": "paragraph",
+        "id": "a722cd0b87b5fb80",
+        "text": "From the creators of [[Beaker]], a fungible hosting service for the peer-to-peer Web. [https://medium.com/blue-link-labs/introducing-hashbase-bf4dd2328f7e blog], "
+      },
+      "date": 1499356664357
+    },
+    {
+      "type": "edit",
+      "id": "a722cd0b87b5fb80",
+      "item": {
+        "type": "paragraph",
+        "id": "a722cd0b87b5fb80",
+        "text": "From the creators of [[Beaker]], a fungible hosting service for the peer-to-peer Web. [https://medium.com/blue-link-labs/introducing-hashbase-bf4dd2328f7e blog], [https://hashbase.io/ try hashbase], "
+      },
+      "date": 1499356702379
+    },
+    {
+      "type": "edit",
+      "id": "a722cd0b87b5fb80",
+      "item": {
+        "type": "paragraph",
+        "id": "a722cd0b87b5fb80",
+        "text": "From the creators of [[Beaker]], a fungible hosting service for the peer-to-peer Web. [https://medium.com/blue-link-labs/introducing-hashbase-bf4dd2328f7e blog], [https://hashbase.io/ try hashbase], [https://github.com/beakerbrowser/hashbase git]"
+      },
+      "date": 1499356716354
+    },
+    {
+      "type": "edit",
+      "id": "a722cd0b87b5fb80",
+      "item": {
+        "type": "paragraph",
+        "id": "a722cd0b87b5fb80",
+        "text": "From the creators of [[Beaker]], a fungible hosting service for the peer-to-peer Web, that keeps Dat content online. Also rehosts Dat content over HTTPS. [https://medium.com/blue-link-labs/introducing-hashbase-bf4dd2328f7e blog], [https://hashbase.io/ try hashbase], [https://github.com/beakerbrowser/hashbase git]"
+      },
+      "date": 1499357106777
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7d9dc8ef3f5886b2"
+      },
+      "id": "7d9dc8ef3f5886b2",
+      "type": "add",
+      "after": "a722cd0b87b5fb80",
+      "date": 1499357922842
+    },
+    {
+      "type": "edit",
+      "id": "7d9dc8ef3f5886b2",
+      "item": {
+        "type": "video",
+        "id": "7d9dc8ef3f5886b2",
+        "text": "YOUTUBE wwLaEyKGc90\n(double-click to edit caption)\n"
+      },
+      "date": 1499357929218
+    },
+    {
+      "type": "edit",
+      "id": "7d9dc8ef3f5886b2",
+      "item": {
+        "type": "video",
+        "id": "7d9dc8ef3f5886b2",
+        "text": "YOUTUBE wwLaEyKGc90\nA quick demo of creating a site in Beaker, and sharing it using Hashbase.\n"
+      },
+      "date": 1499358040981
+    },
+    {
+      "type": "fork",
+      "date": 1528526006913
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9234f4eb517e56c3"
+      },
+      "id": "9234f4eb517e56c3",
+      "type": "add",
+      "after": "7d9dc8ef3f5886b2",
+      "date": 1528526020752
+    },
+    {
+      "type": "edit",
+      "id": "9234f4eb517e56c3",
+      "item": {
+        "type": "paragraph",
+        "id": "9234f4eb517e56c3",
+        "text": "Also see [[Homebase]]."
+      },
+      "date": 1528526035186
+    },
+    {
+      "type": "fork",
+      "site": "forage.rodwell.me",
+      "date": 1528626454698
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "title": "Farms",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "3855a2c587dbca27",
+      "text": "The wiki software can be configured to serve multiple \"virtual\" sites from one running server. This allows one server administrator to host sites for many users. Here we consider the various ways such servers can be configured in order to meet the needs of various communities."
+    },
+    {
+      "type": "paragraph",
+      "id": "96ec4f7862884809",
+      "text": "One variation is a [[Local Farm]] which uses [[Docker]] to host a Farm on a [[Laptop Server]]."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Farms",
+        "story": []
+      },
+      "date": 1501556227406
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3855a2c587dbca27"
+      },
+      "id": "3855a2c587dbca27",
+      "type": "add",
+      "date": 1501556235561
+    },
+    {
+      "type": "edit",
+      "id": "3855a2c587dbca27",
+      "item": {
+        "type": "paragraph",
+        "id": "3855a2c587dbca27",
+        "text": "The wiki software can be configured to serve multiple \"virtual\" sites from one running server. This allows one server administrator to host sites for many users. Here we consider the various ways such servers can be configured in order to meet the needs of various communities."
+      },
+      "date": 1501556507289
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "fa294ce1499d81d5"
+      },
+      "id": "fa294ce1499d81d5",
+      "type": "add",
+      "after": "3855a2c587dbca27",
+      "date": 1501556579001
+    },
+    {
+      "type": "remove",
+      "id": "fa294ce1499d81d5",
+      "date": 1501556668251
+    },
+    {
+      "type": "fork",
+      "site": "admin.asia.wiki.org",
+      "date": 1501848264034
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "96ec4f7862884809"
+      },
+      "id": "96ec4f7862884809",
+      "type": "add",
+      "after": "3855a2c587dbca27",
+      "date": 1501848498731
+    },
+    {
+      "type": "edit",
+      "id": "96ec4f7862884809",
+      "item": {
+        "type": "paragraph",
+        "id": "96ec4f7862884809",
+        "text": "One example is a variation of a [[Laptop Server]] which uses [[Docker]] "
+      },
+      "date": 1501848599283
+    },
+    {
+      "type": "edit",
+      "id": "96ec4f7862884809",
+      "item": {
+        "type": "paragraph",
+        "id": "96ec4f7862884809",
+        "text": "One [[Local Farm]] is a variation of a [[Laptop Server]] which uses [[Docker]] to host a Farm."
+      },
+      "date": 1501848815874
+    },
+    {
+      "type": "edit",
+      "id": "96ec4f7862884809",
+      "item": {
+        "type": "paragraph",
+        "id": "96ec4f7862884809",
+        "text": "One variation is a [[Local Farm]] which uses [[Docker]] to host a Farm on a [[Laptop Server]]."
+      },
+      "date": 1501849440584
+    },
+    {
+      "type": "fork",
+      "site": "local-farm.wiki.dbbs.co",
+      "date": 1501947729518
+    }
+  ]
+}

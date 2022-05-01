@@ -1,0 +1,884 @@
+{
+  "title": "Federated Wiki with Caddy",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "7f8d29ad9af423e8",
+      "text": "[[Caddy]] has a number of attractions, but for the owner of a Federated Wiki farm one of the main attractions is On-Demand TLS, where Caddy will obtain a certificate for a new wiki during the first TLS handshake for a wiki that does not yet have a certificate. [https://caddyserver.com/docs/automatic-https Automatic HTTPS (On-Demand TLS)]"
+    },
+    {
+      "type": "markdown",
+      "id": "4c3a9724dd266940",
+      "text": "*Updated for Caddy v2*"
+    },
+    {
+      "type": "markdown",
+      "id": "ff2f4aef4ec7aafc",
+      "text": "### Caddy Install"
+    },
+    {
+      "type": "markdown",
+      "id": "f18546bd03402ccb",
+      "text": "Install Caddy using the instructions on [https://caddyserver.com/docs/install install caddy]. *N.B. If you want to use wildcard certificates you will need to include the appropriate ACME DNS challenge module. See, [https://caddy.community/t/how-to-use-dns-provider-modules-in-caddy-2/8148 How to use DNS provider modules]*\n"
+    },
+    {
+      "type": "markdown",
+      "id": "de0615725b16d725",
+      "text": "Depending on how you install you might also need to refer to [https://caddyserver.com/docs/running#manual-installation Keep Caddy Running]"
+    },
+    {
+      "type": "markdown",
+      "id": "18ebb8f480b00c9b",
+      "text": "### Caddy Configuration"
+    },
+    {
+      "type": "markdown",
+      "id": "f1888f79133244ad",
+      "text": "Create a Caddyfile `/etc/caddy/Caddyfile` to hold our configuration."
+    },
+    {
+      "type": "markdown",
+      "id": "36d5a20e2d20f513",
+      "text": "We tell Caddy the domains we are interested in by giving it a list. While we can use wildcards, these only apply to one level. So while `*.example.wiki` will match `my.example.wiki` it will not match `example.wiki` or `my.cool.example.wiki`. We also need to include both https and http in the configuration."
+    },
+    {
+      "type": "markdown",
+      "id": "c7ae98b7c3e38b99",
+      "text": "An initial configuration for a wiki file at `example.wiki` with just one level of sub-domains would be:"
+    },
+    {
+      "type": "code",
+      "id": "95cee85c18e755c6",
+      "text": "{\n  auto_https disable_redirects\n  on_demand_tls {\n    interval 1h\n    burst 10\n  }\n}\n\nexample.wiki:443, *.example.wiki:443, http://example.wiki, http://*.example.wiki {\n\n  encode gzip\n  header -Server\n\n  reverse_proxy localhost:3000\n\n  tls myemail@example.wiki {\n    on_demand\n  }\n}"
+    },
+    {
+      "type": "markdown",
+      "id": "482cb83b19e2f7b9",
+      "text": "If we want to have extra levels of sub-domains we can add those, but if you are using wildcard certificates only a single `*` at the start of the pattern is allowed. `*.subdomain.example.wiki` "
+    },
+    {
+      "type": "paragraph",
+      "id": "516200c33f85f2be",
+      "text": "Details  on how to add any extra configuration, such as log files, can be found in [https://caddyserver.com/docs caddy docs]."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Federated Wiki with Caddy",
+        "story": []
+      },
+      "date": 1499699809498
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7f8d29ad9af423e8"
+      },
+      "id": "7f8d29ad9af423e8",
+      "type": "add",
+      "date": 1499701275159
+    },
+    {
+      "type": "edit",
+      "id": "7f8d29ad9af423e8",
+      "item": {
+        "type": "paragraph",
+        "id": "7f8d29ad9af423e8",
+        "text": "[[Caddy]] has a number of attractions, but for the owner of a Federated Wiki farm one of the main attractions is Automatic HTTPS"
+      },
+      "date": 1499701379838
+    },
+    {
+      "type": "edit",
+      "id": "7f8d29ad9af423e8",
+      "item": {
+        "type": "paragraph",
+        "id": "7f8d29ad9af423e8",
+        "text": "[[Caddy]] has a number of attractions, but for the owner of a Federated Wiki farm one of the main attractions is On-Demand TLS, where Caddy will obtain a certificate for a new wiki during the first TLS handshake for a wiki that does not yet have a certificate."
+      },
+      "date": 1499701489635
+    },
+    {
+      "type": "edit",
+      "id": "7f8d29ad9af423e8",
+      "item": {
+        "type": "paragraph",
+        "id": "7f8d29ad9af423e8",
+        "text": "[[Caddy]] has a number of attractions, but for the owner of a Federated Wiki farm one of the main attractions is [https://caddyserver.com/docs/automatic-https On-Demand TLS], where Caddy will obtain a certificate for a new wiki during the first TLS handshake for a wiki that does not yet have a certificate."
+      },
+      "date": 1499701502119
+    },
+    {
+      "type": "edit",
+      "id": "7f8d29ad9af423e8",
+      "item": {
+        "type": "paragraph",
+        "id": "7f8d29ad9af423e8",
+        "text": "[[Caddy]] has a number of attractions, but for the owner of a Federated Wiki farm one of the main attractions is On-Demand TLS, where Caddy will obtain a certificate for a new wiki during the first TLS handshake for a wiki that does not yet have a certificate. [https://caddyserver.com/docs/automatic-https automatic https]"
+      },
+      "date": 1499701570438
+    },
+    {
+      "type": "edit",
+      "id": "7f8d29ad9af423e8",
+      "item": {
+        "type": "paragraph",
+        "id": "7f8d29ad9af423e8",
+        "text": "[[Caddy]] has a number of attractions, but for the owner of a Federated Wiki farm one of the main attractions is On-Demand TLS, where Caddy will obtain a certificate for a new wiki during the first TLS handshake for a wiki that does not yet have a certificate. [https://caddyserver.com/docs/automatic-https Automatic HTTPS (On-Demand TLS)]"
+      },
+      "date": 1499701602315
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ff2f4aef4ec7aafc"
+      },
+      "id": "ff2f4aef4ec7aafc",
+      "type": "add",
+      "after": "7f8d29ad9af423e8",
+      "date": 1499701685432
+    },
+    {
+      "type": "edit",
+      "id": "ff2f4aef4ec7aafc",
+      "item": {
+        "type": "paragraph",
+        "id": "ff2f4aef4ec7aafc",
+        "text": "### Caddy Install"
+      },
+      "date": 1499701724804
+    },
+    {
+      "type": "add",
+      "id": "f18546bd03402ccb",
+      "item": {
+        "type": "paragraph",
+        "id": "f18546bd03402ccb",
+        "text": "We will install using the Caddy installer script from [https://getcaddy.com https://getcaddy.com]."
+      },
+      "after": "ff2f4aef4ec7aafc",
+      "date": 1499701819472
+    },
+    {
+      "type": "edit",
+      "id": "ff2f4aef4ec7aafc",
+      "item": {
+        "type": "markdown",
+        "id": "ff2f4aef4ec7aafc",
+        "text": "### Caddy Install"
+      },
+      "date": 1499701953230
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2a9db7a49546d334"
+      },
+      "id": "2a9db7a49546d334",
+      "type": "add",
+      "after": "f18546bd03402ccb",
+      "date": 1499701966129
+    },
+    {
+      "type": "edit",
+      "id": "2a9db7a49546d334",
+      "item": {
+        "type": "code",
+        "id": "2a9db7a49546d334",
+        "text": "curl https://getcaddy.com | bash"
+      },
+      "date": 1499702154292
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "966b93a437c0f53f"
+      },
+      "id": "966b93a437c0f53f",
+      "type": "add",
+      "after": "2a9db7a49546d334",
+      "date": 1499702484326
+    },
+    {
+      "type": "edit",
+      "id": "966b93a437c0f53f",
+      "item": {
+        "type": "paragraph",
+        "id": "966b93a437c0f53f",
+        "text": "This will install caddy in /usr/local/bin/caddy"
+      },
+      "date": 1499702504122
+    },
+    {
+      "type": "edit",
+      "id": "966b93a437c0f53f",
+      "item": {
+        "type": "paragraph",
+        "id": "966b93a437c0f53f",
+        "text": "This will install caddy in `/usr/local/bin/caddy` "
+      },
+      "date": 1499702539567
+    },
+    {
+      "type": "edit",
+      "id": "966b93a437c0f53f",
+      "item": {
+        "type": "paragraph",
+        "id": "966b93a437c0f53f",
+        "text": "This will install caddy in `/usr/local/bin/caddy` as using "
+      },
+      "date": 1499702619203
+    },
+    {
+      "type": "edit",
+      "id": "966b93a437c0f53f",
+      "item": {
+        "type": "paragraph",
+        "id": "966b93a437c0f53f",
+        "text": "This will install caddy in `/usr/local/bin/caddy` and uses setcap to allow it to be run not as root and get access to "
+      },
+      "date": 1499702752595
+    },
+    {
+      "type": "edit",
+      "id": "966b93a437c0f53f",
+      "item": {
+        "type": "paragraph",
+        "id": "966b93a437c0f53f",
+        "text": "This will install caddy in `/usr/local/bin/caddy` and uses setcap to allow it to be run not as root and use ports 80 and 443."
+      },
+      "date": 1499702813519
+    },
+    {
+      "type": "edit",
+      "id": "966b93a437c0f53f",
+      "item": {
+        "type": "paragraph",
+        "id": "966b93a437c0f53f",
+        "text": "This will install caddy in `/usr/local/bin/caddy` and uses setcap to allow it to be run not as root and use privileged ports (80 and 443)."
+      },
+      "date": 1499702847077
+    },
+    {
+      "type": "add",
+      "id": "da741b1ece2dd25c",
+      "item": {
+        "type": "paragraph",
+        "id": "da741b1ece2dd25c",
+        "text": "We "
+      },
+      "after": "966b93a437c0f53f",
+      "date": 1499702857131
+    },
+    {
+      "type": "edit",
+      "id": "da741b1ece2dd25c",
+      "item": {
+        "type": "paragraph",
+        "id": "da741b1ece2dd25c",
+        "text": "We need to tell upstart how to start/stop caddy. You can find "
+      },
+      "date": 1499702929800
+    },
+    {
+      "type": "edit",
+      "id": "da741b1ece2dd25c",
+      "item": {
+        "type": "paragraph",
+        "id": "da741b1ece2dd25c",
+        "text": "We need to tell upstart how to start/stop caddy. The file you need, for Ubuntu 14.04 is [https://github.com/mholt/caddy/blob/master/dist/init/linux-upstart/caddy.conf caddy.conf], which should be saved to `/"
+      },
+      "date": 1499703055854
+    },
+    {
+      "type": "edit",
+      "id": "da741b1ece2dd25c",
+      "item": {
+        "type": "paragraph",
+        "id": "da741b1ece2dd25c",
+        "text": "We need to tell upstart how to start/stop caddy. The file you need, for Ubuntu 14.04 is [https://github.com/mholt/caddy/blob/master/dist/init/linux-upstart/caddy.conf caddy.conf], which should be saved to `/etc/init/caddy.conf`. "
+      },
+      "date": 1499703075843
+    },
+    {
+      "type": "edit",
+      "id": "da741b1ece2dd25c",
+      "item": {
+        "type": "paragraph",
+        "id": "da741b1ece2dd25c",
+        "text": "We need to tell upstart how to start/stop caddy. The file you need, for Ubuntu 14.04 is [https://github.com/mholt/caddy/blob/master/dist/init/linux-upstart/caddy.conf caddy.conf], which should be saved to `/etc/init/caddy.conf`. See ["
+      },
+      "date": 1499703122193
+    },
+    {
+      "type": "edit",
+      "id": "da741b1ece2dd25c",
+      "item": {
+        "type": "paragraph",
+        "id": "da741b1ece2dd25c",
+        "text": "We need to tell upstart how to start/stop caddy. The file you need, for Ubuntu 14.04 is [https://github.com/mholt/caddy/blob/master/dist/init/linux-upstart/caddy.conf caddy.conf], which should be saved to `/etc/init/caddy.conf`. See [https://github.com/mholt/caddy/tree/master/dist/init/linux-upstart github] for usage."
+      },
+      "date": 1499703160584
+    },
+    {
+      "type": "edit",
+      "id": "da741b1ece2dd25c",
+      "item": {
+        "type": "paragraph",
+        "id": "da741b1ece2dd25c",
+        "text": "We need to tell upstart how to start/stop caddy. The file you need, for Ubuntu 14.04 is [https://github.com/mholt/caddy/blob/master/dist/init/linux-upstart/caddy.conf caddy.conf], which should be saved to `/etc/init/caddy.conf`. See [https://github.com/mholt/caddy/tree/master/dist/init/linux-upstart github] for usage notes."
+      },
+      "date": 1499703207146
+    },
+    {
+      "type": "edit",
+      "id": "da741b1ece2dd25c",
+      "item": {
+        "type": "markdown",
+        "id": "da741b1ece2dd25c",
+        "text": "We need to tell upstart how to start/stop caddy. The file you need, for Ubuntu 14.04 is [https://github.com/mholt/caddy/blob/master/dist/init/linux-upstart/caddy.conf caddy.conf], which should be saved to `/etc/init/caddy.conf`. See [https://github.com/mholt/caddy/tree/master/dist/init/linux-upstart github] for usage notes."
+      },
+      "date": 1499703210811
+    },
+    {
+      "type": "edit",
+      "id": "966b93a437c0f53f",
+      "item": {
+        "type": "markdown",
+        "id": "966b93a437c0f53f",
+        "text": "This will install caddy in `/usr/local/bin/caddy` and uses setcap to allow it to be run not as root and use privileged ports (80 and 443)."
+      },
+      "date": 1499703212338
+    },
+    {
+      "type": "edit",
+      "id": "da741b1ece2dd25c",
+      "item": {
+        "type": "markdown",
+        "id": "da741b1ece2dd25c",
+        "text": "We need to tell upstart how to start/stop caddy. The file you need, for Ubuntu 14.04 is [https://github.com/mholt/caddy/blob/master/dist/init/linux-upstart/caddy.conf caddy.conf], which should be saved to `/etc/init/caddy.conf`. See usage notes on [https://github.com/mholt/caddy/tree/master/dist/init/linux-upstart github]."
+      },
+      "date": 1499703605126
+    },
+    {
+      "type": "edit",
+      "id": "ff2f4aef4ec7aafc",
+      "item": {
+        "type": "markdown",
+        "id": "ff2f4aef4ec7aafc",
+        "text": "###Caddy Install"
+      },
+      "date": 1499703625305
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "18ebb8f480b00c9b"
+      },
+      "id": "18ebb8f480b00c9b",
+      "type": "add",
+      "after": "da741b1ece2dd25c",
+      "date": 1499703628100
+    },
+    {
+      "type": "edit",
+      "id": "18ebb8f480b00c9b",
+      "item": {
+        "type": "paragraph",
+        "id": "18ebb8f480b00c9b",
+        "text": "###Caddy Configuration"
+      },
+      "date": 1499703642536
+    },
+    {
+      "type": "add",
+      "id": "f1888f79133244ad",
+      "item": {
+        "type": "paragraph",
+        "id": "f1888f79133244ad",
+        "text": "Create a Caddyfile `/etc/caddy/Caddyfile` to hold our configuration."
+      },
+      "after": "18ebb8f480b00c9b",
+      "date": 1499703692432
+    },
+    {
+      "type": "add",
+      "id": "36d5a20e2d20f513",
+      "item": {
+        "type": "paragraph",
+        "id": "36d5a20e2d20f513",
+        "text": "We tell Caddy the domains we are interested in by giving it a list. While we can use wildcards `*` these only apply to one level. So while `*.example.wiki` will match `my.example.wiki` it will not match `example.wiki` or `my.cool.example.wiki`. We also need to include both https and http in the configuration."
+      },
+      "after": "f1888f79133244ad",
+      "date": 1499704000928
+    },
+    {
+      "type": "add",
+      "id": "c7ae98b7c3e38b99",
+      "item": {
+        "type": "paragraph",
+        "id": "c7ae98b7c3e38b99",
+        "text": "An initial configuration for a wiki file at `example.wiki` with just one level of sub-domains would be:"
+      },
+      "after": "36d5a20e2d20f513",
+      "date": 1499704104472
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "95cee85c18e755c6"
+      },
+      "id": "95cee85c18e755c6",
+      "type": "add",
+      "after": "c7ae98b7c3e38b99",
+      "date": 1499704107245
+    },
+    {
+      "type": "edit",
+      "id": "95cee85c18e755c6",
+      "item": {
+        "type": "code",
+        "id": "95cee85c18e755c6",
+        "text": "example.wiki:443, *.example.wiki:443, http://example.wiki, http://*.example.wiki {\n  gzip\n  header / {\n    -Server\n  }\n  proxy / localhost:3000 {\n    transparent\n  }\n  tls myemail@example.wiki {\n    max_certs 10\n  }\n}"
+      },
+      "date": 1499704228392
+    },
+    {
+      "type": "edit",
+      "id": "95cee85c18e755c6",
+      "item": {
+        "type": "code",
+        "id": "95cee85c18e755c6",
+        "text": "example.wiki:443, *.example.wiki:443, http://example.wiki, http://*.example.wiki {\n\n  gzip\n\n  header / {\n    -Server\n  }\n\n  proxy / localhost:3000 {\n    transparent\n  }\n\n  tls myemail@example.wiki {\n    max_certs 10\n  }\n}"
+      },
+      "date": 1499704256925
+    },
+    {
+      "type": "edit",
+      "id": "95cee85c18e755c6",
+      "item": {
+        "type": "code",
+        "id": "95cee85c18e755c6",
+        "text": "example.wiki:443, *.example.wiki:443, http://example.wiki, http://*.example.wiki {\n\ngzip\n\nheader / {\n  -Server\n}\n\nproxy / localhost:3000 {\n  transparent\n}\n\ntls myemail@example.wiki {\n  max_certs 10\n}\n}"
+      },
+      "date": 1499704309750
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "482cb83b19e2f7b9"
+      },
+      "id": "482cb83b19e2f7b9",
+      "type": "add",
+      "after": "95cee85c18e755c6",
+      "date": 1499704316748
+    },
+    {
+      "type": "edit",
+      "id": "36d5a20e2d20f513",
+      "item": {
+        "type": "markdown",
+        "id": "36d5a20e2d20f513",
+        "text": "We tell Caddy the domains we are interested in by giving it a list. While we can use wildcards `*` these only apply to one level. So while `*.example.wiki` will match `my.example.wiki` it will not match `example.wiki` or `my.cool.example.wiki`. We also need to include both https and http in the configuration."
+      },
+      "date": 1499704323536
+    },
+    {
+      "type": "edit",
+      "id": "f1888f79133244ad",
+      "item": {
+        "type": "markdown",
+        "id": "f1888f79133244ad",
+        "text": "Create a Caddyfile `/etc/caddy/Caddyfile` to hold our configuration."
+      },
+      "date": 1499704324856
+    },
+    {
+      "type": "edit",
+      "id": "18ebb8f480b00c9b",
+      "item": {
+        "type": "markdown",
+        "id": "18ebb8f480b00c9b",
+        "text": "###Caddy Configuration"
+      },
+      "date": 1499704325903
+    },
+    {
+      "type": "edit",
+      "id": "c7ae98b7c3e38b99",
+      "item": {
+        "type": "markdown",
+        "id": "c7ae98b7c3e38b99",
+        "text": "An initial configuration for a wiki file at `example.wiki` with just one level of sub-domains would be:"
+      },
+      "date": 1499704327375
+    },
+    {
+      "type": "edit",
+      "id": "36d5a20e2d20f513",
+      "item": {
+        "type": "markdown",
+        "id": "36d5a20e2d20f513",
+        "text": "We tell Caddy the domains we are interested in by giving it a list. While we can use wildcards, these only apply to one level. So while `*.example.wiki` will match `my.example.wiki` it will not match `example.wiki` or `my.cool.example.wiki`. We also need to include both https and http in the configuration."
+      },
+      "date": 1499704355455
+    },
+    {
+      "type": "edit",
+      "id": "482cb83b19e2f7b9",
+      "item": {
+        "type": "paragraph",
+        "id": "482cb83b19e2f7b9",
+        "text": "If we want to have extra levels of sub-domains we can add those as `*.*.example.wiki:443, http://*.*.example.wiki`"
+      },
+      "date": 1499704456665
+    },
+    {
+      "type": "edit",
+      "id": "482cb83b19e2f7b9",
+      "item": {
+        "type": "paragraph",
+        "id": "482cb83b19e2f7b9",
+        "text": "If we want to have extra levels of sub-domains we can add those as `*.*.example.wiki:443, http://*.*.example.wiki`. You might also want to add logfiles"
+      },
+      "date": 1499704506151
+    },
+    {
+      "type": "edit",
+      "id": "482cb83b19e2f7b9",
+      "item": {
+        "type": "paragraph",
+        "id": "482cb83b19e2f7b9",
+        "text": "If we want to have extra levels of sub-domains we can add those as `*.*.example.wiki:443, http://*.*.example.wiki`."
+      },
+      "date": 1499704760770
+    },
+    {
+      "type": "edit",
+      "id": "482cb83b19e2f7b9",
+      "item": {
+        "type": "markdown",
+        "id": "482cb83b19e2f7b9",
+        "text": "If we want to have extra levels of sub-domains we can add those as `*.*.example.wiki:443, http://*.*.example.wiki`."
+      },
+      "date": 1499704833477
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4feca58f62dc6ca5"
+      },
+      "id": "4feca58f62dc6ca5",
+      "type": "add",
+      "after": "482cb83b19e2f7b9",
+      "date": 1499704855407
+    },
+    {
+      "type": "remove",
+      "id": "4feca58f62dc6ca5",
+      "date": 1499705041847
+    },
+    {
+      "type": "edit",
+      "id": "482cb83b19e2f7b9",
+      "item": {
+        "type": "markdown",
+        "id": "482cb83b19e2f7b9",
+        "text": "If we want to have extra levels of sub-domains we can add those as `*.*.example.wiki:443, http://*.*.example.wiki`. See [https://caddyserver.com/docs caddy docs] for details  on how to add any extra configuration, such as log files."
+      },
+      "date": 1499705122207
+    },
+    {
+      "type": "edit",
+      "id": "482cb83b19e2f7b9",
+      "item": {
+        "type": "markdown",
+        "id": "482cb83b19e2f7b9",
+        "text": "If we want to have extra levels of sub-domains we can add those as `*.*.example.wiki:443, http://*.*.example.wiki`. "
+      },
+      "date": 1499705138820
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "516200c33f85f2be"
+      },
+      "id": "516200c33f85f2be",
+      "type": "add",
+      "after": "482cb83b19e2f7b9",
+      "date": 1499705139759
+    },
+    {
+      "type": "edit",
+      "id": "516200c33f85f2be",
+      "item": {
+        "type": "paragraph",
+        "id": "516200c33f85f2be",
+        "text": "See [https://caddyserver.com/docs caddy docs] for details  on how to add any extra configuration, such as log files."
+      },
+      "date": 1499705147411
+    },
+    {
+      "type": "edit",
+      "id": "516200c33f85f2be",
+      "item": {
+        "type": "paragraph",
+        "id": "516200c33f85f2be",
+        "text": "Details  on how to add any extra configuration, such as log files, can be found in [https://caddyserver.com/docs caddy docs]."
+      },
+      "date": 1499705187896
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8b198fcc4fd7ad2d"
+      },
+      "id": "8b198fcc4fd7ad2d",
+      "type": "add",
+      "after": "516200c33f85f2be",
+      "date": 1499705314192
+    },
+    {
+      "type": "edit",
+      "id": "8b198fcc4fd7ad2d",
+      "item": {
+        "type": "paragraph",
+        "id": "8b198fcc4fd7ad2d",
+        "text": "Start caddy"
+      },
+      "date": 1499705345354
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f256ece18c395d42"
+      },
+      "id": "f256ece18c395d42",
+      "type": "add",
+      "after": "8b198fcc4fd7ad2d",
+      "date": 1499705386423
+    },
+    {
+      "type": "edit",
+      "id": "f256ece18c395d42",
+      "item": {
+        "type": "code",
+        "id": "f256ece18c395d42",
+        "text": "sudo service caddy start"
+      },
+      "date": 1499705399042
+    },
+    {
+      "type": "fork",
+      "date": 1499705516607
+    },
+    {
+      "type": "edit",
+      "id": "ff2f4aef4ec7aafc",
+      "item": {
+        "type": "markdown",
+        "id": "ff2f4aef4ec7aafc",
+        "text": "### Caddy Install"
+      },
+      "date": 1515078048121
+    },
+    {
+      "type": "edit",
+      "id": "18ebb8f480b00c9b",
+      "item": {
+        "type": "markdown",
+        "id": "18ebb8f480b00c9b",
+        "text": "### Caddy Configuration"
+      },
+      "date": 1515078052256
+    },
+    {
+      "type": "edit",
+      "id": "2a9db7a49546d334",
+      "item": {
+        "type": "code",
+        "id": "2a9db7a49546d334",
+        "text": "curl https://getcaddy.com | bash -s personal"
+      },
+      "date": 1517071307946
+    },
+    {
+      "type": "fork",
+      "site": "goals.pod.rodwell.me",
+      "date": 1647339824125
+    },
+    {
+      "type": "edit",
+      "id": "f18546bd03402ccb",
+      "item": {
+        "type": "paragraph",
+        "id": "f18546bd03402ccb",
+        "text": "We will install from the Caddy home page, [https://caddyserver.com/download download caddy]."
+      },
+      "date": 1647339944170
+    },
+    {
+      "type": "remove",
+      "id": "2a9db7a49546d334",
+      "date": 1647339951068
+    },
+    {
+      "type": "edit",
+      "id": "f18546bd03402ccb",
+      "item": {
+        "type": "factory",
+        "id": "f18546bd03402ccb",
+        "text": "We will install from the Caddy home page, [https://caddyserver.com/download download caddy]. N.B. If you want to use wildcard certificates you will need to include the appropriate ACME DNS challenge module."
+      },
+      "date": 1647340261801
+    },
+    {
+      "type": "edit",
+      "id": "f18546bd03402ccb",
+      "item": {
+        "type": "markdown",
+        "id": "f18546bd03402ccb",
+        "text": "We will install from the Caddy home page, [https://caddyserver.com/download download caddy]. *N.B. If you want to use wildcard certificates you will need to include the appropriate ACME DNS challenge module.*"
+      },
+      "date": 1647340270775
+    },
+    {
+      "type": "edit",
+      "id": "f18546bd03402ccb",
+      "item": {
+        "type": "markdown",
+        "id": "f18546bd03402ccb",
+        "text": "We will install from the Caddy home page, [https://caddyserver.com/download download caddy]. *N.B. If you want to use wildcard certificates you will need to include the appropriate ACME DNS challenge module. See, [https://caddy.community/t/how-to-use-dns-provider-modules-in-caddy-2/8148 How to use DNS provider modules]*"
+      },
+      "date": 1647340367265
+    },
+    {
+      "type": "edit",
+      "id": "f18546bd03402ccb",
+      "item": {
+        "type": "markdown",
+        "id": "f18546bd03402ccb",
+        "text": "Install Caddy using the instructions on [https://caddyserver.com/docs/install install caddy]. *N.B. If you want to use wildcard certificates you will need to include the appropriate ACME DNS challenge module. See, [https://caddy.community/t/how-to-use-dns-provider-modules-in-caddy-2/8148 How to use DNS provider modules]*"
+      },
+      "date": 1647340599201
+    },
+    {
+      "type": "remove",
+      "id": "966b93a437c0f53f",
+      "date": 1647340640748
+    },
+    {
+      "type": "remove",
+      "id": "da741b1ece2dd25c",
+      "date": 1647340645023
+    },
+    {
+      "type": "edit",
+      "id": "f18546bd03402ccb",
+      "item": {
+        "type": "markdown",
+        "id": "f18546bd03402ccb",
+        "text": "Install Caddy using the instructions on [https://caddyserver.com/docs/install install caddy]. *N.B. If you want to use wildcard certificates you will need to include the appropriate ACME DNS challenge module. See, [https://caddy.community/t/how-to-use-dns-provider-modules-in-caddy-2/8148 How to use DNS provider modules]*\n"
+      },
+      "date": 1647340691117
+    },
+    {
+      "type": "add",
+      "id": "de0615725b16d725",
+      "item": {
+        "type": "markdown",
+        "id": "de0615725b16d725",
+        "text": "Depending on how you install you might also need to refer to [https://caddyserver.com/docs/running#manual-installation Keep Caddy Running]"
+      },
+      "after": "f18546bd03402ccb",
+      "date": 1647340729237
+    },
+    {
+      "type": "edit",
+      "id": "95cee85c18e755c6",
+      "item": {
+        "type": "code",
+        "id": "95cee85c18e755c6",
+        "text": "{\n  auto_https disable_redirects\n  on_demand_tls {\n    interval\n    burst\n  }\n}\n\nexample.wiki:443, *.example.wiki:443, http://example.wiki, http://*.example.wiki {\n\n  encode gzip\n  header -Server\n\n  reverse_proxy localhost:3000\n\n  tls myemail@example.wiki {\n    on_demand\n  }\n}"
+      },
+      "date": 1647341196622
+    },
+    {
+      "type": "edit",
+      "id": "95cee85c18e755c6",
+      "item": {
+        "type": "code",
+        "id": "95cee85c18e755c6",
+        "text": "{\n  auto_https disable_redirects\n  on_demand_tls {\n    interval 24h\n    burst\n  }\n}\n\nexample.wiki:443, *.example.wiki:443, http://example.wiki, http://*.example.wiki {\n\n  encode gzip\n  header -Server\n\n  reverse_proxy localhost:3000\n\n  tls myemail@example.wiki {\n    on_demand\n  }\n}"
+      },
+      "date": 1647341256148
+    },
+    {
+      "type": "edit",
+      "id": "95cee85c18e755c6",
+      "item": {
+        "type": "code",
+        "id": "95cee85c18e755c6",
+        "text": "{\n  auto_https disable_redirects\n  on_demand_tls {\n    interval 1h\n    burst 10\n  }\n}\n\nexample.wiki:443, *.example.wiki:443, http://example.wiki, http://*.example.wiki {\n\n  encode gzip\n  header -Server\n\n  reverse_proxy localhost:3000\n\n  tls myemail@example.wiki {\n    on_demand\n  }\n}"
+      },
+      "date": 1647341376316
+    },
+    {
+      "type": "remove",
+      "id": "f256ece18c395d42",
+      "date": 1647341971687
+    },
+    {
+      "type": "remove",
+      "id": "8b198fcc4fd7ad2d",
+      "date": 1647341976126
+    },
+    {
+      "type": "edit",
+      "id": "482cb83b19e2f7b9",
+      "item": {
+        "type": "markdown",
+        "id": "482cb83b19e2f7b9",
+        "text": "If we want to have extra levels of sub-domains we can add those as `*.subdomain.example.wiki:443, http://*.subdomain.example.wiki`. "
+      },
+      "date": 1647342014733
+    },
+    {
+      "type": "edit",
+      "id": "482cb83b19e2f7b9",
+      "item": {
+        "type": "markdown",
+        "id": "482cb83b19e2f7b9",
+        "text": "If we want to have extra levels of sub-domains we can add those, but if you are using wildcard certificates only a single `*` at the start of the pattern is allowed. `*.subdomain.example.wiki` "
+      },
+      "date": 1647342160414
+    },
+    {
+      "type": "add",
+      "id": "4c3a9724dd266940",
+      "item": {
+        "type": "factory",
+        "id": "4c3a9724dd266940",
+        "text": "Updated for Caddy v2"
+      },
+      "after": "7f8d29ad9af423e8",
+      "date": 1647342297454
+    },
+    {
+      "type": "edit",
+      "id": "4c3a9724dd266940",
+      "item": {
+        "type": "markdown",
+        "id": "4c3a9724dd266940",
+        "text": "*Updated for Caddy v2*"
+      },
+      "date": 1647342306387
+    },
+    {
+      "type": "fork",
+      "date": 1647342583984
+    }
+  ]
+}

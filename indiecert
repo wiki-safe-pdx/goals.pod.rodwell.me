@@ -1,0 +1,39 @@
+{
+  "title": "IndieCert",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "98dcbd5680d8ed8e",
+      "text": "Like IndieAuth, but using client certificates. [https://www.tuxed.net/fkooman/blog/indiecert.html blog]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "IndieCert",
+        "story": []
+      },
+      "date": 1447503233815
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "98dcbd5680d8ed8e"
+      },
+      "id": "98dcbd5680d8ed8e",
+      "type": "add",
+      "date": 1447503260612
+    },
+    {
+      "type": "edit",
+      "id": "98dcbd5680d8ed8e",
+      "item": {
+        "type": "paragraph",
+        "id": "98dcbd5680d8ed8e",
+        "text": "Like IndieAuth, but using client certificates. [https://www.tuxed.net/fkooman/blog/indiecert.html blog]"
+      },
+      "date": 1447503293370
+    }
+  ]
+}

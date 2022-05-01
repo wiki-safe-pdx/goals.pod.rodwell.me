@@ -1,0 +1,208 @@
+{
+  "title": "Agoric SES",
+  "story": [
+    {
+      "type": "markdown",
+      "id": "cdec67b96b921f5b",
+      "text": "Mark S Miller (aka @erights) had earlier indicated that in light of Meltdown/Spectre. Dr. SES needed a rewrite. Here we see it progress, with an extensive demo and a secure @warner on bugs. "
+    },
+    {
+      "type": "paragraph",
+      "id": "b173244b5a13ea4f",
+      "text": "\"Secure EcmaScript (SES) is a frozen environment for running EcmaScript (Javascript) 'strict' mode programs with no ambient authority in their global scope, and with the addition of a safe two-argument evaluator (SES.confine(code, endowments)). By freezing everything accessible from the global scope, it removes programs abilities to interfere with each other, and thus enables isolated evaluation of arbitrary code.\n\nIt runs atop an ES6-compliant platform, enabling safe interaction of mutually-suspicious code, using object-capability -style programming.\""
+    },
+    {
+      "type": "markdown",
+      "id": "197433a04c0e928a",
+      "text": "[https://github.com/Agoric/SES Agoric/SES]"
+    },
+    {
+      "type": "pagefold",
+      "id": "85ea66a2d1bcd9cc",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "905f7ea2c58d6ddd",
+      "text": "Not too sure, as I don't see any announcements, but Agoric SES-shim github repo has been renamed/moved to [https://github.com/endojs/endo endojs/endo]."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Agoric SES",
+        "story": []
+      },
+      "date": 1533753573825
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "197433a04c0e928a"
+      },
+      "id": "197433a04c0e928a",
+      "type": "add",
+      "date": 1533753575262
+    },
+    {
+      "type": "edit",
+      "id": "197433a04c0e928a",
+      "item": {
+        "type": "markdown",
+        "id": "197433a04c0e928a",
+        "text": "[https://github.com/Agoric/SES]"
+      },
+      "date": 1533753600722
+    },
+    {
+      "type": "edit",
+      "id": "197433a04c0e928a",
+      "item": {
+        "type": "markdown",
+        "id": "197433a04c0e928a",
+        "text": "[https://github.com/Agoric/SES Agoric/SES]"
+      },
+      "date": 1533753620905
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b173244b5a13ea4f"
+      },
+      "id": "b173244b5a13ea4f",
+      "type": "add",
+      "after": "197433a04c0e928a",
+      "date": 1533753637790
+    },
+    {
+      "type": "edit",
+      "id": "b173244b5a13ea4f",
+      "item": {
+        "type": "paragraph",
+        "id": "b173244b5a13ea4f",
+        "text": "Secure EcmaScript (SES) is a frozen environment for running EcmaScript (Javascript) 'strict' mode programs with no ambient authority in their global scope, and with the addition of a safe two-argument evaluator (SES.confine(code, endowments)). By freezing everything accessible from the global scope, it removes programs abilities to interfere with each other, and thus enables isolated evaluation of arbitrary code.\n\nIt runs atop an ES6-compliant platform, enabling safe interaction of mutually-suspicious code, using object-capability -style programming."
+      },
+      "date": 1533753651370
+    },
+    {
+      "type": "move",
+      "order": [
+        "b173244b5a13ea4f",
+        "197433a04c0e928a"
+      ],
+      "id": "197433a04c0e928a",
+      "date": 1533753655032
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cdec67b96b921f5b"
+      },
+      "id": "cdec67b96b921f5b",
+      "type": "add",
+      "after": "197433a04c0e928a",
+      "date": 1533753662046
+    },
+    {
+      "type": "edit",
+      "id": "cdec67b96b921f5b",
+      "item": {
+        "type": "markdown",
+        "id": "cdec67b96b921f5b",
+        "text": "Mark S Miller (aka @erights) had earlier indicated that in light of Meltdown/Spectre. Dr. SES needed a rewrite. Here we see it progress. With an extensive demo and ability to warn on bugs. "
+      },
+      "date": 1533753817558
+    },
+    {
+      "type": "move",
+      "order": [
+        "cdec67b96b921f5b",
+        "b173244b5a13ea4f",
+        "197433a04c0e928a"
+      ],
+      "id": "cdec67b96b921f5b",
+      "date": 1533753819734
+    },
+    {
+      "type": "edit",
+      "id": "b173244b5a13ea4f",
+      "item": {
+        "type": "paragraph",
+        "id": "b173244b5a13ea4f",
+        "text": "\"Secure EcmaScript (SES) is a frozen environment for running EcmaScript (Javascript) 'strict' mode programs with no ambient authority in their global scope, and with the addition of a safe two-argument evaluator (SES.confine(code, endowments)). By freezing everything accessible from the global scope, it removes programs abilities to interfere with each other, and thus enables isolated evaluation of arbitrary code.\n\nIt runs atop an ES6-compliant platform, enabling safe interaction of mutually-suspicious code, using object-capability -style programming.\""
+      },
+      "date": 1533753834359
+    },
+    {
+      "type": "edit",
+      "id": "cdec67b96b921f5b",
+      "item": {
+        "type": "markdown",
+        "id": "cdec67b96b921f5b",
+        "text": "Mark S Miller (aka @erights) had earlier indicated that in light of Meltdown/Spectre. Dr. SES needed a rewrite. Here we see it progress, with an extensive demo and a secure @warner on bugs. "
+      },
+      "date": 1533778839245
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f71eded0572923ed"
+      },
+      "id": "f71eded0572923ed",
+      "type": "add",
+      "after": "197433a04c0e928a",
+      "date": 1535069919990
+    },
+    {
+      "type": "remove",
+      "id": "f71eded0572923ed",
+      "date": 1556384181206
+    },
+    {
+      "type": "fork",
+      "site": "clive.tries.fed.wiki",
+      "date": 1622197892672
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "85ea66a2d1bcd9cc"
+      },
+      "id": "85ea66a2d1bcd9cc",
+      "type": "add",
+      "after": "197433a04c0e928a",
+      "date": 1622197953655
+    },
+    {
+      "type": "edit",
+      "id": "85ea66a2d1bcd9cc",
+      "item": {
+        "type": "pagefold",
+        "id": "85ea66a2d1bcd9cc",
+        "text": "."
+      },
+      "date": 1622197957324
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "905f7ea2c58d6ddd"
+      },
+      "id": "905f7ea2c58d6ddd",
+      "type": "add",
+      "after": "85ea66a2d1bcd9cc",
+      "date": 1622197958574
+    },
+    {
+      "type": "edit",
+      "id": "905f7ea2c58d6ddd",
+      "item": {
+        "type": "paragraph",
+        "id": "905f7ea2c58d6ddd",
+        "text": "Not too sure, as I don't see any announcements, but Agoric SES-shim github repo has been renamed/moved to [https://github.com/endojs/endo endojs/endo]."
+      },
+      "date": 1622197961368
+    }
+  ]
+}

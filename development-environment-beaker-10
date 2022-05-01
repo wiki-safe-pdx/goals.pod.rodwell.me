@@ -1,0 +1,256 @@
+{
+  "title": "Development Environment (Beaker 1.0)",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "2a166bf6b3d27684",
+      "text": "The initial build environment will follow the lines of the previous, Beaker 0.8, build environment."
+    },
+    {
+      "type": "paragraph",
+      "id": "a597f62c38d9ef21",
+      "text": "At the top level there are three directories - `development`, `test`, `production`. Each of these will contain a directory for the client, and plugins."
+    },
+    {
+      "type": "paragraph",
+      "id": "0a9ab9cf214c80d4",
+      "text": "The [https://github.com/hypercore-protocol/hyperdrive-daemon hyperdrive daemon] is used, so we can import directories into hyperdrive."
+    },
+    {
+      "type": "markdown",
+      "id": "56e86300133ada99",
+      "text": "**N.B.** Details below will almost certainly change as we get to know Hyperdrive 10, and Beaker 1.0, better."
+    },
+    {
+      "type": "paragraph",
+      "id": "6c2e866617608307",
+      "text": "The development directory contains separate directories for the client and the core set of plugins, which will contain a directory for each of the plugins. This will layout will be used to create two hyperdrives, one for the client and the other for the core set of plugins."
+    },
+    {
+      "type": "markdown",
+      "id": "459bee2c0535dbb2",
+      "text": "Hyperdrives are created in the client's client, and the core plugins directory, using `hyperdrive import .`, and seeding is stopped by running `hyperdrive unseed {key}`. *With the next release of hyperdrive-daemon we will be able to use `--no-seed` as a parameter to the import.*"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Development Environment (Beaker 1.0)",
+        "story": []
+      },
+      "date": 1589794477560
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2a166bf6b3d27684"
+      },
+      "id": "2a166bf6b3d27684",
+      "type": "add",
+      "date": 1589794485911
+    },
+    {
+      "type": "edit",
+      "id": "2a166bf6b3d27684",
+      "item": {
+        "type": "paragraph",
+        "id": "2a166bf6b3d27684",
+        "text": "The initial build environment will follow the lines of the previous, Beaker 0.8, build environment."
+      },
+      "date": 1589794536551
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a597f62c38d9ef21"
+      },
+      "id": "a597f62c38d9ef21",
+      "type": "add",
+      "after": "2a166bf6b3d27684",
+      "date": 1589794560068
+    },
+    {
+      "type": "edit",
+      "id": "a597f62c38d9ef21",
+      "item": {
+        "type": "paragraph",
+        "id": "a597f62c38d9ef21",
+        "text": "At the top level there are three directories - `development`, `test`, `production`."
+      },
+      "date": 1589794639231
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0a9ab9cf214c80d4"
+      },
+      "id": "0a9ab9cf214c80d4",
+      "type": "add",
+      "after": "a597f62c38d9ef21",
+      "date": 1589794748093
+    },
+    {
+      "type": "edit",
+      "id": "a597f62c38d9ef21",
+      "item": {
+        "type": "paragraph",
+        "id": "a597f62c38d9ef21",
+        "text": "At the top level there are three directories - `development`, `test`, `production`. Each of these will contain a directory for the client, and plugins."
+      },
+      "date": 1589794801623
+    },
+    {
+      "type": "edit",
+      "id": "0a9ab9cf214c80d4",
+      "item": {
+        "type": "paragraph",
+        "id": "0a9ab9cf214c80d4",
+        "text": "The hyperdrive daemon is used, so we can "
+      },
+      "date": 1589794940614
+    },
+    {
+      "type": "edit",
+      "id": "0a9ab9cf214c80d4",
+      "item": {
+        "type": "paragraph",
+        "id": "0a9ab9cf214c80d4",
+        "text": "The hyperdrive daemon is used, so we can import directories into hyperdrive."
+      },
+      "date": 1589795001619
+    },
+    {
+      "type": "edit",
+      "id": "0a9ab9cf214c80d4",
+      "item": {
+        "type": "paragraph",
+        "id": "0a9ab9cf214c80d4",
+        "text": "The [https://github.com/hypercore-protocol/hyperdrive-daemon hyperdrive daemon] is used, so we can import directories into hyperdrive."
+      },
+      "date": 1589795091250
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6c2e866617608307"
+      },
+      "id": "6c2e866617608307",
+      "type": "add",
+      "after": "0a9ab9cf214c80d4",
+      "date": 1589877887381
+    },
+    {
+      "type": "edit",
+      "id": "6c2e866617608307",
+      "item": {
+        "type": "paragraph",
+        "id": "6c2e866617608307",
+        "text": "The development directory contains separate directories for the client and the core set of plugins, which will contain a directory for each of the plugins."
+      },
+      "date": 1589878102557
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "56e86300133ada99"
+      },
+      "id": "56e86300133ada99",
+      "type": "add",
+      "after": "6c2e866617608307",
+      "date": 1589878172839
+    },
+    {
+      "type": "edit",
+      "id": "56e86300133ada99",
+      "item": {
+        "type": "markdown",
+        "id": "56e86300133ada99",
+        "text": "*N.B.* Details below are subject to change as we get to know Hyperdrive 10 better."
+      },
+      "date": 1589878250845
+    },
+    {
+      "type": "edit",
+      "id": "56e86300133ada99",
+      "item": {
+        "type": "markdown",
+        "id": "56e86300133ada99",
+        "text": "**N.B.** Details below are subject to change as we get to know Hyperdrive 10 better."
+      },
+      "date": 1589878260853
+    },
+    {
+      "id": "56e86300133ada99",
+      "type": "move",
+      "order": [
+        "2a166bf6b3d27684",
+        "a597f62c38d9ef21",
+        "0a9ab9cf214c80d4",
+        "56e86300133ada99",
+        "6c2e866617608307"
+      ],
+      "date": 1589878263309
+    },
+    {
+      "type": "edit",
+      "id": "6c2e866617608307",
+      "item": {
+        "type": "paragraph",
+        "id": "6c2e866617608307",
+        "text": "The development directory contains separate directories for the client and the core set of plugins, which will contain a directory for each of the plugins. This will layout will be used to create two hyperdrives, one for the client and the other for the core set of plugins."
+      },
+      "date": 1589878325858
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "459bee2c0535dbb2"
+      },
+      "id": "459bee2c0535dbb2",
+      "type": "add",
+      "after": "6c2e866617608307",
+      "date": 1589878472995
+    },
+    {
+      "type": "edit",
+      "id": "459bee2c0535dbb2",
+      "item": {
+        "type": "markdown",
+        "id": "459bee2c0535dbb2",
+        "text": "Hyperdrives are created in the client's client, and the core plugins directory, using `hyperdrive import .`, and seeding is stopped by running `hyperdrive unseed {key}`."
+      },
+      "date": 1589878633222
+    },
+    {
+      "type": "edit",
+      "id": "56e86300133ada99",
+      "item": {
+        "type": "markdown",
+        "id": "56e86300133ada99",
+        "text": "**N.B.** Details below will almost certainly change as we get to know Hyperdrive 10, and Beaker 1.0, better."
+      },
+      "date": 1589878929813
+    },
+    {
+      "type": "edit",
+      "id": "459bee2c0535dbb2",
+      "item": {
+        "type": "markdown",
+        "id": "459bee2c0535dbb2",
+        "text": "Hyperdrives are created in the client's client, and the core plugins directory, using `hyperdrive import .`, and seeding is stopped by running `hyperdrive unseed {key}`. *with the next release of hyperdrive-daemon we will be able to use `--no-seed` as a parameter to the import.*"
+      },
+      "date": 1589881252346
+    },
+    {
+      "type": "edit",
+      "id": "459bee2c0535dbb2",
+      "item": {
+        "type": "markdown",
+        "id": "459bee2c0535dbb2",
+        "text": "Hyperdrives are created in the client's client, and the core plugins directory, using `hyperdrive import .`, and seeding is stopped by running `hyperdrive unseed {key}`. *With the next release of hyperdrive-daemon we will be able to use `--no-seed` as a parameter to the import.*"
+      },
+      "date": 1589881261768
+    }
+  ]
+}

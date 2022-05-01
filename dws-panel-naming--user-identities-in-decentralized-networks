@@ -1,0 +1,74 @@
+{
+  "title": "DWS Panel: Naming & User Identities in Decentralized Networks",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "cec532df6801d60b",
+      "text": "[[Decentralised Web]] Panel, with Christopher Allen, Muneeb Ali, Jaochim Lohkamp and Jeremy Rand, moderated by Chelsea Barabas."
+    },
+    {
+      "type": "video",
+      "id": "afd3aed951479648",
+      "text": "ARCHIVE DWebSummit2016_Panel_Naming_and_User_Identities\nPanel – Naming & User Identities in Decentralized Networks. Moderated by Chelsea Barabas. \n"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "DWS Panel: Naming & User Identities in Decentralized Networks",
+        "story": []
+      },
+      "date": 1467193836299
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cec532df6801d60b"
+      },
+      "id": "cec532df6801d60b",
+      "type": "add",
+      "date": 1467193870341
+    },
+    {
+      "type": "edit",
+      "id": "cec532df6801d60b",
+      "item": {
+        "type": "paragraph",
+        "id": "cec532df6801d60b",
+        "text": "[[Decentralised Web]] Panel, with Christopher Allen, Muneeb Ali, Jaochim Lohkamp and Jeremy Rand, moderated by Chelsea Barabas."
+      },
+      "date": 1467193970246
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "afd3aed951479648"
+      },
+      "id": "afd3aed951479648",
+      "type": "add",
+      "after": "cec532df6801d60b",
+      "date": 1467193972149
+    },
+    {
+      "type": "edit",
+      "id": "afd3aed951479648",
+      "item": {
+        "type": "video",
+        "id": "afd3aed951479648",
+        "text": "ARCHIVE DWebSummit2016_Panel_Naming_and_User_Identities\n(double-click to edit caption)\n"
+      },
+      "date": 1467193981341
+    },
+    {
+      "type": "edit",
+      "id": "afd3aed951479648",
+      "item": {
+        "type": "video",
+        "id": "afd3aed951479648",
+        "text": "ARCHIVE DWebSummit2016_Panel_Naming_and_User_Identities\nPanel – Naming & User Identities in Decentralized Networks. Moderated by Chelsea Barabas. \n"
+      },
+      "date": 1467194015650
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Site Index",
+  "story": [
+    {
+      "type": "activity",
+      "id": "e9e9f102158e1382",
+      "text": "MINE only\nSORT title"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Site Index",
+        "story": []
+      },
+      "date": 1573895775529
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2fbe08a703f09a9a"
+      },
+      "id": "2fbe08a703f09a9a",
+      "type": "add",
+      "date": 1573895781905
+    },
+    {
+      "id": "e9e9f102158e1382",
+      "type": "add",
+      "item": {
+        "type": "activity",
+        "id": "e9e9f102158e1382"
+      },
+      "date": 1573895861122
+    },
+    {
+      "type": "edit",
+      "id": "e9e9f102158e1382",
+      "item": {
+        "type": "activity",
+        "id": "e9e9f102158e1382",
+        "text": "MINE only\nSORT title"
+      },
+      "date": 1573895878803
+    },
+    {
+      "type": "remove",
+      "id": "2fbe08a703f09a9a",
+      "date": 1573895925369
+    }
+  ]
+}

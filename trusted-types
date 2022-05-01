@@ -1,0 +1,159 @@
+{
+  "title": "Trusted Types",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "d365d4a89246a5ec",
+      "text": "Trusted Types works by locking down risky browser functions to help prevent client-side (DOM-based) cross-site scripting."
+    },
+    {
+      "type": "paragraph",
+      "id": "23259da294be0dc5",
+      "text": "Currently only available on a limited set of browsers [https://caniuse.com/trusted-types caniuse]"
+    },
+    {
+      "type": "paragraph",
+      "id": "8e3b450eb2db58bf",
+      "text": "Further reading: [https://w3c.github.io/webappsec-trusted-types/dist/spec/ W3C], [https://github.com/w3c/webappsec-trusted-types W3C polyfill], Securing the Tangled Web, Christoph Kern, Google - ACM Queue, 2014 [https://dl.acm.org/doi/pdf/10.1145/2639988.2663760 pdf]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Trusted Types",
+        "story": []
+      },
+      "date": 1612607336574
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d365d4a89246a5ec"
+      },
+      "id": "d365d4a89246a5ec",
+      "type": "add",
+      "date": 1612607538806
+    },
+    {
+      "type": "edit",
+      "id": "d365d4a89246a5ec",
+      "item": {
+        "type": "paragraph",
+        "id": "d365d4a89246a5ec",
+        "text": "Trusted Types works by locking down risky browser functions to help prevent client-side (DOM-based) cross-site scripting."
+      },
+      "date": 1612607983056
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "23259da294be0dc5"
+      },
+      "id": "23259da294be0dc5",
+      "type": "add",
+      "after": "d365d4a89246a5ec",
+      "date": 1612607986101
+    },
+    {
+      "type": "edit",
+      "id": "23259da294be0dc5",
+      "item": {
+        "type": "paragraph",
+        "id": "23259da294be0dc5",
+        "text": "Currently only available on "
+      },
+      "date": 1612607999334
+    },
+    {
+      "type": "edit",
+      "id": "23259da294be0dc5",
+      "item": {
+        "type": "paragraph",
+        "id": "23259da294be0dc5",
+        "text": "Currently only available on a limited set of browsers. ["
+      },
+      "date": 1612608058069
+    },
+    {
+      "type": "edit",
+      "id": "23259da294be0dc5",
+      "item": {
+        "type": "paragraph",
+        "id": "23259da294be0dc5",
+        "text": "Currently only available on a limited set of browsers. See [https://caniuse.com/trusted-types caniuse]"
+      },
+      "date": 1612608077643
+    },
+    {
+      "type": "edit",
+      "id": "23259da294be0dc5",
+      "item": {
+        "type": "paragraph",
+        "id": "23259da294be0dc5",
+        "text": "Currently only available on a limited set of browsers [https://caniuse.com/trusted-types caniuse]"
+      },
+      "date": 1612608089594
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8e3b450eb2db58bf"
+      },
+      "id": "8e3b450eb2db58bf",
+      "type": "add",
+      "after": "23259da294be0dc5",
+      "date": 1612608099920
+    },
+    {
+      "type": "edit",
+      "id": "8e3b450eb2db58bf",
+      "item": {
+        "type": "paragraph",
+        "id": "8e3b450eb2db58bf",
+        "text": "Further reading: "
+      },
+      "date": 1612608342881
+    },
+    {
+      "type": "edit",
+      "id": "8e3b450eb2db58bf",
+      "item": {
+        "type": "paragraph",
+        "id": "8e3b450eb2db58bf",
+        "text": "Further reading: [https://w3c.github.io/webappsec-trusted-types/dist/spec/ W3C]"
+      },
+      "date": 1612608400614
+    },
+    {
+      "type": "edit",
+      "id": "8e3b450eb2db58bf",
+      "item": {
+        "type": "paragraph",
+        "id": "8e3b450eb2db58bf",
+        "text": "Further reading: [https://w3c.github.io/webappsec-trusted-types/dist/spec/ W3C], [https://github.com/w3c/webappsec-trusted-types W3C polyfill]"
+      },
+      "date": 1612608495339
+    },
+    {
+      "type": "edit",
+      "id": "8e3b450eb2db58bf",
+      "item": {
+        "type": "paragraph",
+        "id": "8e3b450eb2db58bf",
+        "text": "Further reading: [https://w3c.github.io/webappsec-trusted-types/dist/spec/ W3C], [https://github.com/w3c/webappsec-trusted-types W3C polyfill], Securing the Tangled Web, Christoph Kern, [https://dl.acm.org/doi/pdf/10.1145/2639988.2663760 pdf]"
+      },
+      "date": 1612608630262
+    },
+    {
+      "type": "edit",
+      "id": "8e3b450eb2db58bf",
+      "item": {
+        "type": "paragraph",
+        "id": "8e3b450eb2db58bf",
+        "text": "Further reading: [https://w3c.github.io/webappsec-trusted-types/dist/spec/ W3C], [https://github.com/w3c/webappsec-trusted-types W3C polyfill], Securing the Tangled Web, Christoph Kern, Google - ACM Queue, 2014 [https://dl.acm.org/doi/pdf/10.1145/2639988.2663760 pdf]"
+      },
+      "date": 1612608687251
+    }
+  ]
+}

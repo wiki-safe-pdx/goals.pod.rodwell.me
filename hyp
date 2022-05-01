@@ -1,0 +1,94 @@
+{
+  "title": "Hyp",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "faea06df9ec2861c",
+      "text": "A command-line tool for peer-to-peer file sharing, and more, using the [[Hypercore Protocol]]. [https://www.patreon.com/posts/hyp-command-line-44923749 blog] [https://github.com/hypercore-protocol/cli github]"
+    },
+    {
+      "type": "video",
+      "id": "c8a375094f5dac5e",
+      "text": "YOUTUBE YppAyNkXUbs\nThe hyp cli is kind of like BitTorrent for you commandline, but instead of BitTorrent it's the new Hypercore Protocol. In this video Paul explains a bunch of the common commands and how to use them. You can get the hyp cli at https://hypercore-protocol.org\n\n"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Hyp",
+        "story": []
+      },
+      "date": 1607766701246
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "faea06df9ec2861c"
+      },
+      "id": "faea06df9ec2861c",
+      "type": "add",
+      "date": 1607766728018
+    },
+    {
+      "type": "edit",
+      "id": "faea06df9ec2861c",
+      "item": {
+        "type": "paragraph",
+        "id": "faea06df9ec2861c",
+        "text": "A command-line tool for peer-to-peer file sharing, and more, using the [[Hypercore Protocol]]."
+      },
+      "date": 1607766806304
+    },
+    {
+      "type": "edit",
+      "id": "faea06df9ec2861c",
+      "item": {
+        "type": "paragraph",
+        "id": "faea06df9ec2861c",
+        "text": "A command-line tool for peer-to-peer file sharing, and more, using the [[Hypercore Protocol]]. [https://www.patreon.com/posts/hyp-command-line-44923749 blog]"
+      },
+      "date": 1607766820694
+    },
+    {
+      "type": "edit",
+      "id": "faea06df9ec2861c",
+      "item": {
+        "type": "paragraph",
+        "id": "faea06df9ec2861c",
+        "text": "A command-line tool for peer-to-peer file sharing, and more, using the [[Hypercore Protocol]]. [https://www.patreon.com/posts/hyp-command-line-44923749 blog] [https://github.com/hypercore-protocol/cli github]"
+      },
+      "date": 1607766984576
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c8a375094f5dac5e"
+      },
+      "id": "c8a375094f5dac5e",
+      "type": "add",
+      "after": "faea06df9ec2861c",
+      "date": 1609943300054
+    },
+    {
+      "type": "edit",
+      "id": "c8a375094f5dac5e",
+      "item": {
+        "type": "video",
+        "id": "c8a375094f5dac5e",
+        "text": "YOUTUBE YppAyNkXUbs\n(double-click to edit caption)\n"
+      },
+      "date": 1609943306359
+    },
+    {
+      "type": "edit",
+      "id": "c8a375094f5dac5e",
+      "item": {
+        "type": "video",
+        "id": "c8a375094f5dac5e",
+        "text": "YOUTUBE YppAyNkXUbs\nThe hyp cli is kind of like BitTorrent for you commandline, but instead of BitTorrent it's the new Hypercore Protocol. In this video Paul explains a bunch of the common commands and how to use them. You can get the hyp cli at https://hypercore-protocol.org\n\n"
+      },
+      "date": 1609943332966
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "title": "Wiki HoA Notes June 6",
+  "story": [
+    {
+      "type": "markdown",
+      "id": "97c4148be986f4e5",
+      "text": "Organized complexity accumulates piecemeal in an iterative cycle."
+    },
+    {
+      "type": "markdown",
+      "id": "70aa439d13a0d621",
+      "text": "Raw\n"
+    },
+    {
+      "type": "markdown",
+      "id": "fb1f925b5a3fffc9",
+      "text": "Robert SterbalHi all\n18:05\nYouhi robert\n18:05\nYouhttp://substance.io/texture/\n18:06\nRobert SterbalBayer had their U.S. headquarters here for decades\n18:14\nUnknown senderprob is the ownership model\n18:15\nRobert SterbalIt is a acquisition that should be reviewed\n18:16\nUnknown senderhttp://tiny.cc/deehock ownership can be defined as 'non-transferable right of participation'\n18:16\nStephan KreutzerI'm not sure if they can buy \"ownership\" of \"IP\", but they might gain the option to look at business secrets internally with people noticing.\n18:16\nStephan KreutzerThe contracts might retain the rights for the repo owners, except GitHub got a separate special license via their TOS for the hosting and 3rd party.\n18:17\nUnknown senderjive?\n18:18\nRobert SterbalAt least there won't be clauses you can't create competing products\n18:18\nStephan KreutzerWhat I wanted to say: busy with wrapping things up, and switching to GitLab ;-)\n18:27\nRobert SterbalThat business has some challenges\n18:48\nRobert SterbalThe one I work with has registration issues\n18:49\nRobert Sterbalthe main players have age and reputation issues\n18:49\nRobert SterbalOne guy is 16\n18:49\nRobert Sterbalthe other guy is being harassed\n18:49\nRobert SterbalIt resolves to: http://start.fed.wiki/view/welcome-visitors\n18:51\nRobert SterbalCan I move my 100,000 photos to fed wiki?\n18:52\nRobert Sterbal:)\n18:52\nRobert SterbalIt would be interesting to see if youtube would do an ok job of transcription\n18:57\nRobert Sterbalyes\n18:57\nRobert SterbalI use an app called Braintoss\n18:58\nRobert SterbalIt captures links, audio and text\n18:58\nRobert Sterbalsomewhat buggy on iOS\n18:58\nRobert Sterbaluses an app and a link grabber\n18:59\nRobert SterbalOnetab is a neat extension for converting all your tabs to links\n18:59\nRobert SterbalYep, does that pretty well\n19:00\nStephan KreutzerMight be the mentioned brain application (sometimes text in the bottom half): https://webbrain.com/brainpage/brain/82279A4E-5679-DE05-133F-8DB87C6454C1\n19:08\nRobert SterbalThanks!\n19:10\nStephan KreutzerTed Nelsons recent \"Xanadu Basics\": https://www.youtube.com/user/TheTedNelson/videos"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Wiki HoA Notes June 6",
+        "story": []
+      },
+      "date": 1528308801866
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "97c4148be986f4e5"
+      },
+      "id": "97c4148be986f4e5",
+      "type": "add",
+      "date": 1528308813309
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "70aa439d13a0d621"
+      },
+      "id": "70aa439d13a0d621",
+      "type": "add",
+      "after": "97c4148be986f4e5",
+      "date": 1528308817659
+    },
+    {
+      "type": "edit",
+      "id": "70aa439d13a0d621",
+      "item": {
+        "type": "markdown",
+        "id": "70aa439d13a0d621",
+        "text": "Raw\n"
+      },
+      "date": 1528308824830
+    },
+    {
+      "type": "add",
+      "id": "fb1f925b5a3fffc9",
+      "item": {
+        "type": "markdown",
+        "id": "fb1f925b5a3fffc9",
+        "text": "Robert SterbalHi all\n18:05\nYouhi robert\n18:05\nYouhttp://substance.io/texture/\n18:06\nRobert SterbalBayer had their U.S. headquarters here for decades\n18:14\nUnknown senderprob is the ownership model\n18:15\nRobert SterbalIt is a acquisition that should be reviewed\n18:16\nUnknown senderhttp://tiny.cc/deehock ownership can be defined as 'non-transferable right of participation'\n18:16\nStephan KreutzerI'm not sure if they can buy \"ownership\" of \"IP\", but they might gain the option to look at business secrets internally with people noticing.\n18:16\nStephan KreutzerThe contracts might retain the rights for the repo owners, except GitHub got a separate special license via their TOS for the hosting and 3rd party.\n18:17\nUnknown senderjive?\n18:18\nRobert SterbalAt least there won't be clauses you can't create competing products\n18:18\nStephan KreutzerWhat I wanted to say: busy with wrapping things up, and switching to GitLab ;-)\n18:27\nRobert SterbalThat business has some challenges\n18:48\nRobert SterbalThe one I work with has registration issues\n18:49\nRobert Sterbalthe main players have age and reputation issues\n18:49\nRobert SterbalOne guy is 16\n18:49\nRobert Sterbalthe other guy is being harassed\n18:49\nRobert SterbalIt resolves to: http://start.fed.wiki/view/welcome-visitors\n18:51\nRobert SterbalCan I move my 100,000 photos to fed wiki?\n18:52\nRobert Sterbal:)\n18:52\nRobert SterbalIt would be interesting to see if youtube would do an ok job of transcription\n18:57\nRobert Sterbalyes\n18:57\nRobert SterbalI use an app called Braintoss\n18:58\nRobert SterbalIt captures links, audio and text\n18:58\nRobert Sterbalsomewhat buggy on iOS\n18:58\nRobert Sterbaluses an app and a link grabber\n18:59\nRobert SterbalOnetab is a neat extension for converting all your tabs to links\n18:59\nRobert SterbalYep, does that pretty well\n19:00\nStephan KreutzerMight be the mentioned brain application (sometimes text in the bottom half): https://webbrain.com/brainpage/brain/82279A4E-5679-DE05-133F-8DB87C6454C1\n19:08\nRobert SterbalThanks!\n19:10\nStephan KreutzerTed Nelsons recent \"Xanadu Basics\": https://www.youtube.com/user/TheTedNelson/videos"
+      },
+      "after": "70aa439d13a0d621",
+      "date": 1528308832187
+    },
+    {
+      "type": "edit",
+      "id": "97c4148be986f4e5",
+      "item": {
+        "type": "markdown",
+        "id": "97c4148be986f4e5",
+        "text": "Organized complexity accumulates piecemeal in an iterative cycle."
+      },
+      "date": 1528308899105
+    }
+  ]
+}

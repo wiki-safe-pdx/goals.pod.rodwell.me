@@ -1,0 +1,327 @@
+{
+  "title": "Beaker Next - Developer Diary",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "9c945b56d6c58963",
+      "text": "Paul Frazee is recording a weekly series of 'diary' videos showing the features of the next version of Beaker."
+    },
+    {
+      "type": "video",
+      "id": "6b00a75b1715378f",
+      "text": "YOUTUBE OUaqT6huJMg\nIn this video, Paul Frazee demonstrates the new tooling for Website creation. That includes the editor sidebar and Beaker's files-explorer application."
+    },
+    {
+      "type": "video",
+      "id": "d449bf98686b29d5",
+      "text": "YOUTUBE iTkLx5lmtLk\nIn this video, Paul Frazee explains the Hyperdrive filesystem. He explain the personal drive, \"mounts\", and filesystem queries. Also shows the Files Explorer and Web terminal."
+    },
+    {
+      "type": "video",
+      "id": "794014e749aea07c",
+      "text": "YOUTUBE Zp5Dh52iS-U\nIn this video, Paul Frazee demonstrates .view files, which are a powerful way to combine multiple directories into a single \"virtual folder.\""
+    },
+    {
+      "type": "video",
+      "id": "09eda0a38f03857b",
+      "text": "YOUTUBE mIu0cZcPUTc\nIn this video, Paul Frazee demonstrate the last week's updates: new onboarding flows, file metadata APIs, and .goto files (aka \"shortcuts\")"
+    },
+    {
+      "type": "video",
+      "id": "ecba85750b5940ea",
+      "text": "YOUTUBE iO3k4d9P3Us\nDemonstrating the updates from the last week."
+    },
+    {
+      "type": "video",
+      "id": "4596b9de8ccfa3b5",
+      "text": "YOUTUBE k0JVGXL-BQY\nThe Beaker.Network app queries the Hyperdrive filesystem to create a feed, social graph, and more. No backend required."
+    },
+    {
+      "type": "video",
+      "id": "81af7456c082d380",
+      "text": "YOUTUBE fKyDhsB6qVw\nHoly cow everybody! I think we have a feature-lock on the beta.\n"
+    },
+    {
+      "type": "pagefold",
+      "id": "ac1b2c5592c5be69",
+      "text": "."
+    },
+    {
+      "type": "markdown",
+      "id": "4cfa8dec9c51a9a4",
+      "text": "Also see:\n\n* [https://beaker-browser.gitbook.io/docs/ Beaker Browser Docs]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Beaker Next - Developer Diary",
+        "story": []
+      },
+      "date": 1572942447463
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "9c945b56d6c58963",
+        "text": "Paul Frazee is recording a weekly series of 'diary' videos showing the features of the next version of Beaker."
+      },
+      "id": "9c945b56d6c58963",
+      "type": "add",
+      "date": 1572942476394
+    },
+    {
+      "item": {
+        "type": "video",
+        "id": "6b00a75b1715378f",
+        "text": "YOUTUBE OUaqT6huJMg\nIn this video, Paul Frazee demonstrates the new tooling for Website creation. That includes the editor sidebar and Beaker's files-explorer application."
+      },
+      "id": "6b00a75b1715378f",
+      "type": "add",
+      "after": "9c945b56d6c58963",
+      "date": 1572942477859
+    },
+    {
+      "type": "edit",
+      "id": "6b00a75b1715378f",
+      "item": {
+        "type": "video",
+        "id": "6b00a75b1715378f",
+        "text": "YOUTUBE OUaqT6huJMg\nIn this video, Paul Frazee demonstrates the new tooling for Website creation. That includes the editor sidebar and Beaker's files-explorer application."
+      },
+      "date": 1572942492762
+    },
+    {
+      "item": {
+        "type": "video",
+        "id": "d449bf98686b29d5",
+        "text": "YOUTUBE iTkLx5lmtLk\nIn this video, Paul Frazee explains the Hyperdrive filesystem. He explain the personal drive, \"mounts\", and filesystem queries. Also shows the Files Explorer and Web terminal."
+      },
+      "id": "d449bf98686b29d5",
+      "type": "add",
+      "after": "6b00a75b1715378f",
+      "date": 1572942495178
+    },
+    {
+      "type": "edit",
+      "id": "d449bf98686b29d5",
+      "item": {
+        "type": "video",
+        "id": "d449bf98686b29d5",
+        "text": "YOUTUBE iTkLx5lmtLk\nIn this video, Paul Frazee explains the Hyperdrive filesystem. He explain the personal drive, \"mounts\", and filesystem queries. Also shows the Files Explorer and Web terminal."
+      },
+      "date": 1572942589382
+    },
+    {
+      "type": "edit",
+      "id": "9c945b56d6c58963",
+      "item": {
+        "type": "paragraph",
+        "id": "9c945b56d6c58963",
+        "text": "Paul Frazee is recording a weekly series of 'diary' videos showing the features of the next version of Beaker."
+      },
+      "date": 1572942709393
+    },
+    {
+      "item": {
+        "type": "video",
+        "id": "794014e749aea07c",
+        "text": "YOUTUBE Zp5Dh52iS-U\nIn this video, Paul Frazee demonstrates .view files, which are a powerful way to combine multiple directories into a single \"virtual folder.\""
+      },
+      "id": "794014e749aea07c",
+      "type": "add",
+      "after": "d449bf98686b29d5",
+      "date": 1573559138340
+    },
+    {
+      "type": "edit",
+      "id": "794014e749aea07c",
+      "item": {
+        "type": "video",
+        "id": "794014e749aea07c",
+        "text": "YOUTUBE Zp5Dh52iS-U\nIn this video, Paul Frazee demonstrates .view files, which are a powerful way to combine multiple directories into a single \"virtual folder.\""
+      },
+      "date": 1573559145514
+    },
+    {
+      "item": {
+        "type": "video",
+        "id": "09eda0a38f03857b",
+        "text": "YOUTUBE mIu0cZcPUTc\nIn this video, Paul Frazee demonstrate the last week's updates: new onboarding flows, file metadata APIs, and .goto files (aka \"shortcuts\")"
+      },
+      "id": "09eda0a38f03857b",
+      "type": "add",
+      "after": "794014e749aea07c",
+      "date": 1574149317489
+    },
+    {
+      "type": "edit",
+      "id": "09eda0a38f03857b",
+      "item": {
+        "type": "video",
+        "id": "09eda0a38f03857b",
+        "text": "YOUTUBE mIu0cZcPUTc\nIn this video, Paul Frazee demonstrate the last week's updates: new onboarding flows, file metadata APIs, and .goto files (aka \"shortcuts\")"
+      },
+      "date": 1574149329607
+    },
+    {
+      "item": {
+        "type": "video",
+        "id": "ecba85750b5940ea",
+        "text": "YOUTUBE iO3k4d9P3Us\nDemonstrating the updates from the last week."
+      },
+      "id": "ecba85750b5940ea",
+      "type": "add",
+      "after": "09eda0a38f03857b",
+      "date": 1574889330997
+    },
+    {
+      "type": "edit",
+      "id": "ecba85750b5940ea",
+      "item": {
+        "type": "video",
+        "id": "ecba85750b5940ea",
+        "text": "YOUTUBE iO3k4d9P3Us\nDemonstrating the updates from the last week."
+      },
+      "date": 1574889353818
+    },
+    {
+      "type": "edit",
+      "id": "ecba85750b5940ea",
+      "item": {
+        "type": "video",
+        "id": "ecba85750b5940ea",
+        "text": "YOUTUBE iO3k4d9P3Us\nDemonstrating the updates from the last week."
+      },
+      "date": 1574889416672
+    },
+    {
+      "item": {
+        "type": "video",
+        "id": "4596b9de8ccfa3b5",
+        "text": "YOUTUBE k0JVGXL-BQY\nThe Beaker.Network app queries the Hyperdrive filesystem to create a feed, social graph, and more. No backend required."
+      },
+      "id": "4596b9de8ccfa3b5",
+      "type": "add",
+      "after": "ecba85750b5940ea",
+      "date": 1576516372544
+    },
+    {
+      "type": "edit",
+      "id": "4596b9de8ccfa3b5",
+      "item": {
+        "type": "video",
+        "id": "4596b9de8ccfa3b5",
+        "text": "YOUTUBE k0JVGXL-BQY\nThe Beaker.Network app queries the Hyperdrive filesystem to create a feed, social graph, and more. No backend required."
+      },
+      "date": 1576516376287
+    },
+    {
+      "item": {
+        "type": "video",
+        "id": "81af7456c082d380",
+        "text": "YOUTUBE fKyDhsB6qVw\nHoly cow everybody! I think we have a feature-lock on the beta.\n"
+      },
+      "id": "81af7456c082d380",
+      "type": "add",
+      "after": "4596b9de8ccfa3b5",
+      "date": 1582826700014
+    },
+    {
+      "type": "edit",
+      "id": "81af7456c082d380",
+      "item": {
+        "type": "video",
+        "id": "81af7456c082d380",
+        "text": "YOUTUBE fKyDhsB6qVw\nHoly cow everybody! I think we have a feature-lock on the beta.\n"
+      },
+      "date": 1582826746899
+    },
+    {
+      "type": "edit",
+      "id": "81af7456c082d380",
+      "item": {
+        "type": "video",
+        "id": "81af7456c082d380",
+        "text": "YOUTUBE fKyDhsB6qVw\nHoly cow everybody! I think we have a feature-lock on the beta.\n"
+      },
+      "date": 1582826768707
+    },
+    {
+      "type": "edit",
+      "id": "81af7456c082d380",
+      "item": {
+        "type": "video",
+        "id": "81af7456c082d380",
+        "text": "YOUTUBE fKyDhsB6qVw\nHoly cow everybody! I think we have a feature-lock on the beta.\n"
+      },
+      "date": 1582826793192
+    },
+    {
+      "type": "edit",
+      "id": "81af7456c082d380",
+      "item": {
+        "type": "video",
+        "id": "81af7456c082d380",
+        "text": "YOUTUBE fKyDhsB6qVw\nHoly cow everybody! I think we have a feature-lock on the beta.\n"
+      },
+      "date": 1582826807935
+    },
+    {
+      "type": "edit",
+      "id": "81af7456c082d380",
+      "item": {
+        "type": "video",
+        "id": "81af7456c082d380",
+        "text": "YOUTUBE fKyDhsB6qVw\nHoly cow everybody! I think we have a feature-lock on the beta.\n"
+      },
+      "date": 1582826818712
+    },
+    {
+      "type": "fork",
+      "site": "forage.dat.rodwell.me",
+      "date": 1583408609959
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ac1b2c5592c5be69"
+      },
+      "id": "ac1b2c5592c5be69",
+      "type": "add",
+      "after": "81af7456c082d380",
+      "date": 1583408611710
+    },
+    {
+      "type": "edit",
+      "id": "ac1b2c5592c5be69",
+      "item": {
+        "type": "pagefold",
+        "id": "ac1b2c5592c5be69",
+        "text": "."
+      },
+      "date": 1583408624591
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4cfa8dec9c51a9a4"
+      },
+      "id": "4cfa8dec9c51a9a4",
+      "type": "add",
+      "after": "ac1b2c5592c5be69",
+      "date": 1583408625950
+    },
+    {
+      "type": "edit",
+      "id": "4cfa8dec9c51a9a4",
+      "item": {
+        "type": "markdown",
+        "id": "4cfa8dec9c51a9a4",
+        "text": "Also see:\n\n* [https://beaker-browser.gitbook.io/docs/ Beaker Browser Docs]"
+      },
+      "date": 1583408706390
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "title": "Node WebID",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "1a8bd729b6c57c39",
+      "text": "An article describing the promise of integrating [[NodeJS]] and [[WebID]] - [http://magnetik.github.io/node-webid-report/ magnetik.github.io]"
+    },
+    {
+      "type": "paragraph",
+      "id": "58709676004d851f",
+      "text": "The original project ([https://github.com/magnetik/node-webid github]) has not be updated for a couple of years."
+    },
+    {
+      "type": "paragraph",
+      "id": "719a90bf82be9213",
+      "text": "A more recent branch of this project is maintained by the linkeddata github organization, linked into [[SoLiD]] - [https://github.com/linkeddata/node-webid github]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Node WebID",
+        "story": []
+      },
+      "date": 1431433371087
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1a8bd729b6c57c39"
+      },
+      "id": "1a8bd729b6c57c39",
+      "type": "add",
+      "date": 1431433372541
+    },
+    {
+      "type": "edit",
+      "id": "1a8bd729b6c57c39",
+      "item": {
+        "type": "paragraph",
+        "id": "1a8bd729b6c57c39",
+        "text": "- [http://magnetik.github.io/node-webid-report/ magnetik.github.io]"
+      },
+      "date": 1431433384187
+    },
+    {
+      "type": "edit",
+      "id": "1a8bd729b6c57c39",
+      "item": {
+        "type": "paragraph",
+        "id": "1a8bd729b6c57c39",
+        "text": "This project lloks like it has not been updated in a couple of years - [http://magnetik.github.io/node-webid-report/ magnetik.github.io]"
+      },
+      "date": 1431433478978
+    },
+    {
+      "type": "add",
+      "id": "58709676004d851f",
+      "item": {
+        "type": "paragraph",
+        "id": "58709676004d851f",
+        "text": "- [https://github.com/magnetik/node-webid github]"
+      },
+      "after": "1a8bd729b6c57c39",
+      "date": 1431433497088
+    },
+    {
+      "type": "edit",
+      "id": "1a8bd729b6c57c39",
+      "item": {
+        "type": "paragraph",
+        "id": "1a8bd729b6c57c39",
+        "text": "An article describing the promise of integrating [[NodeJS]] and [[WebID]] - [http://magnetik.github.io/node-webid-report/ magnetik.github.io]"
+      },
+      "date": 1431433553761
+    },
+    {
+      "type": "edit",
+      "id": "58709676004d851f",
+      "item": {
+        "type": "paragraph",
+        "id": "58709676004d851f",
+        "text": "This project looks like it has not been updated in a couple of years - [https://github.com/magnetik/node-webid github]"
+      },
+      "date": 1431433565125
+    },
+    {
+      "type": "fork",
+      "site": "c0de.academy",
+      "date": 1438340643193
+    },
+    {
+      "type": "edit",
+      "id": "58709676004d851f",
+      "item": {
+        "type": "paragraph",
+        "id": "58709676004d851f",
+        "text": "While the original @magnetik project ( has not be updated for a couple of years - [https://github.com/magnetik/node-webid github]"
+      },
+      "date": 1438340787113
+    },
+    {
+      "type": "edit",
+      "id": "58709676004d851f",
+      "item": {
+        "type": "paragraph",
+        "id": "58709676004d851f",
+        "text": "The original @magnetik project ([https://github.com/magnetik/node-webid github]) has not be updated for a couple of years - "
+      },
+      "date": 1438340828527
+    },
+    {
+      "type": "edit",
+      "id": "58709676004d851f",
+      "item": {
+        "type": "paragraph",
+        "id": "58709676004d851f",
+        "text": "The original @magnetik project ([https://github.com/magnetik/node-webid github]) has not be updated for a couple of years."
+      },
+      "date": 1438340947674
+    },
+    {
+      "type": "add",
+      "id": "719a90bf82be9213",
+      "item": {
+        "type": "paragraph",
+        "id": "719a90bf82be9213",
+        "text": "A more recent version of this "
+      },
+      "after": "58709676004d851f",
+      "date": 1438340968154
+    },
+    {
+      "type": "edit",
+      "id": "58709676004d851f",
+      "item": {
+        "type": "paragraph",
+        "id": "58709676004d851f",
+        "text": "The original project ([https://github.com/magnetik/node-webid github]) has not be updated for a couple of years."
+      },
+      "date": 1438340972776
+    },
+    {
+      "type": "edit",
+      "id": "719a90bf82be9213",
+      "item": {
+        "type": "paragraph",
+        "id": "719a90bf82be9213",
+        "text": "A more recent branch of this project is maintained by the linkeddata github organization, linked into [[SoLiD]] - [https://github.com/linkeddata/node-webid github]"
+      },
+      "date": 1438341118734
+    }
+  ]
+}

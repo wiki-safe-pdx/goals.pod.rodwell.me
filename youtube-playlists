@@ -1,0 +1,152 @@
+{
+  "title": "YouTube Playlists",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "9917624731c6e5a0",
+      "text": "For sometime we have been able to use the video plugin to embed single videos from a select number of sources. But, one thing that has been missing is the ability to include a playlist. With the latest update we can now include a YouTube playlist. As with embedding single videos we need the key for the playlist, see [[key from YouTube playlist]]. But, as the factory includes a drop handler it is far simpler to just drag a YouTube playlist page and drop it on the factory."
+    },
+    {
+      "type": "paragraph",
+      "id": "3fa21044f6b747df",
+      "text": "Sometime ago Mike Caulfield put together a short series of videos illustrate how ideas spread through the federation, as part of a larger presentation. Elsewhere they have been presented in the wiki using three video plugin items. [http://journal.hapgood.net/information-lifecycle.html wiki page], [http://video.fed.wiki.org/information-lifecycle.html wiki page]"
+    },
+    {
+      "type": "paragraph",
+      "id": "95046e5e43024c00",
+      "text": "Here I present them using the playlist Mike created. "
+    },
+    {
+      "type": "video",
+      "id": "3b2490c73de46735",
+      "text": "YOUTUBE PLAYLIST PLRdZ44gFTfl3hobkAy5P-_51uIcn_h5oj\n\nA sequence of simulations, by Mike Caulfield, to illustrate how ideas spread through a federation. This is the fifth part of a larger presentation, Federated Education: New Directions in Digital Collaboration. [http://hapgood.us/2014/11/06/federated-education-new-directions-in-digital-collaboration/ webpage]"
+    },
+    {
+      "type": "paragraph",
+      "id": "931de2bfbb1b4434",
+      "text": "Ward says: I love the storytelling here. There are many small touches one might not notice on first viewing. I especially like the inclusion of character specific backgrounds for each author's site."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "YouTube Playlists",
+        "story": []
+      },
+      "date": 1475089693190
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9917624731c6e5a0"
+      },
+      "id": "9917624731c6e5a0",
+      "type": "add",
+      "date": 1475089707577
+    },
+    {
+      "type": "edit",
+      "id": "9917624731c6e5a0",
+      "item": {
+        "type": "paragraph",
+        "id": "9917624731c6e5a0",
+        "text": "For sometime we have been able to use the video plugin to embed single videos from a select number of sources. But, one thing that has been missing is the ability to include a playlist. With the latest update we can now include a YouTube playlist. As with embedding single videos we need the key for the playlist, see [[key from YouTube playlist]]. But, as the factory includes a drop handler it is far simpler to just drag a YouTube playlist page and drop it on the factory."
+      },
+      "date": 1475090241143
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3fa21044f6b747df"
+      },
+      "id": "3fa21044f6b747df",
+      "type": "add",
+      "after": "9917624731c6e5a0",
+      "date": 1475090249050
+    },
+    {
+      "type": "edit",
+      "id": "3fa21044f6b747df",
+      "item": {
+        "type": "paragraph",
+        "id": "3fa21044f6b747df",
+        "text": "Sometime ago Mike Caulfield put together a short series of videos illustrate how ideas spread through the federation. Elsewhere they have been included as three video plugin items on a page, here they are available using the playlist Mike created. "
+      },
+      "date": 1475090898512
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "video",
+        "id": "3b2490c73de46735",
+        "text": "YOUTUBE PLAYLIST PLRdZ44gFTfl3hobkAy5P-_51uIcn_h5oj\nA sequence of simulations, by Mike Caulfield, to illustrate how ideas spread through a federation. This is the fifth part of a larger presentation, Federated Education: New Directions in Digital Collaboration. [http://hapgood.us/2014/11/06/federated-education-new-directions-in-digital-collaboration/ webpage]"
+      },
+      "after": "3fa21044f6b747df",
+      "id": "3b2490c73de46735",
+      "date": 1475090903969
+    },
+    {
+      "type": "edit",
+      "id": "3fa21044f6b747df",
+      "item": {
+        "type": "paragraph",
+        "id": "3fa21044f6b747df",
+        "text": "Sometime ago Mike Caulfield put together a short series of videos illustrate how ideas spread through the federation, as part of a larger presentation. Elsewhere they have been presented in the wiki using three video plugin items. Here I present them using the playlist Mike created. "
+      },
+      "date": 1475091473719
+    },
+    {
+      "type": "edit",
+      "id": "3fa21044f6b747df",
+      "item": {
+        "type": "paragraph",
+        "id": "3fa21044f6b747df",
+        "text": "Sometime ago Mike Caulfield put together a short series of videos illustrate how ideas spread through the federation, as part of a larger presentation. Elsewhere they have been presented in the wiki using three video plugin items. [http://journal.hapgood.net/information-lifecycle.html link], [http://video.fed.wiki.org/information-lifecycle.html link]"
+      },
+      "date": 1475091547281
+    },
+    {
+      "type": "add",
+      "id": "95046e5e43024c00",
+      "item": {
+        "type": "paragraph",
+        "id": "95046e5e43024c00",
+        "text": "Here I present them using the playlist Mike created. "
+      },
+      "after": "3fa21044f6b747df",
+      "date": 1475091550250
+    },
+    {
+      "type": "edit",
+      "id": "3fa21044f6b747df",
+      "item": {
+        "type": "paragraph",
+        "id": "3fa21044f6b747df",
+        "text": "Sometime ago Mike Caulfield put together a short series of videos illustrate how ideas spread through the federation, as part of a larger presentation. Elsewhere they have been presented in the wiki using three video plugin items. [http://journal.hapgood.net/information-lifecycle.html wiki page], [http://video.fed.wiki.org/information-lifecycle.html wiki page]"
+      },
+      "date": 1475091588957
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "931de2bfbb1b4434",
+        "text": "Ward says: I love the storytelling here. There are many small touches one might not notice on first viewing. I especially like the inclusion of character specific backgrounds for each author's site."
+      },
+      "after": "3b2490c73de46735",
+      "id": "931de2bfbb1b4434",
+      "date": 1475091667003
+    },
+    {
+      "type": "edit",
+      "id": "3b2490c73de46735",
+      "item": {
+        "type": "video",
+        "id": "3b2490c73de46735",
+        "text": "YOUTUBE PLAYLIST PLRdZ44gFTfl3hobkAy5P-_51uIcn_h5oj\n\nA sequence of simulations, by Mike Caulfield, to illustrate how ideas spread through a federation. This is the fifth part of a larger presentation, Federated Education: New Directions in Digital Collaboration. [http://hapgood.us/2014/11/06/federated-education-new-directions-in-digital-collaboration/ webpage]"
+      },
+      "date": 1573896392466
+    }
+  ]
+}

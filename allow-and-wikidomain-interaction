@@ -1,0 +1,53 @@
+{
+  "title": "Allow and wikiDomain Interaction",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "3cf656f71c0f1f0d",
+      "text": "Allow '*' is being added as way of removing the creation of wiki, by limiting wiki server startup to only those wiki for which a data directory exists. Previously, both the \"allow\" and \"wikiDomain\" parameters provide methods of limiting the wiki servers that will be started. With \"allow\" taking a list of wiki, and \"wikiDomain\" a set of domains. Though \"wikiDomain\" is primary used for adding domain specific configuration."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Allow and wikiDomain Interaction",
+        "story": []
+      },
+      "date": 1573839679600
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3cf656f71c0f1f0d"
+      },
+      "id": "3cf656f71c0f1f0d",
+      "type": "add",
+      "date": 1573839699696
+    },
+    {
+      "type": "edit",
+      "id": "3cf656f71c0f1f0d",
+      "item": {
+        "type": "paragraph",
+        "id": "3cf656f71c0f1f0d",
+        "text": "Allow `*` is being added as way of removing the creation of wiki, by limiting wiki server startup to only those wiki for which a data directory exists. Previously, both the \"allow\" and \"wikiDomain\" parameters provide methods of limiting the wiki servers that will be started. With \"allow\" taking a list of wiki, and \"wikiDomain\" a set of domains. Though \"wikiDomain\" is primary used for adding domain specific configuration."
+      },
+      "date": 1573840560138
+    },
+    {
+      "type": "edit",
+      "id": "3cf656f71c0f1f0d",
+      "item": {
+        "type": "paragraph",
+        "id": "3cf656f71c0f1f0d",
+        "text": "Allow '*' is being added as way of removing the creation of wiki, by limiting wiki server startup to only those wiki for which a data directory exists. Previously, both the \"allow\" and \"wikiDomain\" parameters provide methods of limiting the wiki servers that will be started. With \"allow\" taking a list of wiki, and \"wikiDomain\" a set of domains. Though \"wikiDomain\" is primary used for adding domain specific configuration."
+      },
+      "date": 1573840575906
+    },
+    {
+      "type": "fork",
+      "date": 1573840899564
+    }
+  ]
+}

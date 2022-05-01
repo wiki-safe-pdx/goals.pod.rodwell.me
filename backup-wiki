@@ -1,0 +1,74 @@
+{
+  "title": "Backup Wiki",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "b2cc7c97a3404690",
+      "text": "An example using a HTML plug-in with a link that will download, rather than opening the JSON."
+    },
+    {
+      "type": "html",
+      "id": "a8245afc5c49e53a",
+      "text": "<a href=\"/system/export.json\" download>Save Wiki</a>"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Backup Wiki",
+        "story": []
+      },
+      "date": 1641755145271
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b2cc7c97a3404690"
+      },
+      "id": "b2cc7c97a3404690",
+      "type": "add",
+      "date": 1641755147745
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a8245afc5c49e53a"
+      },
+      "id": "a8245afc5c49e53a",
+      "type": "add",
+      "after": "b2cc7c97a3404690",
+      "date": 1641755149385
+    },
+    {
+      "type": "edit",
+      "id": "a8245afc5c49e53a",
+      "item": {
+        "type": "html",
+        "id": "a8245afc5c49e53a",
+        "text": "<a href=\"/system/export.json\" download>Save Wiki</a>"
+      },
+      "date": 1641755181779
+    },
+    {
+      "type": "edit",
+      "id": "b2cc7c97a3404690",
+      "item": {
+        "type": "paragraph",
+        "id": "b2cc7c97a3404690",
+        "text": "An example "
+      },
+      "date": 1641756469777
+    },
+    {
+      "type": "edit",
+      "id": "b2cc7c97a3404690",
+      "item": {
+        "type": "paragraph",
+        "id": "b2cc7c97a3404690",
+        "text": "An example using a HTML plug-in with a link that will download, rather than opening the JSON."
+      },
+      "date": 1641756539667
+    }
+  ]
+}

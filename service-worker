@@ -1,0 +1,267 @@
+{
+  "title": "Service Worker",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "d6dd1482539c5fc3",
+      "text": "Service workers essentially act as proxy servers that sit between web applications, and the browser and network (when available). They are intended to (amongst other things) enable the creation of effective offline experiences, intercepting network requests and taking appropriate action based on whether the network is available and updated assets reside on the server. They will also allow access to push notifications and background sync APIs. (from Mozilla Developer Network)."
+    },
+    {
+      "type": "pagefold",
+      "id": "2499a0781312d218",
+      "text": "resources"
+    },
+    {
+      "type": "paragraph",
+      "id": "b06afc8c61628e21",
+      "text": "[https://serviceworke.rs ServiceWorker Cookbook] -- The Service Worker Cookbook is a collection of working, practical examples of using service workers in modern web apps."
+    },
+    {
+      "type": "paragraph",
+      "id": "136893f9c36fbc5e",
+      "text": "[https://jakearchibald.github.io/isserviceworkerready/index.html Service Worker Resources] -- A list of documentation on service worker."
+    },
+    {
+      "type": "paragraph",
+      "id": "f0c7a28be85a5d5a",
+      "text": "[https://github.com/jakearchibald/simple-serviceworker-tutorial Simple serviceworker turorial] -- a really simple ServiceWorker example."
+    },
+    {
+      "type": "paragraph",
+      "id": "57d3e7341bf8db4e",
+      "text": "[https://developer.mozilla.org/en/docs/Web/API/Service_Worker_API MDN - Service Worker API ] -- Mozilla Developer Network documents about the Service Worker API."
+    },
+    {
+      "type": "paragraph",
+      "id": "f4f9821d18809b42",
+      "text": "[https://developers.google.com/web/fundamentals/getting-started/primers/service-workers Google - Service Workers: an Introduction]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Service Worker",
+        "story": []
+      },
+      "date": 1481109934709
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f234bbaf88137f37"
+      },
+      "id": "f234bbaf88137f37",
+      "type": "add",
+      "date": 1481109952229
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2499a0781312d218"
+      },
+      "id": "2499a0781312d218",
+      "type": "add",
+      "after": "f234bbaf88137f37",
+      "date": 1481110028199
+    },
+    {
+      "type": "edit",
+      "id": "2499a0781312d218",
+      "item": {
+        "type": "pagefold",
+        "id": "2499a0781312d218",
+        "text": "resources"
+      },
+      "date": 1481110054910
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b06afc8c61628e21"
+      },
+      "id": "b06afc8c61628e21",
+      "type": "add",
+      "after": "2499a0781312d218",
+      "date": 1481110056446
+    },
+    {
+      "type": "edit",
+      "id": "b06afc8c61628e21",
+      "item": {
+        "type": "paragraph",
+        "id": "b06afc8c61628e21",
+        "text": "[https://serviceworke.rs ServiceWorker Cookbook] -- The Service Worker Cookbook is a collection of working, practical examples of using service workers in modern web apps."
+      },
+      "date": 1481110124725
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "136893f9c36fbc5e"
+      },
+      "id": "136893f9c36fbc5e",
+      "type": "add",
+      "after": "b06afc8c61628e21",
+      "date": 1481110127863
+    },
+    {
+      "type": "edit",
+      "id": "136893f9c36fbc5e",
+      "item": {
+        "type": "paragraph",
+        "id": "136893f9c36fbc5e",
+        "text": "[https://jakearchibald.github.io/isserviceworkerready/resources.html Service Worker Resources]"
+      },
+      "date": 1481110312578
+    },
+    {
+      "type": "edit",
+      "id": "136893f9c36fbc5e",
+      "item": {
+        "type": "paragraph",
+        "id": "136893f9c36fbc5e",
+        "text": "[https://jakearchibald.github.io/isserviceworkerready/resources.html Service Worker Resources] -- A list of documentation on service worker"
+      },
+      "date": 1481110353218
+    },
+    {
+      "type": "edit",
+      "id": "136893f9c36fbc5e",
+      "item": {
+        "type": "paragraph",
+        "id": "136893f9c36fbc5e",
+        "text": "[https://jakearchibald.github.io/isserviceworkerready/index.html Service Worker Resources] -- A list of documentation on service worker."
+      },
+      "date": 1481110384702
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f0c7a28be85a5d5a"
+      },
+      "id": "f0c7a28be85a5d5a",
+      "type": "add",
+      "after": "136893f9c36fbc5e",
+      "date": 1481110404604
+    },
+    {
+      "type": "edit",
+      "id": "f0c7a28be85a5d5a",
+      "item": {
+        "type": "paragraph",
+        "id": "f0c7a28be85a5d5a",
+        "text": "[https://github.com/jakearchibald/simple-serviceworker-tutorial Simple serviceworker turorial] -- a really simple ServiceWorker example."
+      },
+      "date": 1481110445691
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "57d3e7341bf8db4e"
+      },
+      "id": "57d3e7341bf8db4e",
+      "type": "add",
+      "after": "f0c7a28be85a5d5a",
+      "date": 1481110464957
+    },
+    {
+      "type": "edit",
+      "id": "57d3e7341bf8db4e",
+      "item": {
+        "type": "paragraph",
+        "id": "57d3e7341bf8db4e",
+        "text": "[https://developer.mozilla.org/en/docs/Web/API/Service_Worker_API MDN - Service Worker API ] -- Mozilla Developer Network documents about the Service Worker API."
+      },
+      "date": 1481110570449
+    },
+    {
+      "type": "remove",
+      "id": "f234bbaf88137f37",
+      "date": 1481110609283
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d6dd1482539c5fc3"
+      },
+      "id": "d6dd1482539c5fc3",
+      "type": "add",
+      "after": "57d3e7341bf8db4e",
+      "date": 1481110610810
+    },
+    {
+      "type": "edit",
+      "id": "d6dd1482539c5fc3",
+      "item": {
+        "type": "paragraph",
+        "id": "d6dd1482539c5fc3",
+        "text": "Service workers essentially act as proxy servers that sit between web applications, and the browser and network (when available). They are intended to (amongst other things) enable the creation of effective offline experiences, intercepting network requests and taking appropriate action based on whether the network is available and updated assets reside on the server. They will also allow access to push notifications and background sync APIs. (from Mozilla Developer Network)."
+      },
+      "date": 1481110659827
+    },
+    {
+      "type": "move",
+      "order": [
+        "d6dd1482539c5fc3",
+        "2499a0781312d218",
+        "b06afc8c61628e21",
+        "136893f9c36fbc5e",
+        "f0c7a28be85a5d5a",
+        "57d3e7341bf8db4e"
+      ],
+      "id": "d6dd1482539c5fc3",
+      "date": 1481110664994
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f4f9821d18809b42"
+      },
+      "id": "f4f9821d18809b42",
+      "type": "add",
+      "after": "57d3e7341bf8db4e",
+      "date": 1481110686937
+    },
+    {
+      "type": "edit",
+      "id": "f4f9821d18809b42",
+      "item": {
+        "type": "paragraph",
+        "id": "f4f9821d18809b42",
+        "text": "[https://developers.google.com/web/fundamentals/getting-started/primers/service-workers Google - Service Workers: an Introduction]"
+      },
+      "date": 1481110716668
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2fc6847ef434a18b"
+      },
+      "id": "2fc6847ef434a18b",
+      "type": "add",
+      "after": "f4f9821d18809b42",
+      "date": 1481119099337
+    },
+    {
+      "type": "move",
+      "order": [
+        "d6dd1482539c5fc3",
+        "2fc6847ef434a18b",
+        "2499a0781312d218",
+        "b06afc8c61628e21",
+        "136893f9c36fbc5e",
+        "f0c7a28be85a5d5a",
+        "57d3e7341bf8db4e",
+        "f4f9821d18809b42"
+      ],
+      "id": "2fc6847ef434a18b",
+      "date": 1481119101447
+    },
+    {
+      "type": "remove",
+      "id": "2fc6847ef434a18b",
+      "date": 1481119167721
+    }
+  ]
+}

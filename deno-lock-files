@@ -1,0 +1,329 @@
+{
+  "title": "Deno Lock Files",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "27dda8fb5fb0b5b3",
+      "text": "To cut a finer point, the deno /std/manual page is misleading, and wrong, when it comes to how to create a lock file."
+    },
+    {
+      "type": "markdown",
+      "id": "4fa46321b9f53130",
+      "text": "> Lock file\n\n> Deno can store and check module subresource integrity for modules using a small JSON file. Use the `--lock=lock.json` to enable and specify lock file checking. To update or create a lock use `--lock=lock.json --lock-write`."
+    },
+    {
+      "type": "markdown",
+      "id": "766b8f016bf98257",
+      "text": "Simply adding `--lock=lock.json --lock-write` to the command line will do nothing. Even adding `--reload` will not get it to do anything."
+    },
+    {
+      "type": "paragraph",
+      "id": "3244630f87c526e1",
+      "text": "So, how to get it to work?"
+    },
+    {
+      "type": "markdown",
+      "id": "2bc9366954636976",
+      "text": "The only way I have found of getting a lock file to be created is to run `deno fetch`.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "ac1124bb2caf4148",
+      "text": "So to create a lock file for seran wiki the command would be:"
+    },
+    {
+      "type": "code",
+      "id": "23889e1d03e4681d",
+      "text": "deno fetch -c tsconfig.json --importmap=import_map.json --lock=lock.json --lock-write ./server/seran.ts"
+    },
+    {
+      "type": "markdown",
+      "id": "daa932903e92bbbd",
+      "text": "The lock file can then be used by adding `--lock=lock.json` to the normal command to run seran wiki.\n"
+    },
+    {
+      "type": "pagefold",
+      "id": "d5773e51c0ffd845",
+      "text": "still to be determined"
+    },
+    {
+      "type": "markdown",
+      "id": "44afaeb1c74ee554",
+      "text": "How will this behave if a meta site imports extra resources? "
+    },
+    {
+      "type": "markdown",
+      "id": "7c3f4c0ad1ca438c",
+      "text": "Steps needed when upgrading deno.  As far as I understand it, using `--reload` will not update the lock file. So, `--lock-write`, will be needed. But currently unknown this will need to be done with `deno fetch`."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Deno Lock Files",
+        "story": []
+      },
+      "date": 1585991909330
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "27dda8fb5fb0b5b3"
+      },
+      "id": "27dda8fb5fb0b5b3",
+      "type": "add",
+      "date": 1585991918475
+    },
+    {
+      "type": "edit",
+      "id": "27dda8fb5fb0b5b3",
+      "item": {
+        "type": "paragraph",
+        "id": "27dda8fb5fb0b5b3",
+        "text": "To cut a finer point, the deno /std/manual page is misleading, and wrong, when it comes to how to create a lock file."
+      },
+      "date": 1585992018909
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4fa46321b9f53130"
+      },
+      "id": "4fa46321b9f53130",
+      "type": "add",
+      "after": "27dda8fb5fb0b5b3",
+      "date": 1585992022296
+    },
+    {
+      "type": "edit",
+      "id": "4fa46321b9f53130",
+      "item": {
+        "type": "markdown",
+        "id": "4fa46321b9f53130",
+        "text": "> Lock file\n\n> Deno can store and check module subresource integrity for modules using a small JSON file. Use the --lock=lock.json to enable and specify lock file checking. To update or create a lock use --lock=lock.json --lock-write."
+      },
+      "date": 1585992040160
+    },
+    {
+      "type": "edit",
+      "id": "4fa46321b9f53130",
+      "item": {
+        "type": "markdown",
+        "id": "4fa46321b9f53130",
+        "text": "> Lock file\n\n> Deno can store and check module subresource integrity for modules using a small JSON file. Use the `--lock=lock.json` to enable and specify lock file checking. To update or create a lock use `--lock=lock.json --lock-write`."
+      },
+      "date": 1585992056623
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "766b8f016bf98257"
+      },
+      "id": "766b8f016bf98257",
+      "type": "add",
+      "after": "4fa46321b9f53130",
+      "date": 1585992067213
+    },
+    {
+      "type": "edit",
+      "id": "766b8f016bf98257",
+      "item": {
+        "type": "markdown",
+        "id": "766b8f016bf98257",
+        "text": "Simply adding `--lock=lock.json --lock-write` to the command line will do nothing. Even adding `--reload` will not get it to do anything."
+      },
+      "date": 1585992168146
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3244630f87c526e1"
+      },
+      "id": "3244630f87c526e1",
+      "type": "add",
+      "after": "766b8f016bf98257",
+      "date": 1585992175815
+    },
+    {
+      "type": "edit",
+      "id": "3244630f87c526e1",
+      "item": {
+        "type": "paragraph",
+        "id": "3244630f87c526e1",
+        "text": "So, how to get it to work?"
+      },
+      "date": 1585992188673
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2bc9366954636976"
+      },
+      "id": "2bc9366954636976",
+      "type": "add",
+      "after": "3244630f87c526e1",
+      "date": 1585992311308
+    },
+    {
+      "type": "edit",
+      "id": "2bc9366954636976",
+      "item": {
+        "type": "markdown",
+        "id": "2bc9366954636976",
+        "text": "The only way I have found of getting a lock file to be created is to run `deno fetch`.\n"
+      },
+      "date": 1585992371495
+    },
+    {
+      "type": "add",
+      "id": "ac1124bb2caf4148",
+      "item": {
+        "type": "markdown",
+        "id": "ac1124bb2caf4148",
+        "text": "So to create a lock file for seran wiki the command would be:"
+      },
+      "after": "2bc9366954636976",
+      "date": 1585992397563
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "23889e1d03e4681d"
+      },
+      "id": "23889e1d03e4681d",
+      "type": "add",
+      "after": "ac1124bb2caf4148",
+      "date": 1585992421184
+    },
+    {
+      "type": "edit",
+      "id": "23889e1d03e4681d",
+      "item": {
+        "type": "code",
+        "id": "23889e1d03e4681d",
+        "text": "deno -c tsconfig.json --importmap=import_map.json --lock=lock.json --lock-write ./server/seran.ts"
+      },
+      "date": 1585992464528
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "daa932903e92bbbd"
+      },
+      "id": "daa932903e92bbbd",
+      "type": "add",
+      "after": "23889e1d03e4681d",
+      "date": 1585992761003
+    },
+    {
+      "type": "edit",
+      "id": "daa932903e92bbbd",
+      "item": {
+        "type": "markdown",
+        "id": "daa932903e92bbbd",
+        "text": "The lock file can then be used by adding `--lock=lock.json` to the normal command to run seran wiki."
+      },
+      "date": 1585992833028
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d5773e51c0ffd845"
+      },
+      "id": "d5773e51c0ffd845",
+      "type": "add",
+      "after": "daa932903e92bbbd",
+      "date": 1585992893671
+    },
+    {
+      "type": "edit",
+      "id": "d5773e51c0ffd845",
+      "item": {
+        "type": "pagefold",
+        "id": "d5773e51c0ffd845",
+        "text": "still to be determined"
+      },
+      "date": 1585992911285
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "44afaeb1c74ee554"
+      },
+      "id": "44afaeb1c74ee554",
+      "type": "add",
+      "after": "d5773e51c0ffd845",
+      "date": 1585992913214
+    },
+    {
+      "type": "edit",
+      "id": "44afaeb1c74ee554",
+      "item": {
+        "type": "markdown",
+        "id": "44afaeb1c74ee554",
+        "text": "How will this behave if a meta site "
+      },
+      "date": 1585992984349
+    },
+    {
+      "type": "edit",
+      "id": "44afaeb1c74ee554",
+      "item": {
+        "type": "markdown",
+        "id": "44afaeb1c74ee554",
+        "text": "How will this behave if a meta site imports extra resources? "
+      },
+      "date": 1585993016984
+    },
+    {
+      "type": "edit",
+      "id": "daa932903e92bbbd",
+      "item": {
+        "type": "markdown",
+        "id": "daa932903e92bbbd",
+        "text": "The lock file can then be used by adding `--lock=lock.json` to the normal command to run seran wiki.\n"
+      },
+      "date": 1585993961019
+    },
+    {
+      "type": "add",
+      "id": "7c3f4c0ad1ca438c",
+      "item": {
+        "type": "markdown",
+        "id": "7c3f4c0ad1ca438c",
+        "text": "Steps needed when upgrading deno.  As far as I understand it, using `--reload` will not update the lock file. So, `--lock-write`, will be needed. But currently unknown this will need to be done with `deno fetch`."
+      },
+      "after": "daa932903e92bbbd",
+      "date": 1585994161026
+    },
+    {
+      "id": "7c3f4c0ad1ca438c",
+      "type": "move",
+      "order": [
+        "27dda8fb5fb0b5b3",
+        "4fa46321b9f53130",
+        "766b8f016bf98257",
+        "3244630f87c526e1",
+        "2bc9366954636976",
+        "ac1124bb2caf4148",
+        "23889e1d03e4681d",
+        "daa932903e92bbbd",
+        "d5773e51c0ffd845",
+        "44afaeb1c74ee554",
+        "7c3f4c0ad1ca438c"
+      ],
+      "date": 1585994163346
+    },
+    {
+      "type": "edit",
+      "id": "23889e1d03e4681d",
+      "item": {
+        "type": "code",
+        "id": "23889e1d03e4681d",
+        "text": "deno fetch -c tsconfig.json --importmap=import_map.json --lock=lock.json --lock-write ./server/seran.ts"
+      },
+      "date": 1585994178607
+    }
+  ]
+}
